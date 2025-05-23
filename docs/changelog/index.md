@@ -3,7 +3,7 @@ sidebar_position: 1
 title: Changelog
 ---
 
-## Version 1.2.4 (May 22, 2025)
+## Version 1.2.4 (May 23, 2025)
 
 ### ✨ Added
 
