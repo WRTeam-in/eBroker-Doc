@@ -15,18 +15,21 @@ const config = {
   favicon: "images/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://wrteamdev.github.io",
+  url: "https://wrteam-in.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "wrteamdev", // Usually your GitHub org/user name.
-  projectName: "ebroker-documentation", // Usually your repo name.
+  organizationName: "WRTeam-in", // Usually your GitHub org/user name.
+  projectName: "eBroker-Doc", // Usually your repo name.
 
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
+
+  trailingSlash: true,  // Add this for correct path handling
+  deploymentBranch: "gh-pages", // Branch for deployment
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
