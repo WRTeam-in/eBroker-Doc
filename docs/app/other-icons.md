@@ -14,21 +14,21 @@ There are three main icons that can be customized via the admin panel:
   <div className="col col--4">
     <div className="card padding--sm">
       <h4>Splash Logo</h4>
-      <img src="/images/app/splash_screen.jpg" alt="Splash Screen" style={{ maxHeight: "200px", objectFit: "contain" }} />
+      ![Splash Screen](/images/app/splash_screen.jpg)
       <p className="text--small">Shown on app's splash screen</p>
     </div>
   </div>
   <div className="col col--4">
     <div className="card padding--sm">
       <h4>Home Logo</h4>
-      <img src="/images/app/homelogo.jpg" alt="Home Logo" style={{ maxHeight: "200px", objectFit: "contain" }} />
+      ![Home Logo](/images/app/homelogo.jpg)
       <p className="text--small">Displayed in app's home screen</p>
     </div>
   </div>
   <div className="col col--4">
     <div className="card padding--sm">
       <h4>Placeholder</h4>
-      <img src="/images/app/placeholder.jpg" alt="Placeholder" style={{ maxHeight: "200px", objectFit: "contain" }} />
+      ![Placeholder](/images/app/placeholder.jpg)
       <p className="text--small">Used when images fail to load</p>
     </div>
   </div>
@@ -40,14 +40,14 @@ There are three main icons that can be customized via the admin panel:
   <div className="col col--6">
     <div className="card padding--sm">
       <h4>Login Screen Image</h4>
-      <img src="/images/app/change_login_screen_logo.png" alt="Login Screen" style={{ maxHeight: "200px", objectFit: "contain" }} />
+      ![Login Screen](/images/app/change_login_screen_logo.png)
       <p>Replace image at <code>assets/login_background.png</code><br/>(Keep size under 1MB)</p>
     </div>
   </div>
   <div className="col col--6">
     <div className="card padding--sm">
       <h4>Admin Panel Settings</h4>
-      <img src="/images/app/change_icons_adminpanel.png" alt="Admin Panel" style={{ maxHeight: "200px", objectFit: "contain" }} />
+      ![Admin Panel](/images/app/change_icons_adminpanel.png)
       <p>Manage via Settings > App Settings</p>
     </div>
   </div>
@@ -59,7 +59,7 @@ There are three main icons that can be customized via the admin panel:
   <div className="col col--6">
     <div className="card padding--sm">
       <h4>Asset Folders</h4>
-      <img src="/images/app/fallback_icons.png" alt="Fallback Icons" style={{ maxHeight: "200px", objectFit: "contain" }} />
+      ![Fallback Icons](/images/app/fallback_icons.png)
       <ul>
         <li>📁 Fallback: For server failure scenarios</li>
         <li>📁 Logo: Company logo assets</li>
