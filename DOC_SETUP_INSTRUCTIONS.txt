@@ -1,0 +1,78 @@
+====================================
+eBroker Documentation Setup Guide
+====================================
+
+🌐 QUICK ACCESS TO DOCUMENTATION
+------------------------------
+Access our documentation directly without any setup at:
+https://wrteamdev.github.io/ebroker-App-Doc/
+
+📚 DOCUMENTATION SECTIONS
+------------------------
+• Admin Documentation - Setup and manage the admin panel
+• Web Documentation - Configure and use the web application
+• App Documentation - Mobile app setup and usage guide
+• Video Tutorials - Step-by-step visual guides
+• Changelog - Version history and updates
+
+🚀 LOCAL SETUP INSTRUCTIONS
+-------------------------
+If you prefer to run the documentation locally, follow these steps:
+
+1. System Requirements:
+   • Node.js (version 18 or later)
+   • npm or yarn package manager
+   • Git
+
+2. Installation Steps:
+   a) Clone the repository:
+      git clone https://github.com/wrteamdev/ebroker-docs.git
+      cd ebroker-docs
+
+   b) Install dependencies:
+      Using npm:  npm install
+      Using yarn: yarn install
+
+   c) Start local server:
+      Using npm:  npm start
+      Using yarn: yarn start
+
+   d) Access documentation:
+      Open your browser and visit: http://localhost:3000
+
+3. Building for Production:
+   Using npm:  npm run build
+   Using yarn: yarn build
+
+🔧 TROUBLESHOOTING
+----------------
+• If images are not displaying: Verify image paths in markdown files
+• If build fails: Ensure all dependencies are properly installed
+• For server issues: Clear browser cache and restart the server
+• For Node.js version issues: Use nvm (Node Version Manager) to switch versions
+
+🤝 SUPPORT & CONTACT
+------------------
+We're here to help! Reach out through any of these channels:
+
+• Official Website: https://wrteam.in/
+• Support Email: support@wrteam.in
+• Contact Form: https://wrteam.in/contact-us/
+• Working Hours: Monday to Friday, 9:00 AM - 6:00 PM (IST)
+
+Additional Support Resources:
+• Documentation Issues: Create an issue on GitHub
+• Technical Support: Premium support available for enterprise customers
+• Community Forum: Join our community for discussions and help
+
+📱 SOCIAL MEDIA
+-------------
+Follow us for updates and announcements:
+• LinkedIn: https://www.linkedin.com/company/wrteam/
+• Twitter: @wrteam
+• Facebook: /wrteam
+
+-------------------
+Made with ❤️ by WRTeam
+For any queries, contact us at support@wrteam.in
+------------------- 

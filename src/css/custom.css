@@ -1,0 +1,68 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #087c7c;
+  --ifm-color-primary-dark: #077070;
+  --ifm-color-primary-darker: #066969;
+  --ifm-color-primary-darkest: #055757;
+  --ifm-color-primary-light: #098888;
+  --ifm-color-primary-lighter: #0a9494;
+  --ifm-color-primary-lightest: #0ba6a6;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme="dark"] {
+  --ifm-color-primary: #0ba6a6;
+  --ifm-color-primary-dark: #0a9494;
+  --ifm-color-primary-darker: #098b8b;
+  --ifm-color-primary-darkest: #087c7c;
+  --ifm-color-primary-light: #0cb7b7;
+  --ifm-color-primary-lighter: #0dc4c4;
+  --ifm-color-primary-lightest: #0fdada;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Changelog Styles */
+.changelog-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: var(--ifm-card-background-color);
+  border-radius: 4px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.changelog-item summary {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.changelog-item ul {
+  margin-top: 10px;
+}
+
+.label-added {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.label-improved {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.label-fixed {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.label-migration {
+  color: #6f42c1;
+  font-weight: bold;
+}
