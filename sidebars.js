@@ -68,6 +68,7 @@ export default {
         "app/other-icons",
         "app/connect-admin-panel",
         "app/generate-app",
+        "app/version-history",
       ],
     },
     {
