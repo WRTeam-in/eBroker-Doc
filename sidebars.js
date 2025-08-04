@@ -92,6 +92,7 @@ export default {
         "web/web-logo",
         "web/google-maps-iframe",
         "web/google-adsense",
+        "web/pwa-setup",
         "web/running-project",
         "web/sitemap-setup",
         "web/deployment-without-seo",
