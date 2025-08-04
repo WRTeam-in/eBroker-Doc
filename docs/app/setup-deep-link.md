@@ -30,7 +30,7 @@ Deep linking allows users to open specific content in your eBroker app directly 
 
 2. **Update for Android**:
    - Open `android > app > src > main > AndroidManifest.xml`.
-   - In your `AndroidManifest.xml` file, Update the following with schema you added in admin panel and domain you added in settings.dart:
+   - In your `AndroidManifest.xml` file, Update the following with schema you added in admin panel and domain you added in settings.dart and admin domain as shown in screenshot:
 
 ![Deep Link 3](/images/app/deeplink/manifest_deeplink.png)
    
