@@ -5,7 +5,7 @@ Welcome to the official documentation for eBroker - Your Complete Real Estate Pr
 ## 🌐 Quick Access
 
 Don't want to run locally? Access our documentation directly at:
-**[https://wrteamdev.github.io/ebroker-App-Doc/](https://wrteamdev.github.io/ebroker-App-Doc/)**
+**[https://wrteamdev.github.io/ebroker-App-Doc/](https://wrteamdev.github.io/eBroker-Doc/)**
 
 ## 📑 Documentation Sections
 
