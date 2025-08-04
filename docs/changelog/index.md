@@ -3,6 +3,20 @@ sidebar_position: 1
 title: Changelog
 ---
 
+## Version 1.2.5 (August 04, 2025)
+
+### ✨ Added
+
+- Multi-language support for Title & Description in all required menus
+- Personalized New Listing Notifications (Category Based)
+- Sold & Rented Property Count on Agent Detail Page
+- Article View Count Tracking
+- Subscription Expiry Alerts & Notifications
+
+### 🔄 Improved
+
+- Complete Web & App UI Redesign
+
 ## Version 1.2.4 (May 23, 2025)
 
 ### ✨ Added
@@ -169,5 +183,5 @@ title: Changelog
 ### 🔄 Improved
 - Made SEO settings optional
 
-### �� Fixed
+### 🔁 Fixed
 - Bug Fixes

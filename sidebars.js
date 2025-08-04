@@ -43,6 +43,8 @@ export default {
         "admin/stripe-webhook",
         "admin/flutterwave-setup",
         "admin/unsplash-api-key",
+        "admin/cron-job-setup",
+        "admin/setup-demo-database",
         "admin/update-system-version",
         "admin/support",
         "admin/feedback",
