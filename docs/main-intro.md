@@ -25,7 +25,7 @@ Thank you for purchasing code. It really means a lot and It's our pleasure to se
 
 ### For App
 
-- **Flutter Version:** 3.29.3
+- **Flutter Version:** 3.32.5
 - **Java Version:** JDK version **22**
 
 > **Important Note:** A **VPS server** is only required if you plan to use the web application with **SEO**. However, if you are only using the **web application without SEO, app and the admin panel** you can option for a **shared hosting server** as it is sufficient for these components.
