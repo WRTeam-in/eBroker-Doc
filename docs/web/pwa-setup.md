@@ -1,8 +1,7 @@
-
 # Progressive Web App (PWA) Setup
 
 <!--
-This page explains how to enable and configure PWA features for your eDemand application.
+This page explains how to enable and configure PWA features for your eBroker application.
 -->
 
 <!-- ## On this page
@@ -11,7 +10,7 @@ This page explains how to enable and configure PWA features for your eDemand app
 - [Configuring the Web App Manifest](#configuring-the-web-app-manifest)
 - [Setting Up PWA Icons](#setting-up-pwa-icons)
 - [Testing Your PWA](#testing-your-pwa)
-- [Benefits of PWA for Your eDemand Application](#benefits-of-pwa-for-your-edemand-application) -->
+- [Benefits of PWA for Your eBroker Application](#benefits-of-pwa-for-your-ebroker-application) -->
 
 ---
 
@@ -19,13 +18,13 @@ This page explains how to enable and configure PWA features for your eDemand app
 
 Progressive Web Applications (PWAs) combine the best features of web and mobile apps. They are installable on devices and provide an app-like experience while remaining accessible via web browsers.
 
-Setting up your eDemand application as a PWA enhances user experience by making your service available for installation on devices, providing a more integrated feel with the operating system.
+Setting up your eBroker application as a PWA enhances user experience by making your service available for installation on devices, providing a more integrated feel with the operating system.
 
 ---
 
 ## Enabling PWA Functionality
 
-To enable PWA functionality in your eDemand application, you need to modify the `.env` file:
+To enable PWA functionality in your eBroker application, you need to modify the `.env` file:
 
 ### Step 1: Update the `.env` File
 
@@ -105,7 +104,7 @@ You should see an install prompt on compatible browsers when visiting your site,
 
 ---
 
-## Benefits of PWA for Your eDemand Application
+## Benefits of PWA for Your eBroker Application
 
 - **Installable**: Users can add your app to their home screen without app store requirements
 - **Responsive**: Works on any device with a browser
@@ -116,4 +115,4 @@ You should see an install prompt on compatible browsers when visiting your site,
 - **Re-engageable**: Can use push notifications to re-engage users
 - **Linkable**: Can be shared via URL without requiring installation
 
-> **Note:** While PWAs can provide some caching benefits, the eDemand application requires network connectivity to function properly as it relies on API calls to fetch data.
+> **Note:** While PWAs can provide some caching benefits, the eBroker application requires network connectivity to function properly as it relies on API calls to fetch data.

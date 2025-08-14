@@ -23,7 +23,7 @@ sidebar_position: 1
     <p>Configure Firebase project and authentication</p>
   </a>
   
-   <a href="./pwa-setup.md" className="setup-card">
+   <a href="./pwa-setup" className="setup-card">
     <div className="card-icon">⚡</div>
     <h3>PWA Setup</h3>
     <p>Progressive Web App (PWA) Setup</p>

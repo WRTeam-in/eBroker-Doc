@@ -45,49 +45,36 @@ After uploading the contents of the `out` folder, you also need to add a `.htacc
 
     ```apache
     <IfModule mod_rewrite.c>
-        RewriteEngine On
-        RewriteBase /
-        RewriteRule ^properties-details/([^/]+)/$ properties-details/[slug]/index.html [L]
-        RewriteRule ^my-property/([^/]+)/$ my-property/[slug]/index.html [L]
-        RewriteRule ^agent-details/([^/]+)/$ agent-details/[slug]/index.html [L]
-        RewriteRule ^project-details/([^/]+)/$ project-details/[slug]/index.html [L]
-        RewriteRule ^article-details/([^/]+)/$ article-details/[slug]/index.html [L]
-        RewriteRule ^properties/categories/([^/]+)/$ properties/categories/[slug]/index.html [L]
-        RewriteRule ^properties/city/([^/]+)/$ properties/city/[slug]/index.html [L]
-        RewriteRule ^about-us$ /about-us.html [L]
-        RewriteRule ^all-categories$ /all-categories.html [L]
-        RewriteRule ^articles$ /articles.html [L]
-        RewriteRule ^contact-us$ /contact-us.html [L]
-        RewriteRule ^all-projects$ /all-projects.html [L]
-        RewriteRule ^featured-properties$ /featured-properties.html [L]
-        RewriteRule ^all-agents$ /all-agents.html [L]
-        RewriteRule ^most-viewed-properties$ /most-viewed-properties.html [L]
-        RewriteRule ^mostfav-properties$ /mostfav-properties.html [L]
-        RewriteRule ^privacy-policy$ /privacy-policy.html [L]
-        RewriteRule ^properties/all-properties$ /properties/all-properties.html [L]
-        RewriteRule ^properties-nearby-city$ /properties-nearby-city.html [L]
-        RewriteRule ^search$ /search.html [L]
-        RewriteRule ^subscription-plan$ /subscription-plan.html [L]
-        RewriteRule ^terms-and-condition$ /terms-and-condition.html [L]
-        RewriteRule ^user$ /user.html [L]
-        RewriteRule ^user-register$ /user-register.html [L]
-        RewriteRule ^user/advertisement$ /user/advertisement.html [L]
-        RewriteRule ^user/dashboard$ /user/dashboard.html [L]
-        RewriteRule ^user/edit-property$ /user/edit-property.html [L]
-        RewriteRule ^user/add-project$ /user/add-project.html [L]
-        RewriteRule ^user/edit-project$ /user/edit-project.html [L]
-        RewriteRule ^user/favorites-properties$ /user/favorites-properties.html [L]
-        RewriteRule ^user/notifications$ /user/notifications.html [L]
-        RewriteRule ^user/profile$ /user/profile.html [L]
-        RewriteRule ^user/personalize-feed$ /user/personalize-feed.html [L]
-        RewriteRule ^user/projects$ /user/projects.html [L]
-        RewriteRule ^user/properties$ /user/properties.html [L]
-        RewriteRule ^user/subscription$ /user/subscription.html [L]
-        RewriteRule ^user/transaction-history$ /user/transaction-history.html [L]
-        RewriteRule ^user/interested/([^/]+)/$ user/interested/[slug]/index.html [L]
-        RewriteCond %{REQUEST_FILENAME} !-f
-        RewriteCond %{REQUEST_FILENAME} !-d
-        RewriteRule ^(.*)$ /404/404.html [L]
+    RewriteEngine On
+    RewriteBase /
+
+    RewriteRule ^([^/]+)/property-details/([^/]+)/?$ [locale]/property-details/[slug]/index.html [L]
+    RewriteRule ^([^/]+)/project-details/([^/]+)/?$ [locale]/project-details/[slug]/index.html [L]
+    RewriteRule ^([^/]+)/agent-details/([^/]+)/?$ [locale]/agent-details/[slug]/index.html [L]
+    RewriteRule ^([^/]+)/article-details/([^/]+)/?$ [locale]/article-details/[slug]/index.html [L]
+    RewriteRule ^([^/]+)/compare-properties/([^/]+)/?$ [locale]/compare-properties/[slug]/index.html [L]
+    RewriteRule ^([^/]+)/my-property/([^/]+)/?$ [locale]/my-property/[slug]/index.html [L]
+    RewriteRule ^([^/]+)/my-project/([^/]+)/?$ [locale]/my-project/[slug]/index.html [L]
+    RewriteRule ^([^/]+)/payment/([^/]+)/?$ [locale]/payment/[slug]/index.html [L]
+    RewriteRule ^([^/]+)/all/([^/]+)/?$ [locale]/all/[slug]/index.html [L]
+
+    RewriteRule ^([^/]+)/properties/category/([^/]+)/?$ [locale]/properties/category/[slug]/index.html [L]
+    RewriteRule ^([^/]+)/properties/city/([^/]+)/?$ [locale]/properties/city/[slug]/index.html [L]
+    RewriteRule ^([^/]+)/properties/([^/]+)/ [locale]/properties/[slug]/index.html [L]
+    RewriteRule ^([^/]+)/properties/?$ [locale]/properties/index.html [L]
+    RewriteRule ^([^/]+)/projects/featured-projects/?$ [locale]/projects/featured-projects/index.html [L]
+    RewriteRule ^([^/]+)/projects/ [locale]/projects/index.html [L]
+    RewriteRule ^([^/]+)/user/(.+)/?$ [locale]/user/[...slug]/index.html [L]
+
+    RewriteRule ^([^/]+)/(about-us|contact-us|faqs|privacy-policy|terms-and-conditions|subscription-plan|search|all-personalized-feeds|properties-on-map)/?$ [locale]/$2/index.html [L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^([^/]+)/?$ [locale]/index.html [L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.\*)$ /404.html [L]
     </IfModule>
     ```
 

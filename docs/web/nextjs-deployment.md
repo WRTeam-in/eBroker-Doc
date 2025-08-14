@@ -43,7 +43,8 @@ PM2 is a production process manager for Node.js applications. Install it globall
 ```bash
 npm install pm2 -g
 ```
-<!-- 
+
+<!--
 ## Configuring Apache Proxy
 
 Before configuring Apache, enable the necessary modules:
