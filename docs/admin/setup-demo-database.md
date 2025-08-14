@@ -19,7 +19,7 @@ Follow these main steps to set up the eBroker demo database:
    * Remove all existing tables and data from your target database.
 
 3. **Import the Demo SQL File**  
-   * **Download:** [demo-database-latest.sql](https://drive.google.com/file/d/1WF4f0khyOsd_4_ThwqKAX0YHQzo6xRg0/view?usp=sharing)  
+   * **Download:** [demo-database-latest.sql](https://drive.google.com/file/d/1LZck51sGJjhte8q-kPr3CYz-CMrveTqk/view?usp=sharing)  
    * Import this file into your empty database using phpMyAdmin.
 
 4. **Download Demo Images**  

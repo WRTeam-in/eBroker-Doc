@@ -15,19 +15,21 @@ Access your server via SSH or through your Server Panel's Cron Jobs section.
 
 Choose one of the following methods based on your server configuration:
 
+> Schedule frequency: set the cron to run every minute using `* * * * *`.
+
 #### Method 1: Using CURL (If CURL is installed)
 ```bash
-* * * * * curl -s "https://ebroker.wrteam.me/run-scheduler" > /dev/null 2>&1
+curl -s "https://ebroker.wrteam.me/run-scheduler" > /dev/null 2>&1
 ```
 
 #### Method 2: Using WGET (If CURL is not installed)
 ```bash
-* * * * * wget -q "https://ebroker.wrteam.me/run-scheduler" > /dev/null 2>&1
+wget -q "https://ebroker.wrteam.me/run-scheduler" > /dev/null 2>&1
 ```
 
 #### Method 3: Using PHP Command (If URL scheduler is not working)
 ```bash
-* * * * * cd /home/u863526903/domains/thewrteam.in/public_html/dev-ebroker && php artisan schedule:run >> /dev/null 2>&1
+cd /home/u863526903/domains/thewrteam.in/public_html/dev-ebroker && php artisan schedule:run
 ```
 
 ## Important Notes
