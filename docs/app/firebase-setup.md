@@ -79,23 +79,6 @@ cd android
 
 ![Add SHA Key](/images/app/add_sha_key.png)
 
-## Setup Notifications
-
-1. Get the server key from your Firebase project
-2. Go to Project Settings → Cloud Messaging → Manage API on Google Cloud Console
-
-![Enable FCM](/images/app/enable_fcm.png)
-
-![FCM Server Key](/images/app/fcm_server_key.png)
-
-3. Copy the server key:
-
-![FCM Server Key Get](/images/app/fcm_server_key_get.png)
-
-4. Set the key in your admin panel's Notification FCM key field:
-
-![FCM Set Admin](/images/app/fcm_set_admin.png)
-
 ### iOS Notification Setup
 
 For iOS devices, complete these additional steps:
