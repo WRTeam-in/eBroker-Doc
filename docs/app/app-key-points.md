@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ## System Requirements
 
-- Flutter Version: 3.29.3
+- Flutter Version: 3.32.5
 - Java Version: JDK 22
 - Firebase account
 
