@@ -17,7 +17,7 @@ Adding support for multiple languages is essential for reaching a global audienc
 
 You can use any translation service to create new language files. We recommend:
 
-1. [IBM Language Translator](https://www.ibm.com/demos/live/watson-language-translator/self-service/home) for automated translations
+1. Use any online JSON translator for automated translations
 2. Professional translation services for more accurate results
 
 You'll need to translate three sets of files:

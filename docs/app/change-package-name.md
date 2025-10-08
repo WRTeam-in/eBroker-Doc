@@ -6,15 +6,16 @@ sidebar_position: 4
 
 Changing your app's package name is a crucial step, especially before setting up Firebase. Follow these steps:
 
-## Update in settings.dart
+## Method 1: Update in settings.dart
 
 1. Navigate to `lib > settings.dart` in your project
 2. Find the variable named `androidPackageName="Your package name"`
 3. Update the text inside the quotes with your desired package name (e.g., "com.yourcompany.appname")
+4. Globally find the package name in app code and replace it with your package name.
 
 ![Package Name](/images/app/package_name.png)
 
-## Using Rename Package
+## Method 2: Using Rename Package
 
 To properly change the package name throughout your app, run this command in your terminal:
 

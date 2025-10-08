@@ -8,11 +8,11 @@ Your app icon is a crucial branding element. Follow these steps to change it:
 
 ## Using flutter_launcher_icons Package
 
-1. Add your icon to the designated folder and rename it to `icon.png`
+1. Add your icon to the designated folder and rename it to `ic_launcher.png`
 
    ![App Icon Folder](/images/app/app_icon_folder.png)
 
-   > **Important:** Make sure the icon name is exactly `icon.png`
+   > **Important:** Make sure the icon name is exactly `ic_launcher.png`
 
 2. Run this command in your terminal to update all the app icons:
 
