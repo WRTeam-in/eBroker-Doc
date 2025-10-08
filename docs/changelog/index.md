@@ -3,6 +3,20 @@ sidebar_position: 1
 title: Changelog
 ---
 
+## Version 1.2.6 (October 08, 2025)
+
+### ✨ Added
+
+- Appointment module across admin, web, and app
+- AI-powered natural language search for properties (e.g., "properties in Dubai", "1 BHK properties")
+- Advanced nearby places filter on property list (e.g., select place type like school and set distance)
+- Admin panel menu search to quickly find settings and sections (e.g., Razorpay, Properties, Email Configuration)
+- Agent dashboard with statistics (web)
+
+### 🔄 Improved
+
+- Google API requests handled in backend with caching for location-related features (property listing, project listing, home page location selection)
+
 ## Version 1.2.5 (August 04, 2025)
 
 ### ✨ Added
