@@ -4,7 +4,7 @@ title: Changelog
 ---
 
 ## Version 1.2.6 (October 08, 2025)
-
+ 
 ### ✨ Added
 
 - Appointment module across admin, web, and app
