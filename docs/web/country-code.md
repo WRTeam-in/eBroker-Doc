@@ -12,7 +12,7 @@ Setting a default country code for your eBroker web application helps streamline
 2. Locate the default country code variable
 3. Set it to your preferred country code (e.g., "IN" for India, "US" for the United States)
 
-![Default Country Code](/images/web/default_country_code-v-1.0.9.png)
+![Default Country Code](/images/web/default_country_code_v-1.2.6.png)
 
 ## Why Set a Default Country Code?
 

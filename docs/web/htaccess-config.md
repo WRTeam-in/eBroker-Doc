@@ -1,3 +1,7 @@
+---
+sidebar_position: 23
+---
+
 # .htaccess Configuration
 
 This guide explains how to configure your Apache web server for both static and dynamic (SEO-enabled) deployments of the eBroker web application using .htaccess rules.
@@ -29,7 +33,7 @@ This guide explains how to configure your Apache web server for both static and 
     RewriteRule ^([^/]+)/properties/?$ [locale]/properties/index.html [L]
     RewriteRule ^([^/]+)/projects/featured-projects/?$ [locale]/projects/featured-projects/index.html [L]
     RewriteRule ^([^/]+)/projects/ [locale]/projects/index.html [L]
-    RewriteRule ^([^/]+)/user/(.+)/?$ [locale]/user/[slug]/index.html [L]
+    RewriteRule ^([^/]+)/user/(.+)/?$ [locale]/user/[...slug]/index.html [L]
     RewriteRule ^([^/]+)/(about-us|contact-us|faqs|privacy-policy|terms-and-conditions|subscription-plan|search|all-personalized-feeds|properties-on-map)/?$ [locale]/$2/index.html [L]
 
     RewriteCond %{REQUEST_FILENAME} !-f
@@ -45,7 +49,6 @@ This guide explains how to configure your Apache web server for both static and 
 
 ### Option 2: Reverse Proxy with SEO Optimization
 
-
 ```apache
 # ============================================================
 # OPTION 2: REVERSE PROXY WITH SEO OPTIMIZATION
@@ -53,17 +56,17 @@ This guide explains how to configure your Apache web server for both static and 
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
-    
+
     # Allow SSL certificate verification
     RewriteRule ^.well-known/acme-challenge/(.*) /.well-known/acme-challenge/$1 [L]
-    
+
     # Handle Next.js static files
     RewriteRule ^_next/(.*) /.next/$1 [L]
-    
+
     # Allow direct access to common static files
     RewriteCond %{REQUEST_URI} \.(js|css|svg|jpg|jpeg|png|gif|ico)$
     RewriteRule ^ - [L]
-    
+
     # Forward all other requests to Node.js server
     RewriteRule ^index.html http://127.0.0.1:8001/$1 [P]
     RewriteRule ^index.php http://127.0.0.1:8001/$1 [P]
@@ -73,20 +76,24 @@ This guide explains how to configure your Apache web server for both static and 
 
 ## Important Notes
 
-1. **Port Configuration**: 
+1. **Port Configuration**:
+
    - Make sure the Node.js server port (8001) matches your `package.json` configuration
    - Update the port in the configurations if you're using a different port
 
 2. **SSL/HTTPS**:
+
    - For production, always use HTTPS
    - Configure SSL certificates in your Apache virtual host configuration
 
 3. **File Permissions**:
+
    - Ensure proper file permissions for your web server
    - Apache should have read access to all files
    - Node.js process should have necessary permissions for dynamic content
 
 4. **Performance Tips**:
+
    - Enable gzip compression in Apache configuration
    - Set appropriate cache headers for static content
    - Use CDN for static assets in production
@@ -96,4 +103,4 @@ This guide explains how to configure your Apache web server for both static and 
    - Verify that mod_rewrite is enabled for Apache
    - Make sure mod_proxy is enabled when using Option 2 (Reverse Proxy)
 
-Remember to restart your Apache web server after making changes to these configurations. 
+Remember to restart your Apache web server after making changes to these configurations.

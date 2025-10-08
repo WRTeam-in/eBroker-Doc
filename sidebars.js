@@ -57,7 +57,7 @@ export default {
       type: "category",
       label: "App Documentation",
       items: [
-        
+
         "app/app-key-points",
         "app/change-app-name",
         "app/change-package-name",
@@ -91,6 +91,7 @@ export default {
         "web/social-media",
         "web/country-code",
         "web/color-customization",
+        "web/font-customization",
         "web/web-logo",
         "web/google-maps-iframe",
         "web/google-adsense",

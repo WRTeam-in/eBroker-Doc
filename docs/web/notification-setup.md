@@ -25,7 +25,7 @@ To enable web push notifications, you need to set up VAPID (Voluntary Applicatio
 2. Find the VAPID API key variable
 3. Paste your VAPID key into this variable
 
-![VAPID API Configuration](/images/web/vapid_api-v-1.0.9.png)
+![VAPID API Configuration](/images/web/vapid-api-v-1.2.6.png)
 
 ## Testing Notifications
 

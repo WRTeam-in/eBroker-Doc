@@ -9,11 +9,11 @@ The favicon is the small icon that appears in browser tabs, bookmarks, and other
 ## Changing the Favicon
 
 1. Navigate to the `pages` folder in your project
-2. Open the `_app.js` file
+2. Open the `_document.js` file
 3. Locate the favicon link tag in the file
 4. Update the path to your custom favicon
 
-![Change Icon](/images/web/changeIcon.png)
+![Change Favicon](/images/web/set-favicon.png)
 
 ## Creating a Favicon
 
@@ -21,8 +21,8 @@ If you need to create a favicon:
 
 1. Prepare a square image that represents your brand (ideally 16x16, 32x32, or 64x64 pixels)
 2. Convert it to `.ico` format using an online converter or image editing software
-3. Place the favicon file in your project's public folder
-4. Update the reference in `_app.js` as shown above
+3. Place the favicon file in your project's `public` folder
+4. Update the reference in `_document.js` as shown above
 
 ## Multiple Favicon Sizes
 

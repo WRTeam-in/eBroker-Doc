@@ -1,5 +1,5 @@
 ---
-sidebar_position: 15
+sidebar_position: 16
 ---
 
 # Google AdSense Integration
@@ -24,10 +24,10 @@ Integrating Google AdSense with your eBroker web application allows you to monet
 ## Adding the AdSense Script to Your Website
 
 1. Navigate to your project's source files
-2. Open the `src` → `pages` → `_document.js` file
+2. Open the `pages` → `_app.js` file
 3. Add the AdSense script code to the appropriate section
 
-![AdSense Script](/images/web/adsence-script.png)
+![AdSense Script](/images/web/adsense-script.png)
 
 ## Building and Deploying
 

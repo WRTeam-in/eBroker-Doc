@@ -1,3 +1,6 @@
+---
+sidebar_position: 17
+---
 # Progressive Web App (PWA) Setup
 
 <!--

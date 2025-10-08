@@ -21,22 +21,39 @@ To enable location-based features in your web application, you need to set up Go
 2. Locate the Google Maps API key variable
 3. Paste your API key into this variable
 
-![Google API Configuration](/images/web/google_api-v-1.0.9.png)
+![Google API Configuration](/images/web/google-maps-api-v-1.2.6.png)
 
 ## Enabling Required Google APIs
 
-For full functionality, you'll need to enable these Google APIs for your project:
+- For full functionality, you'll need to enable `Maps JavaScript API` for your project from Google Cloud Console, go to "APIs & Services" > "Library"
 
-- Maps JavaScript API
-- Places API
-- Geocoding API
-- Geolocation API
+## Restricting Google Maps API Key
 
-To enable these APIs:
+To prevent abusive use of google maps api key, you have to add http referrers to your project's google maps api key in the google cloud console.
+To restrict follow the steps below :-
 
-1. In the Google Cloud Console, go to "APIs & Services" > "Library"
-2. Search for each API listed above
-3. Select each API and click "Enable"
+1. Select your project in [Google Cloud Console](https://console.cloud.google.com/) (as shown in the below image) and navigate to "APIs & Services" > "Credentials".
+
+![Restricting API Key S1](/images/web/restrict-map-key-s1.png)
+
+2. Create a new API Key (image attached below for help).
+
+![Restricting API Key S2](/images/web/restrict-map-key-s2.png)
+
+3. Name your Maps API key, select `Application Restrictions` as `Websites`, now add your website's url without `https://` (make sure to add `/*` at the end) and click `Done`.
+
+   Note :- (optionally you can add `localhost:3000/*`, if you want to test google maps in your local environment. But make sure you remove it while deploying website in production environment)
+
+![Restricting API Key S3](/images/web/restrict-map-key-s3.png)
+
+4. Scroll down and select `API Restrictions` to `Restrict Key`, click and open the dropdown and type for `Maps Javascript API` and select that checkbox, hit save button after you see `Maps Javascript API` in `Selected APIs` i.e. the restricted api keys list.
+
+![Restricting API Key S4](/images/web/restrict-map-key-s4.png)
+
+5. After saving the restrictions, click on show key and copy the api key you've just restricted.Now paste it in your website code's `.env` file as value of `NEXT_PUBLIC_GOOGLE_MAPS_API`.
+
+![Restricting API Key S5](/images/web/restrict-map-key-s5.png)
+![Add Restricted API Key](/images/web/add-restricted-key.png)
 
 ## Verifying Setup
 

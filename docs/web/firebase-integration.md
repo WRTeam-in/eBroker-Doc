@@ -61,7 +61,7 @@ After registering, Firebase provides the necessary configuration details. You ne
     NEXT_PUBLIC_MEASUREMENT_ID=YOUR_MEASUREMENT_ID # Optional, if available
     ```
 
-    ![Firebase .env File Configuration Example](/images/web/firebase-v-1.0.9.png) 
+    ![Firebase .env File Configuration Example](/images/web/firebase-v-1.2.6.png) 
 
 
 ## Step 4: Add Authorized Domain for Authentication
