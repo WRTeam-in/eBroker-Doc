@@ -3,6 +3,26 @@ sidebar_position: 1
 title: Changelog
 ---
 
+## Version 1.2.7 (October 14, 2025)
+
+### ✨ Added
+
+- Articles section on the home screen in App (same as web)
+
+### 🔄 Improved
+
+- Optimized homepage initialization and data loading logic for improved performance.
+- Enhanced SEO management system for better meta handling and overall search visibility.
+- Updated UI of properties on the map screen for a cleaner and more consistent look.
+
+### 🔁 Fixed
+
+- Corrected rent duration label display for rental properties to ensure accurate information representation.
+
+### ⏪ Rollback
+
+- AI-powered natural language search for properties (e.g., "properties in Dubai", "1 BHK properties") has been rolled back across the entire system (Admin, Web, and App) for further optimization and performance improvements.
+
 ## Version 1.2.6 (October 08, 2025)
  
 ### ✨ Added
