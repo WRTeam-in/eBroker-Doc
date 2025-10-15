@@ -10,7 +10,7 @@ pagination_next: admin/system-configurations
    i. database name  
    ii. database username  
    iii. database password
-3. Upload your downloaded admin panel zip in your server, unzip it, head to php code (version) folder, and move your all files to your root domain path  
+3. Upload your downloaded admin panel zip in your server, unzip it, Upload Fresh installation zip file in server and extract zip in server
    Note:- .htaccess file is necessary, check that it exists, if not, on the hidden file option and move to your admin panel's root file
 4. Now navigate to the url where your project is located.  
    ex. mydomain.com or subdomain.mydomain.com
