@@ -29,11 +29,14 @@ This guide explains how to configure your Apache web server for both static and 
 
     RewriteRule ^([^/]+)/properties/category/([^/]+)/?$ [locale]/properties/category/[slug]/index.html [L]
     RewriteRule ^([^/]+)/properties/city/([^/]+)/?$ [locale]/properties/city/[slug]/index.html [L]
-    RewriteRule ^([^/]+)/properties/([^/]+)/ [locale]/properties/[slug]/index.html [L]
+    RewriteRule ^([^/]+)/properties/(featured-properties|most-viewed-properties|most-favourite-properties|properties-nearby-city)/?$ [locale]/properties/[slug]/index.html [L]
     RewriteRule ^([^/]+)/properties/?$ [locale]/properties/index.html [L]
+
     RewriteRule ^([^/]+)/projects/featured-projects/?$ [locale]/projects/featured-projects/index.html [L]
-    RewriteRule ^([^/]+)/projects/ [locale]/projects/index.html [L]
+    RewriteRule ^([^/]+)/projects/?$ [locale]/projects/index.html [L]
+
     RewriteRule ^([^/]+)/user/(.+)/?$ [locale]/user/[...slug]/index.html [L]
+
     RewriteRule ^([^/]+)/(about-us|contact-us|faqs|privacy-policy|terms-and-conditions|subscription-plan|search|all-personalized-feeds|properties-on-map)/?$ [locale]/$2/index.html [L]
 
     RewriteCond %{REQUEST_FILENAME} !-f
@@ -78,29 +81,29 @@ This guide explains how to configure your Apache web server for both static and 
 
 1. **Port Configuration**:
 
-   - Make sure the Node.js server port (8001) matches your `package.json` configuration
-   - Update the port in the configurations if you're using a different port
+    - Make sure the Node.js server port (8001) matches your `package.json` configuration
+    - Update the port in the configurations if you're using a different port
 
 2. **SSL/HTTPS**:
 
-   - For production, always use HTTPS
-   - Configure SSL certificates in your Apache virtual host configuration
+    - For production, always use HTTPS
+    - Configure SSL certificates in your Apache virtual host configuration
 
 3. **File Permissions**:
 
-   - Ensure proper file permissions for your web server
-   - Apache should have read access to all files
-   - Node.js process should have necessary permissions for dynamic content
+    - Ensure proper file permissions for your web server
+    - Apache should have read access to all files
+    - Node.js process should have necessary permissions for dynamic content
 
 4. **Performance Tips**:
 
-   - Enable gzip compression in Apache configuration
-   - Set appropriate cache headers for static content
-   - Use CDN for static assets in production
+    - Enable gzip compression in Apache configuration
+    - Set appropriate cache headers for static content
+    - Use CDN for static assets in production
 
 5. **Troubleshooting**:
-   - Check Apache error logs if you encounter issues
-   - Verify that mod_rewrite is enabled for Apache
-   - Make sure mod_proxy is enabled when using Option 2 (Reverse Proxy)
+    - Check Apache error logs if you encounter issues
+    - Verify that mod_rewrite is enabled for Apache
+    - Make sure mod_proxy is enabled when using Option 2 (Reverse Proxy)
 
 Remember to restart your Apache web server after making changes to these configurations.

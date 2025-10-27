@@ -1,7 +1,6 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
-
     RewriteRule ^([^/]+)/property-details/([^/]+)/?$ [locale]/property-details/[slug]/index.html [L]
     RewriteRule ^([^/]+)/project-details/([^/]+)/?$ [locale]/project-details/[slug]/index.html [L]
     RewriteRule ^([^/]+)/agent-details/([^/]+)/?$ [locale]/agent-details/[slug]/index.html [L]
@@ -14,10 +13,12 @@
 
     RewriteRule ^([^/]+)/properties/category/([^/]+)/?$ [locale]/properties/category/[slug]/index.html [L]
     RewriteRule ^([^/]+)/properties/city/([^/]+)/?$ [locale]/properties/city/[slug]/index.html [L]
-    RewriteRule ^([^/]+)/properties/([^/]+)/ [locale]/properties/[slug]/index.html [L]
+    RewriteRule ^([^/]+)/properties/(featured-properties|most-viewed-properties|most-favourite-properties|properties-nearby-city)/?$ [locale]/properties/[slug]/index.html [L]
     RewriteRule ^([^/]+)/properties/?$ [locale]/properties/index.html [L]
+
     RewriteRule ^([^/]+)/projects/featured-projects/?$ [locale]/projects/featured-projects/index.html [L]
-    RewriteRule ^([^/]+)/projects/ [locale]/projects/index.html [L]
+    RewriteRule ^([^/]+)/projects/?$ [locale]/projects/index.html [L]
+
     RewriteRule ^([^/]+)/user/(.+)/?$ [locale]/user/[...slug]/index.html [L]
 
     RewriteRule ^([^/]+)/(about-us|contact-us|faqs|privacy-policy|terms-and-conditions|subscription-plan|search|all-personalized-feeds|properties-on-map)/?$ [locale]/$2/index.html [L]

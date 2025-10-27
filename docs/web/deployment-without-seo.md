@@ -45,36 +45,38 @@ After uploading the contents of the `out` folder, you also need to add a `.htacc
 
     ```apache
     <IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteBase /
+        RewriteEngine On
+        RewriteBase /
+        RewriteRule ^([^/]+)/property-details/([^/]+)/?$ [locale]/property-details/[slug]/index.html [L]
+        RewriteRule ^([^/]+)/project-details/([^/]+)/?$ [locale]/project-details/[slug]/index.html [L]
+        RewriteRule ^([^/]+)/agent-details/([^/]+)/?$ [locale]/agent-details/[slug]/index.html [L]
+        RewriteRule ^([^/]+)/article-details/([^/]+)/?$ [locale]/article-details/[slug]/index.html [L]
+        RewriteRule ^([^/]+)/compare-properties/([^/]+)/?$ [locale]/compare-properties/[slug]/index.html [L]
+        RewriteRule ^([^/]+)/my-property/([^/]+)/?$ [locale]/my-property/[slug]/index.html [L]
+        RewriteRule ^([^/]+)/my-project/([^/]+)/?$ [locale]/my-project/[slug]/index.html [L]
+        RewriteRule ^([^/]+)/payment/([^/]+)/?$ [locale]/payment/[slug]/index.html [L]
+        RewriteRule ^([^/]+)/all/([^/]+)/?$ [locale]/all/[slug]/index.html [L]
 
-    RewriteRule ^([^/]+)/property-details/([^/]+)/?$ [locale]/property-details/[slug]/index.html [L]
-    RewriteRule ^([^/]+)/project-details/([^/]+)/?$ [locale]/project-details/[slug]/index.html [L]
-    RewriteRule ^([^/]+)/agent-details/([^/]+)/?$ [locale]/agent-details/[slug]/index.html [L]
-    RewriteRule ^([^/]+)/article-details/([^/]+)/?$ [locale]/article-details/[slug]/index.html [L]
-    RewriteRule ^([^/]+)/compare-properties/([^/]+)/?$ [locale]/compare-properties/[slug]/index.html [L]
-    RewriteRule ^([^/]+)/my-property/([^/]+)/?$ [locale]/my-property/[slug]/index.html [L]
-    RewriteRule ^([^/]+)/my-project/([^/]+)/?$ [locale]/my-project/[slug]/index.html [L]
-    RewriteRule ^([^/]+)/payment/([^/]+)/?$ [locale]/payment/[slug]/index.html [L]
-    RewriteRule ^([^/]+)/all/([^/]+)/?$ [locale]/all/[slug]/index.html [L]
+        RewriteRule ^([^/]+)/properties/category/([^/]+)/?$ [locale]/properties/category/[slug]/index.html [L]
+        RewriteRule ^([^/]+)/properties/city/([^/]+)/?$ [locale]/properties/city/[slug]/index.html [L]
+        RewriteRule ^([^/]+)/properties/(featured-properties|most-viewed-properties|most-favourite-properties|properties-nearby-city)/?$ [locale]/properties/[slug]/index.html [L]
+        RewriteRule ^([^/]+)/properties/?$ [locale]/properties/index.html [L]
 
-    RewriteRule ^([^/]+)/properties/category/([^/]+)/?$ [locale]/properties/category/[slug]/index.html [L]
-    RewriteRule ^([^/]+)/properties/city/([^/]+)/?$ [locale]/properties/city/[slug]/index.html [L]
-    RewriteRule ^([^/]+)/properties/([^/]+)/ [locale]/properties/[slug]/index.html [L]
-    RewriteRule ^([^/]+)/properties/?$ [locale]/properties/index.html [L]
-    RewriteRule ^([^/]+)/projects/featured-projects/?$ [locale]/projects/featured-projects/index.html [L]
-    RewriteRule ^([^/]+)/projects/ [locale]/projects/index.html [L]
-    RewriteRule ^([^/]+)/user/(.+)/?$ [locale]/user/[...slug]/index.html [L]
+        RewriteRule ^([^/]+)/projects/featured-projects/?$ [locale]/projects/featured-projects/index.html [L]
+        RewriteRule ^([^/]+)/projects/?$ [locale]/projects/index.html [L]
 
-    RewriteRule ^([^/]+)/(about-us|contact-us|faqs|privacy-policy|terms-and-conditions|subscription-plan|search|all-personalized-feeds|properties-on-map)/?$ [locale]/$2/index.html [L]
+        RewriteRule ^([^/]+)/user/(.+)/?$ [locale]/user/[...slug]/index.html [L]
 
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^([^/]+)/?$ [locale]/index.html [L]
+        RewriteRule ^([^/]+)/(about-us|contact-us|faqs|privacy-policy|terms-and-conditions|subscription-plan|search|all-personalized-feeds|properties-on-map)/?$ [locale]/$2/index.html [L]
 
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.\*)$ /404.html [L]
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteRule ^([^/]+)/?$ [locale]/index.html [L]
+
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteRule ^(.\*)$ /404.html [L]
+
     </IfModule>
     ```
 
@@ -107,10 +109,10 @@ After deployment:
 
 If you encounter issues:
 
-- Check your server error logs
-- Verify that all files were uploaded correctly
-- Ensure your hosting environment supports modern JavaScript applications
-- Check if any server configuration is blocking your application (e.g., `.htaccess` rules)
+-   Check your server error logs
+-   Verify that all files were uploaded correctly
+-   Ensure your hosting environment supports modern JavaScript applications
+-   Check if any server configuration is blocking your application (e.g., `.htaccess` rules)
 
 ## Additional Resources
 
