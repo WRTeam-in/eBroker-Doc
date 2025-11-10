@@ -29,7 +29,7 @@ You can use either a restricted two-key setup (recommended) or a single unrestri
 
 - **Option A — Restricted (recommended):**
   - Create API Key 1 (server key) with these APIs enabled: Places API, Geocoding API, Geolocation API.
-  - Restrict API Key 1 by your server IP address(es).
+  - Restrict API Key 1 by your server IP address(es), add ipv4 and ipv6(if exists) addresses.
   - Create API Key 2 (web key) with this API enabled: Maps JavaScript API.
   - Restrict API Key 2 by your website URL (HTTP referrer).
 
