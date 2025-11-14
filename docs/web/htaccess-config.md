@@ -17,31 +17,32 @@ This guide explains how to configure your Apache web server for both static and 
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
-    RewriteRule ^([^/]+)/property-details/([^/]+)/?$ [locale]/property-details/[slug]/index.html [L]
-    RewriteRule ^([^/]+)/project-details/([^/]+)/?$ [locale]/project-details/[slug]/index.html [L]
-    RewriteRule ^([^/]+)/agent-details/([^/]+)/?$ [locale]/agent-details/[slug]/index.html [L]
-    RewriteRule ^([^/]+)/article-details/([^/]+)/?$ [locale]/article-details/[slug]/index.html [L]
-    RewriteRule ^([^/]+)/compare-properties/([^/]+)/?$ [locale]/compare-properties/[slug]/index.html [L]
-    RewriteRule ^([^/]+)/my-property/([^/]+)/?$ [locale]/my-property/[slug]/index.html [L]
-    RewriteRule ^([^/]+)/my-project/([^/]+)/?$ [locale]/my-project/[slug]/index.html [L]
-    RewriteRule ^([^/]+)/payment/([^/]+)/?$ [locale]/payment/[slug]/index.html [L]
-    RewriteRule ^([^/]+)/all/([^/]+)/?$ [locale]/all/[slug]/index.html [L]
 
-    RewriteRule ^([^/]+)/properties/category/([^/]+)/?$ [locale]/properties/category/[slug]/index.html [L]
-    RewriteRule ^([^/]+)/properties/city/([^/]+)/?$ [locale]/properties/city/[slug]/index.html [L]
-    RewriteRule ^([^/]+)/properties/(featured-properties|most-viewed-properties|most-favourite-properties|properties-nearby-city)/?$ [locale]/properties/[slug]/index.html [L]
-    RewriteRule ^([^/]+)/properties/?$ [locale]/properties/index.html [L]
+    RewriteRule ^property-details/([^/]+)/?$ property-details/[slug]/index.html [L]
+    RewriteRule ^project-details/([^/]+)/?$ project-details/[slug]/index.html [L]
+    RewriteRule ^agent-details/([^/]+)/?$ agent-details/[slug]/index.html [L]
+    RewriteRule ^article-details/([^/]+)/?$ article-details/[slug]/index.html [L]
+    RewriteRule ^compare-properties/([^/]+)/?$ compare-properties/[slug]/index.html [L]
+    RewriteRule ^my-property/([^/]+)/?$ my-property/[slug]/index.html [L]
+    RewriteRule ^my-project/([^/]+)/?$ my-project/[slug]/index.html [L]
+    RewriteRule ^payment/([^/]+)/?$ payment/[slug]/index.html [L]
+    RewriteRule ^all/([^/]+)/?$ all/[slug]/index.html [L]
 
-    RewriteRule ^([^/]+)/projects/featured-projects/?$ [locale]/projects/featured-projects/index.html [L]
-    RewriteRule ^([^/]+)/projects/?$ [locale]/projects/index.html [L]
+    RewriteRule ^properties/category/([^/]+)/?$ properties/category/[slug]/index.html [L]
+    RewriteRule ^properties/city/([^/]+)/?$ properties/city/[slug]/index.html [L]
+    RewriteRule ^properties/(featured-properties|most-viewed-properties|most-favourite-properties|properties-nearby-city)/?$ properties/[slug]/index.html [L]
+    RewriteRule ^properties/?$ properties/index.html [L]
 
-    RewriteRule ^([^/]+)/user/(.+)/?$ [locale]/user/[...slug]/index.html [L]
+    RewriteRule ^projects/featured-projects/?$ projects/featured-projects/index.html [L]
+    RewriteRule ^projects/?$ projects/index.html [L]
 
-    RewriteRule ^([^/]+)/(about-us|contact-us|faqs|privacy-policy|terms-and-conditions|subscription-plan|search|all-personalized-feeds|properties-on-map)/?$ [locale]/$2/index.html [L]
+    RewriteRule ^user/(.+)/?$ user/[...slug]/index.html [L]
+
+    RewriteRule ^(about-us|contact-us|faqs|privacy-policy|terms-and-conditions|subscription-plan|search|all-personalized-feeds|properties-on-map)/?$ $1/index.html [L]
 
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^([^/]+)/?$ [locale]/index.html [L]
+    RewriteRule ^([^/]+)/?$ index.html [L]
 
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d

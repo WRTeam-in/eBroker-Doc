@@ -37,14 +37,7 @@ There are three main icons that can be customized via the admin panel:
 ## Icon Management
 
 <div className="row">
-  <div className="col col--6">
-    <div className="card padding--sm">
-      <h4>Login Screen Image</h4>
-      ![Login Screen](/images/app/change_login_screen_logo.png)
-      <p>Replace image at <code>assets/login_background.png</code><br/>(Keep size under 1MB)</p>
-    </div>
-  </div>
-  <div className="col col--6">
+  <div className="col col--12">
     <div className="card padding--sm">
       <h4>Admin Panel Settings</h4>
       ![Admin Panel](/images/app/change_icons_adminpanel.png)
