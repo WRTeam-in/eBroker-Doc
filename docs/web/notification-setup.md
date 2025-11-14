@@ -19,6 +19,15 @@ To enable web push notifications, you need to set up VAPID (Voluntary Applicatio
 
 ![How to Get VAPID API](/images/web/how-get-vapid-api.png)
 
+## Adding Firebase Credentials to register Service Worker
+
+1. Copy your firebase credentials config of web
+2. Navigate to website source code > `public` > `firebase-messaging-sw.js` file
+3. Place your firebase website project configuration as shown in the image
+4. Additionally, change the clickAction url to your website url
+
+![Firebase Service Worker Configuration](/images/web/firebase-service-worker-setup.png)
+
 ## Configuring VAPID Key in Your Project
 
 1. Open the `.env` file in your project's root directory
@@ -39,17 +48,17 @@ After setting up the VAPID key:
 
 If notifications aren't working:
 
-- Make sure your VAPID key is correctly configured in your `.env` file
-- Check that your Firebase project is properly set up
-- Verify that your browser supports web push notifications
-- Check for permission issues (users must grant notification permissions)
-- Look for errors in the browser console
+-   Make sure your VAPID key is correctly configured in your `.env` file
+-   Check that your Firebase project is properly set up
+-   Verify that your browser supports web push notifications
+-   Check for permission issues (users must grant notification permissions)
+-   Look for errors in the browser console
 
 ## Best Practices
 
 For effective push notifications:
 
-- Only ask for notification permission after establishing user value
-- Keep notifications relevant and timely
-- Allow users to easily manage their notification preferences
-- Don't overwhelm users with too many notifications
+-   Only ask for notification permission after establishing user value
+-   Keep notifications relevant and timely
+-   Allow users to easily manage their notification preferences
+-   Don't overwhelm users with too many notifications
