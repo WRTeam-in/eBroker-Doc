@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.1">
 <title data-rh="true">Google AdSense Integration | eBroker Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://wrteam-in.github.io/eBroker-Doc/images/ebroker-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://wrteam-in.github.io/eBroker-Doc/images/ebroker-social-card.jpg"><meta data-rh="true" property="og:url" content="https://wrteam-in.github.io/eBroker-Doc/docs/web/google-adsense/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Google AdSense Integration | eBroker Documentation"><meta data-rh="true" name="description" content="Integrating Google AdSense with your eBroker web application allows you to monetize your website by displaying targeted advertisements. Follow these steps to set up Google AdSense."><meta data-rh="true" property="og:description" content="Integrating Google AdSense with your eBroker web application allows you to monetize your website by displaying targeted advertisements. Follow these steps to set up Google AdSense."><link data-rh="true" rel="icon" href="/eBroker-Doc/images/favicon.ico"><link data-rh="true" rel="canonical" href="https://wrteam-in.github.io/eBroker-Doc/docs/web/google-adsense/"><link data-rh="true" rel="alternate" href="https://wrteam-in.github.io/eBroker-Doc/docs/web/google-adsense/" hreflang="en"><link data-rh="true" rel="alternate" href="https://wrteam-in.github.io/eBroker-Doc/docs/web/google-adsense/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Google AdSense Integration","item":"https://wrteam-in.github.io/eBroker-Doc/docs/web/google-adsense"}]}</script><link rel="stylesheet" href="/eBroker-Doc/assets/css/styles.1b911e3b.css">
-<script src="/eBroker-Doc/assets/js/runtime~main.da54f8a3.js" defer="defer"></script>
+<script src="/eBroker-Doc/assets/js/runtime~main.945fea13.js" defer="defer"></script>
 <script src="/eBroker-Doc/assets/js/main.d2c6b4ef.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -30,14 +30,14 @@
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="adding-the-adsense-script-to-your-website">Adding the AdSense Script to Your Website<a href="#adding-the-adsense-script-to-your-website" class="hash-link" aria-label="Direct link to Adding the AdSense Script to Your Website" title="Direct link to Adding the AdSense Script to Your Website" translate="no">​</a></h2>
 <ol>
 <li>Navigate to your project&#x27;s source files</li>
-<li>Open the <code>pages</code> → <code>_app.js</code> file</li>
+<li>Open the <code>pages</code> → <code>_document.js</code> file</li>
 <li>Add the AdSense script code to the appropriate section</li>
 </ol>
-<p><img decoding="async" loading="lazy" alt="AdSense Script" src="/eBroker-Doc/assets/images/adsense-script-913d2825f74c0bb1409f19a6028bebd9.png" width="1920" height="1049" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="AdSense Script" src="/eBroker-Doc/assets/images/adsense-script-bddc6d8049cfbf10546191de34bf7708.png" width="1919" height="1046" class="img_ev3q"></p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="building-and-deploying">Building and Deploying<a href="#building-and-deploying" class="hash-link" aria-label="Direct link to Building and Deploying" title="Direct link to Building and Deploying" translate="no">​</a></h2>
 <p>After adding the AdSense script:</p>
 <ol>
-<li>Run the command <code>npm run export</code> to build your project</li>
+<li>Run the command <code>npm run export</code> if <code>NEXT_PUBLIC_SEO=false</code> in your .env file to build your project</li>
 <li>Upload the generated files to your server</li>
 <li>Return to Google AdSense and click the &quot;Verify&quot; button</li>
 </ol>
