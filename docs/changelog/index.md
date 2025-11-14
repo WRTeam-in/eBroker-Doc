@@ -3,6 +3,52 @@ sidebar_position: 1
 title: Changelog
 ---
 
+## Version 1.2.8 (November 14, 2025)
+
+### ✨ Added
+
+- Dynamic Banner Ads
+- Phone login with password
+- Admin can create users for frontend by email and password
+- Allowed Admin to assign packages to users
+- Added translations in Privacy Policy, Terms & Conditions, and About Us pages
+- Allowed plan re-purchase/renewal even if limit reached before expiry
+- City images with different styles and new UI
+- Web: All Properties section with Load More on homepage
+- App: SEO section in the dropdown
+
+### 🔄 Improved
+
+- General
+  - Admin can edit user's listing with reason
+  - Users can edit their properties in all statuses except Sold and Rented
+  - Added slug_id and id parameter filters for Projects API (SEO meta without token)
+  - Email login toggle in admin settings and settings API
+  - Renamed Social Login to Google/Apple Login in admin settings
+  - Changed login flow for better UX
+  - Proper deeplinking implementation for:
+    - Project Details
+    - Agent Details
+    - Chats
+    - Article Details
+  - Property share deeplink handling improvements
+  - Appointment listing filters (status, meeting type)
+  - Show Property / Project / Agent IDs for reference
+  - Language content now editable directly from admin via form
+  - Update See All in homepage to skip lat/long when location-based data is unavailable
+- Web
+  - Changed language structure from /en/ → ?lang=en
+- App
+  - Dark mode home logo and login page image configurable from admin
+  - Improved text area padding
+  - Applied first-letter capitalization to text areas
+
+### 🔁 Fixed
+
+- Property view count: avoid duplicate counts from the same user on the same day; user-level listing counts are cleared every 3 months while overall counts for properties and projects persist
+- XSS attack fixes in all admin forms
+- Web: Fixed Location model alignment in mobile view
+
 ## Version 1.2.7 (October 14, 2025)
 
 ### ✨ Added
