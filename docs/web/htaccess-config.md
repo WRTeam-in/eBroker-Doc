@@ -67,14 +67,15 @@ This guide explains how to configure your Apache web server for both static and 
     # Handle Next.js static files
     RewriteRule ^_next/(.*) /.next/$1 [L]
 
-    # Allow direct access to common static files
-    RewriteCond %{REQUEST_URI} \.(js|css|svg|jpg|jpeg|png|gif|ico)$
+    # Only serve static files directly if they ACTUALLY exist on disk
+    RewriteCond %{REQUEST_URI} \.(js|css|svg|jpg|jpeg|png|gif|ico|webp)$
+    RewriteCond %{REQUEST_FILENAME} -f
     RewriteRule ^ - [L]
 
     # Forward all other requests to Node.js server
-    RewriteRule ^index.html http://127.0.0.1:8001/$1 [P]
-    RewriteRule ^index.php http://127.0.0.1:8001/$1 [P]
-    RewriteRule ^/?(.*)$ http://127.0.0.1:8001/$1 [P]
+    RewriteRule ^index.html$ http://127.0.0.1:8001/$1 [P]
+    RewriteRule ^index.php$ http://127.0.0.1:8001/$1 [P]
+    RewriteRule ^(.*)$ http://127.0.0.1:8001/$1 [P]
 </IfModule>
 ```
 

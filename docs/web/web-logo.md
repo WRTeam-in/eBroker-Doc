@@ -11,9 +11,9 @@ Customizing your web logo is essential for establishing brand identity on your e
 1. Log in to your admin panel
 2. Navigate to **Settings → Web settings → Image Settings**
 3. You can customize three different logo types:
-   - **Main Logo**: Appears in the header/navigation bar
-   - **Footer Logo**: Displayed in the website footer
-   - **Placeholder Image**: Used when no other image is available
+    - **Main Logo**: Appears in the header/navigation bar
+    - **Footer Logo**: Displayed in the website footer
+    - **Placeholder Image**: Used when no other image is available
 
 ![Change Logo](/images/web/change-logo.png)
 
@@ -23,21 +23,21 @@ For optimal display, follow these guidelines when preparing your logo files:
 
 ### Main Logo
 
-- Format: PNG or SVG (preferred for best quality)
-- Recommended size: 200px wide, height proportional
-- Transparent background recommended
+-   Format: WebP (preferred for best performance), PNG or SVG (preferred for best quality)
+-   Recommended size: 176px wide, 56px height
+-   Transparent background recommended
 
 ### Footer Logo
 
-- Format: PNG or SVG
-- Usually a white/light version of your logo for dark footer backgrounds
-- Transparent background
+-   Format: WebP or PNG or SVG
+-   Usually a white/light version of your logo for dark footer backgrounds
+-   Transparent background
 
 ### Placeholder Image
 
-- Format: PNG or JPG
-- Used when property images or other content images are unavailable
-- Should contain your branding
+-   Format: WebP or PNG or JPG
+-   Used when property images or other content images are unavailable
+-   Should contain your branding
 
 ## Uploading Your Logos
 
