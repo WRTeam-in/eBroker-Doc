@@ -24,7 +24,7 @@ Follow these main steps to set up the eBroker demo database:
 
 4. **Download Demo Images**  
    * **Download:** [demo-images.zip](https://drive.google.com/file/d/1Hfb6auZEPqfh4qvNUr17YCRMXThEiEEr/view?usp=sharing)  
-   * Extract file to your Admin project -> public -> images. Under Images folder extract your file
+   * Extract file to your Admin Storage -> app -> public. Under Public folder extract your file
 
 5. **Default Admin Credentials**  
    * **Email:** `admin@gmail.com`  
@@ -33,15 +33,6 @@ Follow these main steps to set up the eBroker demo database:
 :::warning Important
 The demo data and credentials are for testing and learning purposes only. Do not use them in production environments.
 :::
-
-## Demo Images Setup
-
-After downloading the demo images:
-
-1. **Property Images:** Upload to `/public/images/properties/`
-2. **Profile Images:** Upload to `/public/images/profiles/`
-3. **Category Icons:** Upload to `/public/images/categories/`
-4. **Other Assets:** Upload to respective directories as per folder structure
 
 ## Troubleshooting
 
