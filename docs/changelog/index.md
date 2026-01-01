@@ -3,6 +3,50 @@ sidebar_position: 1
 title: Changelog
 ---
 
+## Version 1.2.9 (January 01, 2026)
+
+### ✨ Added
+
+- Location‑based home slider with type support for Properties
+- Fast image loading with low‑quality blur placeholders
+  - Applied to: Property title image and Project title image
+  - Not applied to galleries or other images
+- AI‑assisted Content Generation
+  - Generate Description, Meta Title, Meta Description and Meta Keywords for Properties & Projects
+  - Uses Gemini (configurable in Admin → Settings → System → Gemini AI)
+  - Designed to minimize requests for production API keys (cost‑aware)
+- Image watermarking for uploads (`jpg`, `jpeg`, `png`, `webp`)
+  - Modules
+    - Property: title image, gallery images
+    - Project: title image, gallery images, floor images (supported extensions)
+- Admin side‑menu redesign for better usability
+- Multiple payment gateways can be enabled simultaneously
+
+### 🔄 Improved
+
+- Homepage performance: significantly faster initial load; reviewed location‑based data loading
+- Static notification label translations
+- WebP added as an allowed image extension across all uploads
+
+### 🔁 Fixed
+
+- Admin sidebar mobile view layout issues
+
+### 📦 Migration / Ops Notes
+
+- All images moved from `public/` to Laravel Storage
+  - Ensure storage symlink is present (`php artisan storage:link`)
+  - Review and verify uploads/paths across modules:
+    - Facilities, Categories, Nearby places
+    - Customer profiles, Verify form files
+    - Property: image, gallery, meta image, documents, 3D images
+    - Project: image, gallery, meta image, documents, floor plans
+    - City images, Ad banners, Chat files, Sliders, Articles, Notifications
+    - Settings → all logos, SEO settings, Firebase notification, Admin profile
+    - Bank receipts
+
+---
+
 ## Version 1.2.8 (November 14, 2025)
 
 ### ✨ Added
