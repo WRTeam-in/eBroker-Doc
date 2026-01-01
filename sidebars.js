@@ -29,7 +29,7 @@ export default {
         "admin/privacy-policy",
         "admin/terms-conditions",
         "admin/about-us",
-        // "admin/gemini-ai-setup",
+        "admin/gemini-ai-setup",
         "admin/maps-setup",
         "admin/firebase-settings",
         "admin/twilio-settings",
