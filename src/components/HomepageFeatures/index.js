@@ -2,6 +2,7 @@ import clsx from "clsx";
 import Heading from "@theme/Heading";
 import styles from "./styles.module.css";
 import Link from "@docusaurus/Link";
+import DocBanner from "../../../DocBanner";
 
 const FeatureList = [
   {
@@ -75,11 +76,12 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="row" style={{rowGap: "1rem"}}>
+        <div className="row" style={{ rowGap: "1rem" }}>
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
         </div>
+        <DocBanner />
       </div>
     </section>
   );
