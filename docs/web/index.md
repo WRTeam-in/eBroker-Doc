@@ -4,6 +4,10 @@ sidebar_position: 1
 
 # Website Setup
 
+import DocBanner from '@site/src/components/DocBanner/DocBanner';
+
+<DocBanner />
+
 <div className="setup-grid">
   <a href="./installation-setup" className="setup-card">
     <div className="card-icon">📋</div>

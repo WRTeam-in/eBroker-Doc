@@ -2,7 +2,7 @@ import clsx from "clsx";
 import Heading from "@theme/Heading";
 import styles from "./styles.module.css";
 import Link from "@docusaurus/Link";
-import DocBanner from "../../../DocBanner";
+import DocBanner from "../DocBanner/DocBanner";
 
 const FeatureList = [
   {

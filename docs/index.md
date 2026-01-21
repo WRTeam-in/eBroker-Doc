@@ -3,6 +3,10 @@ sidebar_position: 1
 slug: /introduction
 ---
 
+import DocBanner from '@site/src/components/DocBanner/DocBanner';
+
+<DocBanner />
+
 # We Provide
 
 Welcome to the eBroker documentation. Here you can find comprehensive guides for all components of the eBroker platform.

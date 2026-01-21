@@ -2,6 +2,10 @@
 sidebar_position: 1
 ---
 
+import DocBanner from '@site/src/components/DocBanner/DocBanner';
+
+<DocBanner />
+
 # Introduction
 
 Thank you for purchasing code. It really means a lot and It's our pleasure to serve top-notch service to you. Thank you so much for choosing [WRTeam](https://wrteam.in/). If you have trouble with the code and documentation please contact to our Support Team [Here](#support).

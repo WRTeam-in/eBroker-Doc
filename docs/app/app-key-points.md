@@ -4,6 +4,10 @@ sidebar_position: 2
 
 # eBroker App - Key Points
 
+import DocBanner from '@site/src/components/DocBanner/DocBanner';
+
+<DocBanner />
+
 ## System Requirements
 
 -   Flutter Version: 3.35.7

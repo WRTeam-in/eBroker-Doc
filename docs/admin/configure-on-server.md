@@ -5,6 +5,10 @@ pagination_next: admin/system-configurations
 
 # Configure on your server
 
+import DocBanner from '@site/src/components/DocBanner/DocBanner';
+
+<DocBanner />
+
 1. Create your domain or subdomain in your hosting
 2. Create an empty database in your hosting and remember this credentials:  
    i. database name  

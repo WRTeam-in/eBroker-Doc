@@ -5,6 +5,9 @@ slug: /
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import DocBanner from '@site/src/components/DocBanner/DocBanner';
+
+<DocBanner />
 
 # eBroker Documentation
 
