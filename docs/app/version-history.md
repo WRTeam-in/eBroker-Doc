@@ -7,6 +7,7 @@ title: Version Compatibility
 
 | eBroker App Version | Flutter Compatible With App Version |
 | ------------------- | ----------------------------------- |
+| v1.2.9              | Flutter 3.38.8                      |
 | v1.2.8              | Flutter 3.35.7                      |
 | v1.2.7              | Flutter 3.35.6                      |
 | v1.2.6              | Flutter 3.35.5                      |

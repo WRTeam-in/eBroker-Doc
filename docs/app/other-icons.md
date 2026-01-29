@@ -8,7 +8,7 @@ In addition to the app icon, there are several other important icons you'll need
 
 ## Key Icons to Customize
 
-There are three main icons that can be customized via the admin panel:
+There are three main icons that can be customized:
 
 <div className="row margin-bottom--lg">
   <div className="col col--4">
@@ -55,7 +55,7 @@ There are three main icons that can be customized via the admin panel:
       ![Fallback Icons](/images/app/fallback_icons.png)
       <ul>
         <li>📁 Fallback: For server failure scenarios</li>
-        <li>📁 Logo: Company logo assets</li>
+        <li>📁 App Icons: Company logo assets</li>
         <li>📁 Multi Color SVG: Theme-independent icons</li>
       </ul>
     </div>
@@ -64,10 +64,10 @@ There are three main icons that can be customized via the admin panel:
     <div className="card padding--sm">
       <h4>Icon Specifications</h4>
       <ul>
-        <li>🎨 Splash Logo: 400x400px (PNG/SVG)</li>
-        <li>🏠 Home Logo: 200px width (PNG/SVG)</li>
-        <li>🖼️ Placeholder: 300x300px (PNG)</li>
-        <li>🔐 Login Background: 1080x1920px (PNG, &lt;1MB)</li>
+        <li>🎨 Splash Logo: 400x400px </li>
+        <li>🏠 Home Logo: 200px width </li>
+        <li>🖼️ Placeholder: 300x300px </li>
+        <li>🔐 Login Background: 1080x1920px </li>
       </ul>
       <div className="alert alert--info">
         <p>⚠️ Multi-color SVGs won't change with theme color - create separate versions for different themes</p>

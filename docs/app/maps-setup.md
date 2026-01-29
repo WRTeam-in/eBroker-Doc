@@ -2,9 +2,9 @@
 sidebar_position: 8
 ---
 
-# Map API Key and Place API
+# Map API Key
 
-For location features to work properly in your app, you need to set up Google Maps and Places API. Follow these steps:
+For location features to work properly in your app, you need to set up Google Maps. Follow these steps:
 
 ## Setting up Google Cloud Console
 
@@ -15,7 +15,6 @@ For location features to work properly in your app, you need to set up Google Ma
 
 3. Enable the following APIs from "Enable API and Services":
    - Geocoding API
-   - Places API
    - Geolocation APIs
    - Maps SDK for Android
    - Maps SDK for iOS
@@ -40,19 +39,5 @@ For location features to work properly in your app, you need to set up Google Ma
 3. Replace with your iOS API key
 
 ![iOS Map Key](/images/app/ios_map_key.png)
-
-## Setting Up Places API
-
-For the Places API to work (which enables location search functionality):
-
-1. **Enable billing** on your Google Cloud project
-
-   > **Note:** This is mandatory for Places API to work
-
-2. Copy your API key from Google Cloud Console
-3. Open your admin panel and go to System Settings
-4. Paste the key in the Places API field and save
-
-![Place API Panel](/images/app/place_api_panel.png)
 
 > **Important:** Without enabling a billing account, location search will not work in the app, admin panel, or web application.
