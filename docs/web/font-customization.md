@@ -4,32 +4,63 @@ sidebar_position: 13
 
 # Font Customization
 
-Customizing your eBroker web application's typography reinforces your brand identity and enhances readability across the platform.
+## Step 1: Choose your font
 
-## Customizing Website Font
+1. Go to [Google Fonts](https://fonts.google.com/) and pick a font
+2. Note the exact font name (e.g., "Inter", "Roboto", "Poppins")
 
-1. Go to [Google Fonts](https://fonts.google.com/) and search for your desired font family.
+   :::caution IMPORTANT
+   The font name must match Google Fonts exactly (case-sensitive)
+   :::
 
-![Font Change S1](/images/web/font-change-s1.png)
+## Step 2: Update the import
 
-2. Click on searched font, then click on "Get font" > "Get embed Code"
+In `pages/_app.js`, change line 16:
 
-![Font Change S2](/images/web/font-change-s2.png)
+Replace `Manrope` with your font name
 
-![Font Change S3](/images/web/font-change-s3.png)
-
-3. Copy the highlighted `<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet" />` tag, navigate to `_document.js` file of `pages/` folder in the website code and paste it there.
-
-![Font Change S4](/images/web/font-change-s4.png)
-
-![Font Change S5](/images/web/font-change-s5.png)
-
-4. Now navigate to `globals.css` file in `src/styles/` folder in website code and change the `--font-family:` css variable to include font style according to the font link tag you've attached.It will look like
-
-```css
-:root {
-  --font-family: "Roboto", sans-serif;
-}
+```javascript
+import { Inter } from "next/font/google";
 ```
 
-![Font Change S6](/images/web/font-change-s6.png)
+## Step 3: Update the font variable name
+
+On line 18, change `const manrope` to match your font:
+
+```javascript
+const inter = Inter({
+```
+
+Use the same name as the import.
+
+## Step 4: Configure font weights
+
+On line 8, update the weight array with the weights you need:
+
+```javascript
+weight: ["300", "400", "500", "600", "700"],
+```
+
+Common options: `["200", "300", "400", "500", "600", "700", "800"]`
+
+:::tip TIP
+Only include weights you'll use. Fewer weights = smaller bundle size.
+:::
+
+## Step 5: Update the className
+
+On line 66, change `manrope.className` to your new variable:
+
+```sh
+inter.className
+```
+
+## Step 6: Test your changes
+
+1. Save the file
+2. Restart your dev server: `npm run dev`
+3. Check your app to see the new font
+
+:::info NOTE
+Keep `subsets: ["latin"]` and `display: "swap"` as shown in the original configuration.
+:::

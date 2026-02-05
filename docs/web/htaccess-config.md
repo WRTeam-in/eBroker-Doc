@@ -68,7 +68,7 @@ This guide explains how to configure your Apache web server for both static and 
     RewriteRule ^_next/(.*) /.next/$1 [L]
 
     # Only serve static files directly if they ACTUALLY exist on disk
-    RewriteCond %{REQUEST_URI} \.(js|css|svg|jpg|jpeg|png|gif|ico|webp)$
+    RewriteCond %{REQUEST_URI} \.(js|css|svg|jpg|jpeg|png|gif|ico|webp|woff2)$
     RewriteCond %{REQUEST_FILENAME} -f
     RewriteRule ^ - [L]
 

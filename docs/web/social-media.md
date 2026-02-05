@@ -19,12 +19,14 @@ Connecting your social media accounts to your eBroker web application helps impr
 
 You can also add links to your mobile app on the App Store and Play Store:
 
-1. In your admin panel, go to **Settings > Web Settings > More Settings**
-2. Find the sections for Play Store and App Store links
+1. In your admin panel, go to **Settings > System Settings > More Settings**
+2. Find the sections for Play Store and App Store Id
 3. Enter the URLs for your mobile app listings
 4. Save your changes
 
 These links will typically appear in the footer of your website and help promote your mobile application.
+
+![Social Media Links 2](/images/web/app_link_settings.png)
 
 ## Best Practices
 
