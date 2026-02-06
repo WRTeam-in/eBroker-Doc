@@ -3,6 +3,34 @@ sidebar_position: 1
 title: Changelog
 ---
 
+## Version 1.3.0 (February 06, 2026)
+
+### ✨ Added
+
+- Payment Gateway Integrations
+  - Cashfree payment gateway
+  - PhonePe payment gateway
+  - Midtrans payment gateway
+- Payment gateway flow migrated to WebView (all SDKs removed from frontend)
+- Demo data setup directly from admin panel
+  - One-time import support for facilities and categories
+  - Batch property import support (up to 8 properties per batch)
+- Advertisement list filters in admin panel
+
+### 🔄 Improved
+
+- Default watermark fallback when no logo is uploaded
+- Featured properties prioritized at the top of the all-properties list
+- Slug generation logic to prevent symbol usage
+- Admin email configuration error handling with clear feedback
+- Google Maps marker updated to resolve deprecated implementation
+
+### 🔁 Fixed
+
+- System user account password reset issue in admin panel
+
+---
+
 ## Version 1.2.9 (January 01, 2026)
 
 ### ✨ Added
