@@ -2,6 +2,23 @@
 sidebar_position: 1
 title: Changelog
 ---
+## Version 1.3.1 (March 10, 2026)
+
+### ✨ **Added**
+
+- Project premium toggle allowing users to add projects as **Premium or Non-Premium** (same as properties)
+- Custom video upload support for **Property and Project** with admin control via **"Show Direct Video Upload"** setting
+- API validation to **block direct video uploads when the admin toggle is disabled**
+- **Pay As You Go** module allowing property/project uploads **without purchasing a package**
+- Admin controls for **Pay As You Go pricing and listing duration** for properties and projects
+- **OTP-based password reset** flow for email login users
+- **Listing expiry system** with time limits for property and project listings
+- **Custom Pages module** allowing admins to create pages from the **Pages menu**
+
+### 🔄 **Improved**
+
+- Custom pages visibility on **Web (Pages dropdown & footer)** and **App (Profile Settings)**
+- **User dashboard updated** to display property and project listing expiry dates
 
 ## Version 1.3.0 (February 06, 2026)
 

@@ -13,10 +13,10 @@ The app version in Flutter has two components:
 - **Version Name**: The user-visible version number (e.g., 1.0.8)
 - **Version Code**: An internal version number (e.g., 23) that increases with each release
 
-For example, in `1.0.8+23`:
+For example, in `1.3.1+37`:
 
-- `1.0.8` is the version name visible to users
-- `+23` is the version code used by app stores
+- `1.3.1` is the version name visible to users
+- `+37` is the version code used by app stores
 
 ## Updating the Version
 
