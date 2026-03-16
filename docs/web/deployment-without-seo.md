@@ -47,23 +47,23 @@ After uploading the contents of the `out` folder, you also need to add a `.htacc
     <IfModule mod_rewrite.c>
         RewriteEngine On
         RewriteBase /
-
         RewriteRule ^property-details/([^/]+)/?$ property-details/[slug]/index.html [L]
         RewriteRule ^project-details/([^/]+)/?$ project-details/[slug]/index.html [L]
-        RewriteRule ^agent-details/([^/]+)/?$ agent-details/[slug]/index.html [L]
+        RewriteRule ^verified-user-details/([^/]+)/?$ verified-user-details/[slug]/index.html [L]
         RewriteRule ^article-details/([^/]+)/?$ article-details/[slug]/index.html [L]
         RewriteRule ^compare-properties/([^/]+)/?$ compare-properties/[slug]/index.html [L]
         RewriteRule ^my-property/([^/]+)/?$ my-property/[slug]/index.html [L]
         RewriteRule ^my-project/([^/]+)/?$ my-project/[slug]/index.html [L]
         RewriteRule ^payment/([^/]+)/?$ payment/[slug]/index.html [L]
         RewriteRule ^all/([^/]+)/?$ all/[slug]/index.html [L]
+        RewriteRule ^more-pages/([^/]+)/?$ more-pages/[...slug]/index.html [L]
 
         RewriteRule ^properties/category/([^/]+)/?$ properties/category/[slug]/index.html [L]
         RewriteRule ^properties/city/([^/]+)/?$ properties/city/[slug]/index.html [L]
         RewriteRule ^properties/(featured-properties|most-viewed-properties|most-favourite-properties|properties-nearby-city)/?$ properties/[slug]/index.html [L]
         RewriteRule ^properties/?$ properties/index.html [L]
 
-        RewriteRule ^projects/featured-projects/?$ projects/featured-projects/index.html [L]
+        RewriteRule ^projects/(featured-projects|most-viewed-projects|most-favourite-projects|projects-nearby-city)/?$ projects/[slug]/index.html [L]
         RewriteRule ^projects/?$ projects/index.html [L]
 
         RewriteRule ^user/(.+)/?$ user/[...slug]/index.html [L]
@@ -77,7 +77,6 @@ After uploading the contents of the `out` folder, you also need to add a `.htacc
         RewriteCond %{REQUEST_FILENAME} !-f
         RewriteCond %{REQUEST_FILENAME} !-d
         RewriteRule ^(.\*)$ /404.html [L]
-            
 
     </IfModule>
     ```
@@ -111,10 +110,10 @@ After deployment:
 
 If you encounter issues:
 
--   Check your server error logs
--   Verify that all files were uploaded correctly
--   Ensure your hosting environment supports modern JavaScript applications
--   Check if any server configuration is blocking your application (e.g., `.htaccess` rules)
+- Check your server error logs
+- Verify that all files were uploaded correctly
+- Ensure your hosting environment supports modern JavaScript applications
+- Check if any server configuration is blocking your application (e.g., `.htaccess` rules)
 
 ## Additional Resources
 
