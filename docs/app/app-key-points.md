@@ -10,7 +10,7 @@ import DocBanner from '@site/src/components/DocBanner/DocBanner';
 
 ## System Requirements
 
-- Flutter Version: 3.41.* (see [Version Compatibility](version-history.md) for older app versions)
+- Flutter Version: 3.41.9 (see [Version Compatibility](version-history.md) for older app versions)
 - Java Version: JDK 17
 - Firebase account
 

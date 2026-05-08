@@ -15,7 +15,7 @@ Before doing anything else, copy these two files from your previous project into
 | `android/app/keystore.jks` | `android/app/keystore.jks` |
 | `android/key.properties` | `android/key.properties` |
 
-> **If you lose `keystore.jks`, you cannot publish updates to your existing Play Store listing — ever.** Back it up to secure storage.
+> **If you lose `keystore.jks`, you cannot publish updates to your existing Play Store listing using the same key.** You can generate a new `keystore.jks`, but you must then request a signing key reset through Google Play Console support and follow their verification process before publishing updates. Back it up to secure storage to avoid this.
 
 ## 2. Confirm Flutter Version
 

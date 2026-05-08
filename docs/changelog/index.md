@@ -2,6 +2,26 @@
 sidebar_position: 1
 title: Changelog
 ---
+## Version 1.4.0 (May 08, 2026)
+
+### ✨ **Added**
+
+- **Dual-role support** — clients can operate as Agent and User independently
+- **Separate listings and plans** for Agent and User modules
+- **Draft Listing** — auto-saves when subscription is required, resumable after purchase
+- **Multi-type chat** — User to User, User to Agent, and User to Admin
+- **Agent dashboard** with statistics in Agent mode
+- **Appointment management** for Agents
+- **Target Audience** selector in Assign Package
+- **Four client types** with guided onboarding and verified badge support
+- **Scramble API documentation** for Admin and Developer
+
+### 🔄 **Improved**
+
+- Agent plans focused exclusively on listing-related features
+
+---
+
 ## Version 1.3.1 (March 10, 2026)
 
 ### ✨ **Added**
