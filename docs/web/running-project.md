@@ -22,7 +22,7 @@ First, you need to install all the required dependencies:
 2. Run the following command:
 
 ```bash
-npm i
+npm install
 ```
 
 This will take some time to download all necessary packages. Wait until the installation completes.
@@ -40,6 +40,28 @@ npm run dev
 2. This command will start the development mode of your application
 3. Wait for the compilation to complete
 4. The terminal will show the local URL where your application is running (typically `http://localhost:3000`)
+
+## Building for Production
+
+The build command depends on the value of the `NEXT_PUBLIC_SEO` environment variable in your `.env` file:
+
+### If `NEXT_PUBLIC_SEO="true"` (SEO Enabled)
+
+When SEO is enabled, the project uses **Server-Side Rendering (SSR)**, so you need to run a standard Next.js build:
+
+```bash
+npm run build
+```
+
+### If `NEXT_PUBLIC_SEO="false"` (SEO Disabled)
+
+When SEO is disabled, the project is exported as a **static site**, so run:
+
+```bash
+npm run export
+```
+
+> **Note:** Make sure the `NEXT_PUBLIC_SEO` value in your `.env` file matches the command you intend to run. Using the wrong command for your configuration may result in build errors or an incorrect deployment.
 
 ## Testing Your Application
 

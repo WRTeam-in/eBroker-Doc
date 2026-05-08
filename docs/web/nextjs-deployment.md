@@ -25,7 +25,7 @@ Node.js can be installed using NVM (Node Version Manager) to easily manage multi
 sudo apt install curl
 curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 source ~/.bashrc  # or restart your terminal
-nvm install node 20.*
+nvm install 22
 ```
 
 Verify the installation with:
@@ -123,6 +123,24 @@ pm2 delete "YOUR_PROJECT_NAME"
 ```
 
 For more information, refer to the [official PM2 documentation](https://pm2.keymetrics.io/docs/usage/quick-start/).
+
+## Auto-Start on Server Reboot
+
+To ensure your application automatically restarts when the hosting server reboots, you need to save the current PM2 process list and configure PM2 to launch on system startup.
+
+**Step 1 — Save the current PM2 process list:**
+
+```bash
+pm2 save
+```
+
+This saves all currently running processes so PM2 can restore them after a reboot.
+
+**Step 2 — Generate and configure the startup script:**
+
+```bash
+pm2 startup
+```
 
 ## Testing Your Deployment
 

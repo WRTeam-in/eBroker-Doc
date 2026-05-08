@@ -49,11 +49,13 @@ After uploading the contents of the `out` folder, you also need to add a `.htacc
         RewriteBase /
         RewriteRule ^property-details/([^/]+)/?$ property-details/[slug]/index.html [L]
         RewriteRule ^project-details/([^/]+)/?$ project-details/[slug]/index.html [L]
-        RewriteRule ^verified-user-details/([^/]+)/?$ verified-user-details/[slug]/index.html [L]
+        RewriteRule ^agent-details/([^/]+)/?$ agent-details/[slug]/index.html [L]
         RewriteRule ^article-details/([^/]+)/?$ article-details/[slug]/index.html [L]
         RewriteRule ^compare-properties/([^/]+)/?$ compare-properties/[slug]/index.html [L]
         RewriteRule ^my-property/([^/]+)/?$ my-property/[slug]/index.html [L]
         RewriteRule ^my-project/([^/]+)/?$ my-project/[slug]/index.html [L]
+        RewriteRule ^agent/my-property/(.+)/?$ agent/my-property/[slug]/index.html [L]
+        RewriteRule ^agent/my-project/(.+)/?$ agent/my-project/[slug]/index.html [L]
         RewriteRule ^payment/([^/]+)/?$ payment/[slug]/index.html [L]
         RewriteRule ^all/([^/]+)/?$ all/[slug]/index.html [L]
         RewriteRule ^more-pages/([^/]+)/?$ more-pages/[...slug]/index.html [L]
@@ -66,9 +68,10 @@ After uploading the contents of the `out` folder, you also need to add a `.htacc
         RewriteRule ^projects/(featured-projects|most-viewed-projects|most-favourite-projects|projects-nearby-city)/?$ projects/[slug]/index.html [L]
         RewriteRule ^projects/?$ projects/index.html [L]
 
+        RewriteRule ^agent/(.+)/?$ agent/[...slug]/index.html [L]
         RewriteRule ^user/(.+)/?$ user/[...slug]/index.html [L]
 
-        RewriteRule ^(about-us|contact-us|faqs|privacy-policy|terms-and-conditions|subscription-plan|search|all-personalized-feeds|properties-on-map)/?$ $1/index.html [L]
+        RewriteRule ^(about-us|contact-us|faqs|privacy-policy|terms-and-conditions|subscription-plan|search|all-personalized-feeds|properties-on-map|become-agent|become-agent-form)/?$ $1/index.html [L]
 
         RewriteCond %{REQUEST_FILENAME} !-f
         RewriteCond %{REQUEST_FILENAME} !-d
