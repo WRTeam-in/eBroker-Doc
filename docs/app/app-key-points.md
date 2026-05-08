@@ -21,7 +21,7 @@ Follow this order. Generic Flutter steps link out to the common app guide; eBrok
 | # | Step | Guide |
 |---|---|---|
 | 1 | Install Flutter & dev tools | [Basic Setup ↗](https://wrteam-in.github.io/common_app_doc/GeneralSettings/basicsetup) |
-| 2 | **Upgrading from older eBroker build?** Copy keystore + key.properties first | [Update From Old Version](update-from-old-version.md) |
+| 2 | **Upgrading from older eBroker build?** | [Update From Old Version](update-from-old-version.md) |
 | 3 | Change app name | [Change App Name](change-app-name.md) |
 | 4 | Change package name | [Change Package Name](change-package-name.md) |
 | 5 | Replace app launcher icon | [Change App Icon](change-app-icon.md) |
@@ -34,7 +34,7 @@ Follow this order. Generic Flutter steps link out to the common app guide; eBrok
 | 12 | Multi-language | [Add Languages](add-languages.md) |
 | 13 | Connect to admin panel API | [Connect Admin Panel](connect-admin-panel.md) |
 | 14 | Bump app version | [Change App Version](change-app-version.md) |
-| 15 | Build & submit to Play Store | [Generate App](generate-app.md) |
+| 15 | Build & submit to Play Store And Apple Store| [Generate App](generate-app.md) |
 
 ## Critical Rules
 
