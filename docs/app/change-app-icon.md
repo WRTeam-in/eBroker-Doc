@@ -4,24 +4,12 @@ sidebar_position: 5
 
 # Change App Icon
 
-Your app icon is a crucial branding element. Follow these steps to change it:
+Follow the common Flutter app guide for generating the launcher icon:
 
-## Using flutter_launcher_icons Package
+[App Icon Setup ↗](https://wrteam-in.github.io/common_app_doc/GeneralSettings/appicon)
 
-1. Add your icon to the designated folder and rename it to `ic_launcher.png`
+## eBroker-specific notes
 
-   ![App Icon Folder](/images/app/app_icon_folder.png)
-
-   > **Important:** Make sure the icon name is exactly `ic_launcher.png`
-
-2. Run this command in your terminal to update all the app icons:
-
-   ```bash
-   flutter pub run flutter_launcher_icons
-   ```
-
-   > **Note:** Make sure you have run `flutter pub get` first to install dependencies
-
-## Troubleshooting
-
-If you encounter any issues while changing your app icon, feel free to contact support on [Teams](https://teams.live.com/l/invite/FEAN_7C4kzeomJM8gE).
+- Place your source icon in `assets/app_icons/` and name it exactly `ic_launcher.png` before running the launcher-icons command.
+- This page covers the **launcher icon only**. For splash logo, home logo, placeholder, and login background, see [Other Icons](other-icons.md).
+- Run `flutter pub get` before `flutter pub run flutter_launcher_icons`.

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 # eBroker App - Key Points
@@ -10,70 +10,35 @@ import DocBanner from '@site/src/components/DocBanner/DocBanner';
 
 ## System Requirements
 
--   Flutter Version: 3.41.*
--   Java Version: JDK 17
--   Firebase account
+- Flutter Version: 3.41.* (see [Version Compatibility](version-history.md) for older app versions)
+- Java Version: JDK 17
+- Firebase account
 
-## Key Setup Steps
+## Setup Checklist
 
-### 1. Firebase Configuration
+Follow this order. Generic Flutter steps link out to the common app guide; eBroker-specific steps are documented here.
 
--   Create a Firebase project
--   Configure phone authentication
--   Setup SHA keys for real device testing
--   Configure Firebase Cloud Messaging (FCM) for notifications
--   Setup iOS push notification certificates if needed
+| # | Step | Guide |
+|---|---|---|
+| 1 | Install Flutter & dev tools | [Basic Setup ↗](https://wrteam-in.github.io/common_app_doc/GeneralSettings/basicsetup) |
+| 2 | **Upgrading from older eBroker build?** Copy keystore + key.properties first | [Update From Old Version](update-from-old-version.md) |
+| 3 | Change app name | [Change App Name](change-app-name.md) |
+| 4 | Change package name | [Change Package Name](change-package-name.md) |
+| 5 | Replace app launcher icon | [Change App Icon](change-app-icon.md) |
+| 6 | Replace splash / home / placeholder / login-bg | [Other Icons](other-icons.md) |
+| 7 | Set theme colors | [Theme Colors](theme-colors.md) |
+| 8 | Firebase project, phone auth, notifications, billing | [Firebase Setup](firebase-setup.md) |
+| 9 | Google Maps API keys | [Map API Key](maps-setup.md) |
+| 10 | Deep linking | [Setup Deep Link](setup-deep-link.md) |
+| 11 | AdMob (optional) | [Setup AdMob](setup-admob.md) |
+| 12 | Multi-language | [Add Languages](add-languages.md) |
+| 13 | Connect to admin panel API | [Connect Admin Panel](connect-admin-panel.md) |
+| 14 | Bump app version | [Change App Version](change-app-version.md) |
+| 15 | Build & submit to Play Store | [Generate App](generate-app.md) |
 
-### 2. Essential App Customizations
+## Critical Rules
 
--   **App Name**: Edit in `lib > settings.dart` and use rename package
--   **Package Name**: Update in settings file before Firebase setup
--   **App Icon**: Replace icon files or use Flutter launcher icons package
--   **Theme Colors**: Customize in theme file
-
-### 3. API Integration
-
--   **Google Maps**: Set up API keys for location features
--   **Unsplash**: Configure API for image access
--   **Payment Gateways**: Set up necessary payment gateway credentials
-
-### 4. Authentication
-
--   Firebase Phone Authentication
--   Secure login process
--   User registration flow
-
-### 5. Backend Connection
-
--   Connect to admin panel via API endpoint
--   Configure webhook URLs if using payment gateways
-
-### 6. Deep Linking
-
--   Set up Firebase Dynamic Links for sharing properties
--   Configure app for proper deep link handling
-
-### 7. App Building
-
--   Generate signed APK for Android
--   Create proper release builds
--   Prepare for store submission
-
-### 8. Performance Considerations
-
--   Image optimization settings
--   Map rendering configuration
--   Notification handling
-
-### 9. Additional Features
-
--   Multi-language support
--   AdMob integration (if using)
--   Custom icons and branding
-
-## Common Issues & Solutions
-
--   SHA key issues for phone authentication
--   Firebase configuration problems
--   Push notification delivery
--   Deep link handling errors
+- **Change package name BEFORE Firebase setup** — Firebase config is tied to package name; redoing it later means re-downloading `google-services.json`.
+- **For production phone OTP** — add the **release** SHA-1 + SHA-256 to Firebase, not just debug. Run `cd android && ./gradlew signinReport`.
+- **Never lose `keystore.jks`** — without it you cannot publish updates to an existing Play Store listing. Always copy from previous build.
+- **Always use `--no-tree-shake-icons`** when building eBroker (`flutter build appbundle --no-tree-shake-icons`).

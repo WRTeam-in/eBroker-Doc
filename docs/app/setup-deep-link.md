@@ -1,74 +1,30 @@
 ---
-sidebar_position: 8
+sidebar_position: 10
 ---
 
 # Setup Deep Link
 
-Deep linking allows users to open specific content in your eBroker app directly from links in websites, emails, or messages. This guide explains how to set up deep linking for your application.
+Follow the common Flutter app guide for the full deep-link configuration (Android intent filters, iOS URL schemes, `.well-known` files):
 
-## Admin Panel Side Configuration
-1. **Add Deep Link schema**:
-   - In the admin panel, navigate to the `Settings > System Settings` section.
-   - Find the "Deep Link Settings" section.
-   - Under "Schema" add your desired schema.
+[Deeplink Setup ↗](https://wrteam-in.github.io/common_app_doc/GeneralSettings/deeplink)
 
-![Deep Link 1](/images/app/deeplink/setup_schema_admin.png)
+## eBroker-specific notes
 
-## App Side Configuration 
+Deep links in eBroker are configured in **three** places — all three must agree or links will not open the app.
 
+1. **Admin Panel** → Settings → System Settings → Deep Link Settings → set your **Schema**.
+2. **`lib/settings.dart`** → set `shareNavigationWebUrl` to your domain (web domain if you want web fallback redirect; otherwise admin panel domain).
+3. **Android `AndroidManifest.xml`** and **iOS `Info.plist`** → use the same schema and domain (covered in the common doc).
 
-:::note
- Choose the appropriate domain based on your usage:
- - If using a web domain, add the web domain. (If you want to use web for redirect)
- - If using a panel domain, add the panel domain.
-:::
-1. **Update `settings.dart`**:
-   - Open `lib > settings.dart`.
-   - Update the `shareNavigationWebUrl` variable with the domain that you are using for deeplink.
+iOS `Info.plist` snippet (schema must match Admin Panel value):
 
-![Deep Link 2](/images/app/deeplink/settings_deeplink.png)
+```xml
+<key>CFBundleURLSchemes</key>
+<array>
+    <string>your_schema</string>
+</array>
+```
 
-2. **Update for Android**:
-   - Open `android > app > src > main > AndroidManifest.xml`.
-   - In your `AndroidManifest.xml` file, Update the following with schema you added in admin panel and domain you added in settings.dart and admin domain as shown in screenshot:
+## Quick test
 
-![Deep Link 3](/images/app/deeplink/manifest_deeplink.png)
-   
-3. **Update for iOS**:
-   - Open `ios > Runner > Info.plist`. 
-   - In your `info.plist` file, update the following same as schema you added in admin panel:
-
-     ```xml
-     <key>CFBundleURLSchemes</key>
-     <array>
-         <string>your_schema</string>
-     </array>
-     ```:
-
-![Deep Link 4](/images/app/deeplink/app_info_plist.png)
-     
-
-## How Deep Links Work
-
-When a user clicks a deep link:
-
-1. The link opens your app if it's installed
-2. The app navigates to the specific content referenced in the link
-3. If the app isn't installed, the link can direct the user to the app store
-
-## Testing Deep Links
-
-After setting up deep links:
-
-1. Create a test link in the format: `https://yourdomain.com/link_path`
-2. Send this link to a device with your app installed
-3. Click the link and verify that it opens the correct content in your app
-
-## Troubleshooting
-
-If deep links aren't working:
-
-- Verify that the `.well-known` folder and its files are accessible via browser
-- Ensure the `.htaccess` file is properly configured
-- Check that your app's build configuration correctly includes the deep link handling code
-- Test on multiple devices to rule out device-specific issues
+Send `https://yourdomain.com/<link_path>` to a device with the app installed. If the app does not open, mismatch between the three locations above is the usual cause.

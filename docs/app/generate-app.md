@@ -1,68 +1,31 @@
 ---
-sidebar_position: 12
+sidebar_position: 15
 ---
 
-# Generate App (Android)
+# Generate App
 
-This guide provides step-by-step instructions for generating a release version of your eBroker Android application, ready for distribution to users or submission to the Google Play Store.
+Follow the common Flutter app guide for the full Android build + Play Store submission flow:
 
-## Building Split APKs
+[Deployment Guide ↗](https://wrteam-in.github.io/common_app_doc/GeneralSettings/deployment)
 
-Split APKs optimize your app for different device architectures:
+## eBroker-specific notes
 
-1. Open terminal or command prompt
-2. Navigate to your project directory
-3. Run the following command:
-   ```bash
-   flutter build apk --split-per-abi --no-tree-shake-icons
-   ```
+Always pass `--no-tree-shake-icons` when building eBroker — the app uses dynamic icon loading that the tree-shaker incorrectly strips, causing missing icons in production.
 
-This will generate optimized APKs for different CPU architectures (ARM, ARM64, x86_64).
+| Output | Command |
+|---|---|
+| App Bundle (.aab) for Play Store | `flutter build appbundle --no-tree-shake-icons` |
+| Split APKs (per ABI) | `flutter build apk --split-per-abi --no-tree-shake-icons` |
+| Single Release APK | `flutter build apk --release --no-tree-shake-icons` |
 
-## Building Release APK
+## Output Locations
 
-To create a single APK file for all devices:
+- AAB: `build/app/outputs/bundle/release/app-release.aab`
+- APK: `build/app/outputs/flutter-apk/app-release.apk`
 
-1. Open terminal or command prompt
-2. Navigate to your project directory
-3. Run the following command:
-   ```bash
-   flutter build apk --release
-   ```
+## Pre-build Checklist
 
-The generated APK will be located at `build/app/outputs/flutter-apk/app-release.apk`.
-
-## Building App Bundle
-
-App Bundles are the preferred format for Google Play Store submission:
-
-> **Note:** Before generating the App Bundle, ensure you have completed the keystore configuration steps above.
-
-1. Open terminal or command prompt
-2. Navigate to your project directory
-3. Run the following command:
-   ```bash
-   flutter build appbundle --no-tree-shake-icons
-   ```
-
-The generated AAB file will be located at `build/app/outputs/bundle/release/app-release.aab`.
-
-## Testing the Build
-
-Before distributing your app:
-
-1. Install the generated APK on a test device
-2. Verify that all features work correctly
-3. Check performance and responsiveness
-4. Ensure proper handling of user data and permissions
-
-## Submitting to Google Play Store
-
-After successful testing:
-
-1. Create a developer account on Google Play Console if you don't have one
-2. Create a new application listing
-3. Upload your signed AAB or APK file
-4. Complete the store listing with screenshots, descriptions, and promotional graphics
-5. Set pricing and distribution options
-6. Submit for review
+- [ ] Version bumped in `pubspec.yaml` ([Change App Version](change-app-version.md))
+- [ ] Release SHA keys added to Firebase ([Firebase Setup](firebase-setup.md))
+- [ ] `keystore.jks` + `key.properties` present in `android/app/` and `android/`
+- [ ] `flutter pub get` run after dependency changes
