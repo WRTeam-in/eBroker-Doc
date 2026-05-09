@@ -10,33 +10,36 @@ title: Support
   <p className="support-detail">We typically reply to all questions and queries within 24 hours via comments, support forum, or emails.</p>
 </div>
 
-<div className="contact-grid">
-  <div className="contact-card info-card">
-    <div className="card-content">
-      <h3>Support Hours</h3>
-      <ul>
-        <li>Monday – Friday</li>
-        <li>9:00 AM to 6:00 PM (IST)</li>
-        <li>GMT +5:30</li>
-      </ul>
-      <div className="response-time">
-        <span>Average Response Time:</span>
-        <strong>Within 24 hours</strong>
-      </div>
+<div className="support-hours-banner">
+  <div className="hours-block">
+    <div className="hours-icon" aria-hidden="true">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+    </div>
+    <div className="hours-text">
+      <span className="hours-label">Support Hours</span>
+      <strong>Mon – Fri · 9:00 AM – 6:00 PM IST</strong>
+      <span className="hours-sub">GMT +5:30</span>
     </div>
   </div>
+  <div className="response-block">
+    <span className="response-label">Avg. Response</span>
+    <strong className="response-value">Within 24 hours</strong>
+  </div>
+</div>
 
-  <a href="https://teams.live.com/l/invite/FEACZ7umzeFT_yb_BE?v=g1" className="contact-card" target="_blank">
+<div className="contact-grid">
+  <a href="https://teams.live.com/l/invite/FEACZ7umzeFT_yb_BE?v=g1" className="contact-card teams-card" target="_blank">
     <div className="card-content">
       <div className="platform-icon">
 <svg width="60px" height="60px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none"><path fill="#5059C9" d="M10.765 6.875h3.616c.342 0 .619.276.619.617v3.288a2.272 2.272 0 01-2.274 2.27h-.01a2.272 2.272 0 01-2.274-2.27V7.199c0-.179.145-.323.323-.323zM13.21 6.225c.808 0 1.464-.655 1.464-1.462 0-.808-.656-1.463-1.465-1.463s-1.465.655-1.465 1.463c0 .807.656 1.462 1.465 1.462z"/><path fill="#7B83EB" d="M8.651 6.225a2.114 2.114 0 002.117-2.112A2.114 2.114 0 008.65 2a2.114 2.114 0 00-2.116 2.112c0 1.167.947 2.113 2.116 2.113zM11.473 6.875h-5.97a.611.611 0 00-.596.625v3.75A3.669 3.669 0 008.488 15a3.669 3.669 0 003.582-3.75V7.5a.611.611 0 00-.597-.625z"/><path fill="#000000" d="M8.814 6.875v5.255a.598.598 0 01-.596.595H5.193a3.951 3.951 0 01-.287-1.476V7.5a.61.61 0 01.597-.624h3.31z" opacity=".1"/><path fill="#000000" d="M8.488 6.875v5.58a.6.6 0 01-.596.595H5.347a3.22 3.22 0 01-.267-.65 3.951 3.951 0 01-.172-1.15V7.498a.61.61 0 01.596-.624h2.985z" opacity=".2"/><path fill="#000000" d="M8.488 6.875v4.93a.6.6 0 01-.596.595H5.08a3.951 3.951 0 01-.172-1.15V7.498a.61.61 0 01.596-.624h2.985z" opacity=".2"/><path fill="#000000" d="M8.163 6.875v4.93a.6.6 0 01-.596.595H5.079a3.951 3.951 0 01-.172-1.15V7.498a.61.61 0 01.596-.624h2.66z" opacity=".2"/><path fill="#000000" d="M8.814 5.195v1.024c-.055.003-.107.006-.163.006-.055 0-.107-.003-.163-.006A2.115 2.115 0 016.593 4.6h1.625a.598.598 0 01.596.594z" opacity=".1"/><path fill="#000000" d="M8.488 5.52v.699a2.115 2.115 0 01-1.79-1.293h1.195a.598.598 0 01.595.594z" opacity=".2"/><path fill="#000000" d="M8.488 5.52v.699a2.115 2.115 0 01-1.79-1.293h1.195a.598.598 0 01.595.594z" opacity=".2"/><path fill="#000000" d="M8.163 5.52v.647a2.115 2.115 0 01-1.465-1.242h.87a.598.598 0 01.595.595z" opacity=".2"/><path fill="url(#microsoft-teams-color-16__paint0_linear_2372_494)" d="M1.597 4.925h5.969c.33 0 .597.267.597.596v5.958a.596.596 0 01-.597.596h-5.97A.596.596 0 011 11.479V5.521c0-.33.267-.596.597-.596z"/><path fill="#ffffff" d="M6.152 7.193H4.959v3.243h-.76V7.193H3.01v-.63h3.141v.63z"/><defs><linearGradient id="microsoft-teams-color-16__paint0_linear_2372_494" x1="2.244" x2="6.906" y1="4.46" y2="12.548" gradientUnits="userSpaceOnUse"><stop stop-color="#5A62C3"/><stop offset=".5" stop-color="#4D55BD"/><stop offset="1" stop-color="#3940AB"/></linearGradient></defs></svg>
       </div>
       <h3>Microsoft Teams</h3>
       <p>Chat with Raj Joshi</p>
+      <span className="card-action">Open chat <span className="arrow">→</span></span>
     </div>
   </a>
 
-  <a href="mailto:support@wrteam.in" className="contact-card" target="_blank">
+  <a href="mailto:support@wrteam.in" className="contact-card email-card" target="_blank">
     <div className="card-content">
       <div className="platform-icon">
        <svg width="60px" height="60px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -52,10 +55,11 @@ title: Support
       </div>
       <h3>Email Support</h3>
       <p>support@wrteam.in</p>
+      <span className="card-action">Send email <span className="arrow">→</span></span>
     </div>
   </a>
 
-  <a href="https://www.instagram.com/wrteam.in" className="contact-card" target="_blank">
+  <a href="https://www.instagram.com/wrteam.in" className="contact-card instagram-card" target="_blank">
     <div className="card-content">
       <div className="platform-icon">
        <svg width="60px" height="60px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -87,10 +91,11 @@ title: Support
       </div>
       <h3>Instagram</h3>
       <p>@wrteam.in</p>
+      <span className="card-action">Follow us <span className="arrow">→</span></span>
     </div>
   </a>
 
-  <a href="https://wrteam.in" className="contact-card" target="_blank">
+  <a href="https://wrteam.in" className="contact-card website-card" target="_blank">
     <div className="card-content">
       <div className="platform-icon">
       <svg viewBox="0 0 76.632 42.733" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" data-name="wrteam logo" style={{maxHeight: "500px"}} width="76.632" height="42.733">
@@ -161,38 +166,57 @@ title: Support
     </div>
   </a>
 
-  <a href="https://codecanyon.net/downloads" className="contact-card" target="_blank">
-    <div className="card-content">
-      <div className="platform-icon">
-        <svg width="60px" height="60px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M11.2808 19.7782C11.3464 19.8438 11.4244 19.8959 11.5102 19.9316C11.596 19.9672 11.6877 19.9857 11.7808 19.9857C11.8739 19.9857 11.9657 19.9672 12.0515 19.9316C12.1373 19.8959 12.2153 19.8438 12.2808 19.7782L21.5308 10.5282C22.5508 9.50821 23.1108 8.12821 23.1108 6.52821C23.1108 4.92821 22.5508 3.54821 21.5308 2.52821C20.5108 1.50821 19.1308 0.948212 17.5308 0.948212C15.9308 0.948212 14.5508 1.50821 13.5308 2.52821L11.7808 4.27821L10.0308 2.52821C9.01082 1.50821 7.63082 0.948212 6.03082 0.948212C4.43082 0.948212 3.05082 1.50821 2.03082 2.52821C1.01082 3.54821 0.450821 4.92821 0.450821 6.52821C0.450821 8.12821 1.01082 9.50821 2.03082 10.5282L11.2808 19.7782Z" fill="url(#paint0_linear_87_7154)"/>
-          <defs>
-            <linearGradient id="paint0_linear_87_7154" x1="0.450821" y1="10.4669" x2="23.1108" y2="10.4669" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#82D84E"/>
-              <stop offset="1" stop-color="#0DB4F3"/>
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
-      <h3>Rate Us</h3>
-      <p>Share your feedback on CodeCanyon</p>
-      <span className="feedback-badge">⭐ Rate Now</span>
-    </div>
-  </a>
 </div>
+
+<div className="review-section">
+  <div className="review-header">
+    <h2>Love eBroker? Leave a Review</h2>
+    <p>Simply click below to review the product you purchased.</p>
+  </div>
+
+  <a href="https://codecanyon.net/downloads" className="review-primary" target="_blank">
+    <span className="review-primary-icon" aria-hidden="true">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11.2808 19.7782C11.3464 19.8438 11.4244 19.8959 11.5102 19.9316C11.596 19.9672 11.6877 19.9857 11.7808 19.9857C11.8739 19.9857 11.9657 19.9672 12.0515 19.9316C12.1373 19.8959 12.2153 19.8438 12.2808 19.7782L21.5308 10.5282C22.5508 9.50821 23.1108 8.12821 23.1108 6.52821C23.1108 4.92821 22.5508 3.54821 21.5308 2.52821C20.5108 1.50821 19.1308 0.948212 17.5308 0.948212C15.9308 0.948212 14.5508 1.50821 13.5308 2.52821L11.7808 4.27821L10.0308 2.52821C9.01082 1.50821 7.63082 0.948212 6.03082 0.948212C4.43082 0.948212 3.05082 1.50821 2.03082 2.52821C1.01082 3.54821 0.450821 4.92821 0.450821 6.52821C0.450821 8.12821 1.01082 9.50821 2.03082 10.5282L11.2808 19.7782Z" fill="white"/>
+      </svg>
+    </span>
+    <span className="review-primary-text">
+      <strong>Rate on CodeCanyon</strong>
+      <span>Review the product you purchased</span>
+    </span>
+    <span className="review-primary-arrow">→</span>
+  </a>
+
+  <p className="review-divider-text">We'd also love your valuable feedback on our other platforms:</p>
+
+  <div className="review-buttons">
+    <a href="https://review.clutch.co/review?provider_id=b9f48d80-5534-4c8e-a584-75a0ff66a5ef" className="review-btn" target="_blank">Clutch</a>
+    <a href="https://www.trustpilot.com/evaluate/wrteam.in" className="review-btn" target="_blank">Trustpilot</a>
+    <a href="https://g.page/r/CW2vKBbGZy3EEAI/review" className="review-btn" target="_blank">Google Reviews</a>
+  </div>
+</div>
+
+<a href="https://buymeacoffee.com/wrteamitprivatelimited" className="coffee-cta" target="_blank">
+  <span className="coffee-emoji" aria-hidden="true">☕</span>
+  <span className="coffee-text">
+    <strong>Love what we do?</strong>
+    <span>Buy us a coffee to show your appreciation and help us keep building awesome products.</span>
+  </span>
+  <span className="coffee-arrow">→</span>
+</a>
 
 <style>
 {`
   .support-intro {
     text-align: left;
-    margin: 2rem 0 3rem;
+    margin: 2rem 0 2rem;
     color: var(--ifm-color-emphasis-700);
   }
 
   .support-intro p {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     max-width: 800px;
-    margin: 0 0 1rem 0;
+    margin: 0 0 0.75rem 0;
   }
 
   .support-intro .support-detail {
@@ -201,160 +225,383 @@ title: Support
     margin-bottom: 0;
   }
 
+  /* Hours banner */
+  .support-hours-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0 2.25rem;
+    border-radius: 14px;
+    background: var(--ifm-color-emphasis-100);
+    border: 1px solid var(--ifm-color-emphasis-200);
+    flex-wrap: wrap;
+  }
+
+  .hours-block {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .hours-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    color: var(--ifm-color-primary);
+    background: color-mix(in srgb, var(--ifm-color-primary) 14%, transparent);
+    flex-shrink: 0;
+  }
+
+  .hours-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .hours-label,
+  .response-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ifm-color-emphasis-600);
+  }
+
+  .hours-text strong {
+    font-size: 1rem;
+    color: var(--ifm-color-emphasis-900);
+  }
+
+  .hours-sub {
+    font-size: 0.82rem;
+    color: var(--ifm-color-emphasis-600);
+  }
+
+  .response-block {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .response-value {
+    font-size: 1rem;
+    color: var(--ifm-color-success);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .response-value::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--ifm-color-success);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--ifm-color-success) 22%, transparent);
+  }
+
+  /* Grid */
   .contact-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    margin: 2rem 0;
+    gap: 1.25rem;
+    margin: 0 0 2.5rem;
   }
 
-  @media (max-width: 768px) {
-    .contact-grid {
-      grid-template-columns: 1fr;
-    }
+  @media (max-width: 600px) {
+    .contact-grid { grid-template-columns: 1fr; }
+    .support-hours-banner { flex-direction: column; align-items: flex-start; }
+    .response-block { text-align: left; }
   }
 
+  /* Card base */
   .contact-card {
+    --accent: var(--ifm-color-primary);
+    --accent-soft: color-mix(in srgb, var(--accent) 14%, transparent);
+    position: relative;
     background: var(--ifm-background-surface-color);
     border: 1px solid var(--ifm-color-emphasis-200);
-    border-radius: 12px;
-    text-decoration: none;
+    border-radius: 14px;
+    text-decoration: none !important;
     color: var(--ifm-color-emphasis-800);
-    transition: all 0.3s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
     overflow: hidden;
-    height: 100%;
+    isolation: isolate;
   }
 
   .contact-card:hover {
     transform: translateY(-4px);
-    border-color: var(--ifm-color-primary);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
- text-decoration: none;
+    border-color: var(--accent);
+    box-shadow: 0 8px 20px -10px color-mix(in srgb, var(--accent) 35%, transparent);
   }
 
   .card-content {
-    padding: 1.75rem;
+    padding: 1.5rem;
     height: 100%;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(145deg, var(--ifm-color-emphasis-0), var(--ifm-background-surface-color));
-    border-radius: 12px;
-    transition: all 0.3s ease;
-  }
-
-  .contact-card:hover .card-content {
-    background: linear-gradient(145deg, var(--ifm-background-surface-color), var(--ifm-color-emphasis-100));
+    gap: 0.35rem;
   }
 
   .platform-icon {
-    color: var(--ifm-color-primary);
-    margin-bottom: 1.25rem;
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    background: var(--accent-soft);
+    margin-bottom: 1rem;
+    transition: transform 0.25s ease;
   }
 
+  .platform-icon svg { width: 32px; height: 32px; display: block; }
+
+  .contact-card:hover .platform-icon { transform: scale(1.05) rotate(-2deg); }
+
   .contact-card h3 {
-    margin: 0 0 0.5rem 0;
-    font-size: 1.2rem;
-    font-weight: 600;
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 650;
     color: var(--ifm-color-emphasis-900);
   }
 
   .contact-card p {
     margin: 0;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: var(--ifm-color-emphasis-600);
   }
 
-  .info-card {
-    background: var(--ifm-color-emphasis-0);
-  }
-
-  .info-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 1.5rem 0;
-    color: var(--ifm-color-emphasis-700);
-  }
-
-  .info-card li {
-    margin-bottom: 0.5rem;
-    font-size: 0.95rem;
-  }
-
-  .response-time {
-    border-top: 1px solid var(--ifm-color-emphasis-200);
-    padding-top: 1rem;
-    font-size: 0.9rem;
+  .card-action {
     margin-top: auto;
+    padding-top: 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
   }
 
-  .response-time span {
-    display: block;
-    margin-bottom: 0.25rem;
-    color: var(--ifm-color-emphasis-600);
-  }
-
-  .response-time strong {
-    color: var(--ifm-color-success);
-  }
-
-  [data-theme='dark'] .card-content {
-    background: linear-gradient(145deg, var(--ifm-color-emphasis-100), var(--ifm-color-emphasis-200));
-  }
-
-  [data-theme='dark'] .contact-card:hover .card-content {
-    background: linear-gradient(145deg, var(--ifm-color-emphasis-200), var(--ifm-color-emphasis-300));
-  }
-
-  .feedback-card .card-content {
-    background: linear-gradient(145deg, var(--ifm-color-emphasis-0), var(--ifm-color-emphasis-100));
-    border-radius: 8px;
-  }
-
-  .feedback-card:hover .card-content {
-    background: linear-gradient(145deg, var(--ifm-color-emphasis-100), var(--ifm-color-emphasis-200));
-  }
-
-  .feedback-badge {
+  .card-action .arrow {
+    transition: transform 0.25s ease;
     display: inline-block;
-    margin-top: 1rem;
-    padding: 0.4rem 1rem;
+  }
+
+  .contact-card:hover .card-action .arrow { transform: translateX(4px); }
+
+  /* Per-card accents */
+  .teams-card     { --accent: #5059C9; }
+  .email-card     { --accent: #EA4335; }
+  .instagram-card { --accent: #E1306C; }
+  .website-card   { --accent: #117f7c; }
+
+  /* Review section */
+  .review-section {
+    position: relative;
+    padding: 2rem 1.75rem;
+    border-radius: 16px;
+    background: var(--ifm-color-emphasis-100);
+    border: 1px solid var(--ifm-color-emphasis-200);
+    margin: 0 0 1.5rem;
+  }
+
+  .review-header {
+    text-align: center;
+    margin-bottom: 1.25rem;
+  }
+
+  .review-emoji {
+    font-size: 2rem;
+    display: inline-block;
+    filter: drop-shadow(0 4px 8px rgba(245, 158, 11, 0.35));
+    animation: starPulse 2.4s ease-in-out infinite;
+  }
+
+  @keyframes starPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.12); }
+  }
+
+  .review-section h2 {
+    margin: 0.4rem 0 0.4rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--ifm-color-emphasis-900);
+  }
+
+  .review-section > .review-header > p {
+    margin: 0;
+    color: var(--ifm-color-emphasis-700);
+    font-size: 0.95rem;
+  }
+
+  .review-primary {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
     background: var(--ifm-color-primary);
-    color: white;
-    border-radius: 20px;
+    color: white !important;
+    text-decoration: none !important;
+    transition: transform 0.25s ease, background 0.25s ease;
+  }
+
+  .review-primary:hover {
+    transform: translateY(-2px);
+    background: var(--ifm-color-primary-dark);
+  }
+
+  .review-primary-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.22);
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+  }
+
+  .review-primary-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+  }
+
+  .review-primary-text strong { font-size: 1rem; font-weight: 650; }
+  .review-primary-text span { font-size: 0.85rem; opacity: 0.92; }
+
+  .review-primary-arrow {
+    font-size: 1.25rem;
+    transition: transform 0.25s ease;
+  }
+
+  .review-primary:hover .review-primary-arrow { transform: translateX(4px); }
+
+  .review-divider-text {
+    margin: 1.25rem 0 0.75rem;
+    font-size: 0.9rem;
+    color: var(--ifm-color-emphasis-700);
+    text-align: center;
+  }
+
+  .review-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    justify-content: center;
+  }
+
+  .review-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1.1rem;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--ifm-color-emphasis-800) !important;
+    text-decoration: none !important;
     font-size: 0.9rem;
     font-weight: 500;
-    transition: all 0.3s ease;
+    border: 1px solid var(--ifm-color-emphasis-400);
+    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
   }
 
-  .contact-card:hover .feedback-badge {
-    transform: scale(1.05);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  .review-btn:hover {
+    color: var(--ifm-color-primary) !important;
+    border-color: var(--ifm-color-primary);
+    background: color-mix(in srgb, var(--ifm-color-primary) 8%, transparent);
   }
 
-  .website-card .card-content {
-    background: linear-gradient(145deg, var(--ifm-color-emphasis-0), var(--ifm-background-surface-color));
-    border-radius: 8px;
+  /* Coffee CTA */
+  .coffee-cta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    border-radius: 14px;
+    background: var(--ifm-background-surface-color);
+    border: 1px solid var(--ifm-color-emphasis-300);
+    color: var(--ifm-color-emphasis-900) !important;
+    text-decoration: none !important;
+    margin: 0 0 2rem;
+    transition: transform 0.25s ease, border-color 0.25s ease;
   }
 
-  .website-card:hover .card-content {
-    background: linear-gradient(145deg, var(--ifm-background-surface-color), var(--ifm-color-emphasis-100));
+  .coffee-cta:hover {
+    transform: translateY(-2px);
+    border-color: var(--ifm-color-primary);
   }
 
-  .website-badge {
-    display: inline-block;
+  .coffee-emoji {
+    font-size: 1.75rem;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+
+  .coffee-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+  }
+
+  .coffee-text strong { font-size: 1rem; font-weight: 700; }
+  .coffee-text span { font-size: 0.85rem; opacity: 0.85; }
+
+  .coffee-arrow {
+    font-size: 1.25rem;
+    font-weight: 700;
+    transition: transform 0.25s ease;
+  }
+
+  .coffee-cta:hover .coffee-arrow { transform: translateX(4px); }
+
+  [data-theme='dark'] .review-section {
+    background: var(--ifm-color-emphasis-100);
+    border-color: var(--ifm-color-emphasis-300);
+  }
+
+  [data-theme='dark'] .support-hours-banner {
+    background: var(--ifm-color-emphasis-100);
+    border-color: var(--ifm-color-emphasis-300);
+  }
+
+  [data-theme='dark'] .review-btn {
+    background: var(--ifm-background-surface-color);
+  }
+
+  /* Website + Rate badges (kept) */
+  .website-badge,
+  .feedback-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
     margin-top: 1rem;
-    padding: 0.4rem 1rem;
-    background: linear-gradient(90deg, #4F46E5, #7C3AED);
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
     color: white;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
+    width: fit-content;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
+
+  .website-badge { background: #117f7c; }
 
   .contact-card:hover .website-badge {
-    transform: scale(1.05);
-    box-shadow: 0 2px 8px rgba(124, 58, 237, 0.2);
+    transform: translateY(-1px);
   }
+
+  [data-theme='dark'] .contact-card {
+    background: var(--ifm-background-surface-color);
+    border-color: var(--ifm-color-emphasis-300);
+  }
+
 `}
 </style>
