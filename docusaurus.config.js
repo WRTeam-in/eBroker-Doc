@@ -26,7 +26,12 @@ const config = {
   projectName: "eBroker-Doc", // Usually your repo name.
 
   onBrokenLinks: "warn",
-  onBrokenMarkdownLinks: "warn",
+
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: "warn",
+    },
+  },
 
   trailingSlash: true,  // Add this for correct path handling
   deploymentBranch: "gh-pages", // Branch for deployment
