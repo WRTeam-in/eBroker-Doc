@@ -2,7 +2,7 @@
 sidebar_position: 1
 title: Changelog
 ---
-## Version 1.4.0 (May 08, 2026)
+<!-- ## Version 1.4.0 (May 08, 2026)
 
 ### ✨ **Added**
 
@@ -20,7 +20,7 @@ title: Changelog
 
 - Agent plans focused exclusively on listing-related features
 
----
+--- -->
 
 ## Version 1.3.1 (March 10, 2026)
 
