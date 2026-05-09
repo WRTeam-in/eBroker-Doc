@@ -6,7 +6,7 @@ sidebar_position: 11
 
 Follow the common Flutter app guide for AdMob account creation, ad-unit setup, and the Android/iOS SDK config:
 
-[Advertisement Setup ↗](https://wrteam-in.github.io/common_app_doc/GeneralSettings/advertisement)
+[Advertisement Setup ↗](https://wrteam-in.github.io/common_app_doc/GeneralSettings/advertisement/google-admob)
 
 ## eBroker-specific notes
 
