@@ -2,25 +2,38 @@
 sidebar_position: 1
 title: Changelog
 ---
-<!-- ## Version 1.4.0 (May 08, 2026)
+## Version 1.4.0 (May 11, 2026)
 
 ### ✨ **Added**
 
 - **Dual-role support** — clients can operate as Agent and User independently
 - **Separate listings and plans** for Agent and User modules
+- **Mode switching via Profile Settings** — app remembers last active mode on relaunch
+- **Agent Mode** accessible only after opting in as an Agent
+- **Agent Mode: Subscription-based packages** with listing limits, promotion limits, and branding options
 - **Draft Listing** — auto-saves when subscription is required, resumable after purchase
+- **Listings remain tied** to the mode they were created in
 - **Multi-type chat** — User to User, User to Agent, and User to Admin
 - **Agent dashboard** with statistics in Agent mode
 - **Appointment management** for Agents
-- **Target Audience** selector in Assign Package
-- **Four client types** with guided onboarding and verified badge support
-- **Scramble API documentation** for Admin and Developer
+- **Schedule appointment option** on Agent listings for Users
+- **Four client types** — Normal User, Verified User, Agent, Verified Agent — with respective onboarding forms
+- **Agent forms structure** updated to be section-based
+- **Admin can assign package** as per selected role - Agent/User
+- **Verified badge visibility** on listing page, profile settings, and agent details screen
 
 ### 🔄 **Improved**
 
-- Agent plans focused exclusively on listing-related features
+- **Agent plans** focused exclusively on listing and promotion-related features
+- **User Mode:** Pay-As-You-Go listing model for properties and projects
+- **Website:** Homepage Slider Images Preview, Search Filters responsive UI in mobile view
+- **Mobile App:** Updated profile tab UI to properly indicate Active role
+- **Mobile App:** Updated Snackbar UI
+- **Admin Panel:** Added tabs filter and required changes in all module tables
+- **Admin Panel:** Distinguish user and agent feature
+- **Admin Panel:** Structural UI updates – implemented dedicated create form pages across key modules
 
---- -->
+---
 
 ## Version 1.3.1 (March 10, 2026)
 
