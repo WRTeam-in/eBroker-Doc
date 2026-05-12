@@ -6,8 +6,9 @@ sidebar_position: 20
 
 1. Take backup of your current version code and database
 2. Download latest code from codecanyon
-3. Extract code, extract admin code and head to update folder in admin code
-4. Then in your admin panel -> system update
+3. Check update Instruction before update the system
+4. Extract code, extract admin code and head to update folder in admin code
+5. Then in your admin panel -> system update
     - Add Purchase code
     - Upload the update zip file for the version you want to update to. For example, if your current version is 1.3.0, then upload 1.3.0-to-1.3.1.zip file
     - Click on save and wait to update
