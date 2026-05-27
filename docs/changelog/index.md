@@ -2,6 +2,33 @@
 sidebar_position: 1
 title: Changelog
 ---
+
+## Version 1.4.1 (May 26, 2026)
+
+### 🛠 **Fixed**
+
+- Invalid filter values being passed into the property list API. (Web)
+- Homepage location clearing so data refetches correctly, and related "See All" button behavior. (Web)
+- Homepage location fetching including the alert popup race condition. (Web)
+- Redirection after successful property/project edits (Web)
+- Duplicate property entries appearing in Home section and nearby pagination (App)
+- Chat send failure leaving loading state with no error feedback (App)
+- Wrong location displayed in category results (App)
+- Agent social section showing when links are empty or null (App)
+- Total Interested Users click action not working (Admin)
+- Explore Projects / See All displaying incorrect data (Admin)
+- Read More functionality not working in article module (Admin)
+
+### 🔄 **Improved**
+
+- Enhance search functionality across multiple modules (Admin)
+- Enhance property graph (Admin)
+- Enhance chat module (Admin)
+
+### ✨ **Added**
+- Sorting functionality in multiple tables (Admin)
+
+
 ## Version 1.4.0 (May 11, 2026)
 
 ### ✨ **Added**
