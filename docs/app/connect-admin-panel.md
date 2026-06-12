@@ -16,21 +16,21 @@ Before connecting your app to the admin panel, make sure you have:
 ## Configuring Connection Settings
 
 1. Open your app project
-2. Navigate to the `settings.dart` file
-3. Locate the connection settings section:
+2. Navigate to the `lib/config/app_config.dart` file
+3. Locate the connection settings section inside the `AppConfig` class:
 
 ![Connect Admin](/images/app/connect_admin.png)
 
 4. Update the following settings:
-   - **Host URL**: Your admin panel's URL (e.g., `https://yourdomain.com/`)
-   - **API Data Load Limit**: Number of items to load per request (default: 20)
-   - **Max Category Load**: Number of categories to show on the home screen (default: 5)
+   - **Host URL** (`AppConfig.hostUrl`): Your admin panel's URL (e.g., `https://yourdomain.com/`)
+   - **API Data Load Limit** (`AppConfig.apiDataLoadLimit`): Number of items to load per request (default: 10)
+   - **Max Category Load** (`AppConfig.maxCategoryShowLengthInHomeScreen`): Number of categories to show on the home screen (default: 5)
 
 ## Understanding the Settings
 
-- **Host URL**: This is the base URL for all API requests. Make sure it includes the protocol (`http://` or `https://`) and ends with a slash `/`.
-- **API Data Load Limit**: This setting controls pagination. A higher number loads more data at once but may slow down the app.
-- **Max Category Load**: Categories beyond this number will be accessible via the "Show More" button on the home screen.
+- **Host URL** (`AppConfig.hostUrl`): This is the base URL for all API requests. Make sure it includes the protocol (`http://` or `https://`) and ends with a slash `/`.
+- **API Data Load Limit** (`AppConfig.apiDataLoadLimit`): This setting controls pagination. A higher number loads more data at once but may slow down the app.
+- **Max Category Load** (`AppConfig.maxCategoryShowLengthInHomeScreen`): Categories beyond this number will be accessible via the "Show More" button on the home screen.
 
 ## Testing the Connection
 

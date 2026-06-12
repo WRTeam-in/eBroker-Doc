@@ -29,7 +29,7 @@ These are every file you typically touch during an eBroker update. Each is cover
 
 | File | What changes | Doc |
 |---|---|---|
-| `lib/settings.dart` | App name, package name, host URL, deep link domain | [Change App Name](change-app-name.md), [Change Package Name](change-package-name.md), [Connect Admin Panel](connect-admin-panel.md), [Setup Deep Link](setup-deep-link.md) |
+| `lib/config/app_config.dart` | App name, package name, host URL, deep link domain | [Change App Name](change-app-name.md), [Change Package Name](change-package-name.md), [Connect Admin Panel](connect-admin-panel.md), [Setup Deep Link](setup-deep-link.md) |
 | `lib/theme.dart` | Fallback theme colors | [Theme Colors](theme-colors.md) |
 | `pubspec.yaml` | Version name + version code | [Change App Version](change-app-version.md) |
 | `android/app/src/main/AndroidManifest.xml` | Maps API key, AdMob app ID, deep link schema | [Map API Key](maps-setup.md), [Setup AdMob](setup-admob.md), [Setup Deep Link](setup-deep-link.md) |

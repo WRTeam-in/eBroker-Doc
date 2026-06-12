@@ -13,7 +13,7 @@ Follow the common Flutter app guide for the full deep-link configuration (Androi
 Deep links in eBroker are configured in **three** places — all three must agree or links will not open the app.
 
 1. **Admin Panel** → Settings → System Settings → Deep Link Settings → set your **Schema**.
-2. **`lib/settings.dart`** → set `shareNavigationWebUrl` to your domain (web domain if you want web fallback redirect; otherwise admin panel domain).
+2. **`lib/config/app_config.dart`** → set `shareNavigationWebUrl` in the `AppConfig` class to your domain (web domain if you want web fallback redirect; otherwise admin panel domain).
 3. **Android `AndroidManifest.xml`** and **iOS `Info.plist`** → use the same schema and domain (covered in the common doc).
 
 iOS `Info.plist` snippet (schema must match Admin Panel value):

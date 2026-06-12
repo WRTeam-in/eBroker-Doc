@@ -6,10 +6,10 @@ sidebar_position: 3
 
 To change your app name, follow these simple steps:
 
-## Method 1: Using settings.dart
+## Method 1: Using app_config.dart
 
-1. Navigate to `lib > settings.dart` in your project
-2. Find the variable named `applicationName="Your app name"`
+1. Navigate to `lib > config > app_config.dart` in your project
+2. Find the variable named `applicationName` inside the `AppConfig` class (e.g., `static const String applicationName = 'eBroker';`)
 3. Update the text inside the quotes with your desired app name
 
 ![App Name](/images/app/app_name.png)
