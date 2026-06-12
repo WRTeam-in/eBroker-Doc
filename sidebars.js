@@ -31,6 +31,7 @@ export default {
         "admin/about-us",
         "admin/gemini-ai-setup",
         "admin/maps-setup",
+        "admin/free-maps-setup",
         "admin/firebase-settings",
         "admin/twilio-settings",
         "admin/notification-settings",
