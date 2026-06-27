@@ -24,7 +24,7 @@ Integrating Google AdSense with your eBroker web application allows you to monet
 ## Adding the AdSense Script to Your Website
 
 1. Navigate to your project's source files
-2. Open the `pages` → `_document.js` file
+2. Open the `pages` → `_app.js` file, select line no 154-162 and press CTRL + / to uncomment the line and paste your adsense script link there
 3. Add the AdSense script code to the appropriate section
 
 ![AdSense Script](/images/web/adsense-script.png)
@@ -63,7 +63,7 @@ Once your site is approved:
 
 For effective AdSense integration:
 
--   Don't overload your pages with too many ads
--   Place ads in positions that generate engagement without disrupting user experience
--   Follow all Google AdSense policies to avoid account suspension
--   Regularly check your AdSense dashboard for performance metrics and optimization tips
+- Don't overload your pages with too many ads
+- Place ads in positions that generate engagement without disrupting user experience
+- Follow all Google AdSense policies to avoid account suspension
+- Regularly check your AdSense dashboard for performance metrics and optimization tips

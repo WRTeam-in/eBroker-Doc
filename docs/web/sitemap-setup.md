@@ -13,27 +13,57 @@ A sitemap helps search engines discover and index all the pages on your website 
 
 ![Add Web URL](/images/web/addWebUrl.png)
 
+## How the Sitemap Works
+
+The sitemap setup is automated via `scripts/setup-sitemap.js` and behaves differently depending on the `NEXT_PUBLIC_SEO` environment variable in your `.env` file.
+
+### 1. Dynamic / SSR Mode (Recommended for VPS)
+If `NEXT_PUBLIC_SEO="true"` is set in your environment:
+* **Behavior**: The sitemap is dynamically generated at runtime.
+* **Mechanism**: During the build process, the setup script deletes any static `public/sitemap.xml` file (to avoid routing conflicts) and auto-restores/writes the dynamic route page `pages/sitemap.xml.js`.
+* **Outcome**: Search engines and visitors fetching `/sitemap.xml` will receive real-time database updates of properties and projects served via Server-Side Rendering (`getServerSideProps`). It also embeds visual stylesheet branding dynamically.
+
+### 2. Static Mode (Recommended for Static Builds)
+If `NEXT_PUBLIC_SEO="false"` or not set in your environment:
+* **Behavior**: The sitemap is generated as a static XML file at build time.
+* **Mechanism**: The setup script deletes `pages/sitemap.xml.js` (preventing export errors) and runs `scripts/sitemap-generator.js` to output a physical `public/sitemap.xml` file containing all statically compiled pages.
+* **Outcome**: The sitemap is served as a plain static file directly from the filesystem.
+
+---
+
 ## Generating the Sitemap
 
-Sitemap will generate automatically when you're making the build for deployment i.e. when you run command `npm run export` with `NEXT_PUBLIC_SEO=false` or `npm run build` with `NEXT_PUBLIC_SEO=false`
-
-For manual sitemap generation of the sitemap for your website:
-
-1. Run the following command:
-
+### Automated Generation (Build Time)
+The sitemap configuration is integrated into the build process. When you run `npm run build` or `npm run export`, the setup script executes automatically:
 ```bash
-node scripts/sitemap-generator.js
+# Defined in package.json build/export scripts
+node scripts/setup-sitemap.js && next build
 ```
 
-2. This will automatically generate a sitemap.xml file in the `public` directory
+### Manual Triggering
+If you want to manually configure or regenerate the sitemap:
+
+1. **Trigger the Sitemap Setup Utility**:
+   ```bash
+   node scripts/setup-sitemap.js
+   ```
+   This reads your `.env` settings to decide whether to set up the dynamic SSR page or write a static sitemap file.
+
+2. **Force-Generate a Static File**:
+   If you want to bypass the environment check and immediately output a physical static XML file to `public/sitemap.xml`, run the generator script directly:
+   ```bash
+   node scripts/sitemap-generator.js
+   ```
+
+---
 
 ## Customizing the Sitemap
 
 If you want to customize the sitemap manually:
 
-1. Navigate to the `public` directory
-2. Open the `sitemap.xml` file
-3. Modify the file according to your needs
+1. Navigate to the `public` directory.
+2. Open the `sitemap.xml` file (only applicable in static mode, as dynamic mode is managed by the database and Next.js).
+3. Modify the file according to your needs.
 
 ![Sitemap](/images/web/sitemap.png)
 

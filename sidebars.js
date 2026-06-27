@@ -100,6 +100,7 @@ export default {
         "web/deployment-without-seo",
         "web/seo-for-web",
         "web/nextjs-deployment",
+        "web/vps-standalone-deployment",
         "web/htaccess-config",
       ],
     },
