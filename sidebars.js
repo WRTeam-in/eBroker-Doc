@@ -94,6 +94,8 @@ export default {
         "web/web-logo",
         "web/google-maps-iframe",
         "web/google-adsense",
+        "web/google-analytics-setup",
+        "web/microsoft-clarity-setup",
         "web/pwa-setup",
         "web/running-project",
         "web/sitemap-setup",

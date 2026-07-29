@@ -32,7 +32,18 @@ import DocBanner from '@site/src/components/DocBanner/DocBanner';
     <h3>PWA Setup</h3>
     <p>Progressive Web App (PWA) Setup</p>
   </a>
-  
+
+  <a href="./google-analytics-setup" className="setup-card">
+    <div className="card-icon">📊</div>
+    <h3>Google Analytics Setup</h3>
+    <p>Track visitors with Google Analytics 4 (GA4)</p>
+  </a>
+
+  <a href="./microsoft-clarity-setup" className="setup-card">
+    <div className="card-icon">🧠</div>
+    <h3>Microsoft Clarity Setup</h3>
+    <p>Session recordings and heatmaps with Microsoft Clarity</p>
+  </a>
 
   <a href="./running-project" className="setup-card">
     <div className="card-icon">▶️</div>
