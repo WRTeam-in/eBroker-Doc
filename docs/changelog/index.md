@@ -3,6 +3,55 @@ sidebar_position: 1
 title: Changelog
 ---
 
+## Version 1.6.0 (July 29, 2026)
+
+### ✨ **Added**
+
+- Bulk Upload for properties and projects (Admin)
+- WhatsApp chat button on property and agent details
+- Stories - share 24-hour photo/video stories linked to properties and projects, upload for agent only
+- Story view count and seen/unseen tracking for logged-in users
+- Audit Logs - track create, update, and delete actions on property/project listings, admin only
+
+### 🔄 **Improved**
+
+- UI/UX enhancements across various screens
+
+
+## Version 1.5.0 (June 29, 2026)
+
+### ✨ **Added**
+
+- OpenStreetMap Free maps integration (Admin, App, Web)
+- LinkedIn field on agent profile
+- Agent banner - configurable via Edit Agent Profile, displayed on Agent Details screen
+- Agent watermark - applies exclusively to listings created in Agent mode
+- Watermark settings screen (App, Web)
+- Separate "Save as Draft" option on property and project creation forms
+- Search and filter support on Agent Details listings
+- Premium Projects section on Home Page Sections (Admin, App, Web)
+- Filters on all listing-related screens (App)
+
+### 🔄 **Improved**
+
+- Fixed home screen sections now individually toggleable - Search, Slider, and All Properties can each be disabled
+- Home page section titles configurable separately for Web and App
+- All Properties section loads 3 Featured + 7 Normal per batch; pattern repeats on Load More
+- Agent Details screen redesigned
+- Placeholder images now use dynamic colors matching system theme
+- Icons removed from Custom Pages
+- SEO optimization for agent-specific listings - meta tags and URLs updated (Web)
+- Deployment pipeline updated (Web)
+- Edit Profile screen redesigned (App)
+- Appointment configuration flow redesigned (App)
+- Filter screen redesigned (App)
+- Unified button in profile menu for Privacy Policy and other pages, and Settings (App)
+
+### 🛠 **Fixed**
+
+- Clear location on home now correctly resets and refetches data (App, Web)
+
+
 ## Version 1.4.1 (May 26, 2026)
 
 ### 🛠 **Fixed**

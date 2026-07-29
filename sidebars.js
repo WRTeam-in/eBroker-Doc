@@ -67,6 +67,7 @@ export default {
         "app/maps-setup",
         "app/setup-deep-link",
         "app/setup-admob",
+        "app/setup-iap",
         "app/add-languages",
         "app/connect-admin-panel",
         "app/change-app-version",
