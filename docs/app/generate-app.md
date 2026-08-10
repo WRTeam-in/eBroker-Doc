@@ -6,7 +6,7 @@ sidebar_position: 15
 
 Follow the common Flutter app guide for the full Android build + Play Store submission flow:
 
-[Deployment Guide ↗](https://wrteam-in.github.io/common_app_doc/GeneralSettings/deployment)
+[Deployment Guide ↗](https://www.marketplace.wrteam.in/docs/flutter-common-doc/GeneralSettings/deployment)
 
 ## eBroker-specific notes
 

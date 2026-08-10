@@ -21,7 +21,7 @@ Before doing anything else, copy these two files from your previous project into
 
 Check the [Version Compatibility](version-history.md) table and switch your Flutter SDK to match the eBroker version you are upgrading to.
 
-For Flutter install / version-switching steps, see the [Basic Setup ↗](https://wrteam-in.github.io/common_app_doc/GeneralSettings/basicsetup) guide.
+For Flutter install / version-switching steps, see the [Basic Setup ↗](https://www.marketplace.wrteam.in/docs/flutter-common-doc/GeneralSettings/basicsetup) guide.
 
 ## 3. Files to Edit (Master Reference)
 

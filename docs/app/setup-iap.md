@@ -6,4 +6,4 @@ sidebar_position: 12
 
 Follow the common Flutter app guide for In-App Purchase setup:
 
-[In-App Purchase Setup ↗](https://wrteam-in.github.io/common_app_doc/GeneralSettings/iap)
+[In-App Purchase Setup ↗](https://www.marketplace.wrteam.in/docs/flutter-common-doc/GeneralSettings/iap)

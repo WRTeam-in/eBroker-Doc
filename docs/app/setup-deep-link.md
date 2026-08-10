@@ -6,7 +6,7 @@ sidebar_position: 10
 
 Follow the common Flutter app guide for the full deep-link configuration (Android intent filters, iOS URL schemes, `.well-known` files):
 
-[Deeplink Setup ↗](https://wrteam-in.github.io/common_app_doc/GeneralSettings/deeplink)
+[Deeplink Setup ↗](https://www.marketplace.wrteam.in/docs/flutter-common-doc/GeneralSettings/deeplink)
 
 ## eBroker-specific notes
 

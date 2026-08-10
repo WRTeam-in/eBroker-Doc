@@ -6,7 +6,7 @@ sidebar_position: 4
 
 Follow the common Flutter app guide for the full package-name change procedure:
 
-[Package Name Setup ↗](https://wrteam-in.github.io/common_app_doc/GeneralSettings/packagename)
+[Package Name Setup ↗](https://www.marketplace.wrteam.in/docs/flutter-common-doc/GeneralSettings/packagename)
 
 ## eBroker-specific notes
 

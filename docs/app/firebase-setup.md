@@ -6,9 +6,9 @@ sidebar_position: 8
 
 Follow the common Flutter app guides for Firebase project creation, push notifications, and billing setup:
 
-- [Firebase Setup ↗](https://wrteam-in.github.io/common_app_doc/GeneralSettings/firebase) — create project, FlutterFire CLI, phone auth, keystore + `key.properties`
-- [Notifications ↗](https://wrteam-in.github.io/common_app_doc/GeneralSettings/notifications) — FCM and iOS APNs (.p8) setup
-- [Firebase Billing ↗](https://wrteam-in.github.io/common_app_doc/GeneralSettings/firebase-billing/) — enable billing for OTP and Maps quotas
+- [Firebase Setup ↗](https://www.marketplace.wrteam.in/docs/flutter-common-doc/GeneralSettings/firebase) — create project, FlutterFire CLI, phone auth, keystore + `key.properties`
+- [Notifications ↗](https://www.marketplace.wrteam.in/docs/flutter-common-doc/GeneralSettings/notifications) — FCM and iOS APNs (.p8) setup
+- [Firebase Billing ↗](https://www.marketplace.wrteam.in/docs/flutter-common-doc/GeneralSettings/firebase-billing/) — enable billing for OTP and Maps quotas
 
 ## eBroker-specific notes
 

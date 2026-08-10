@@ -6,7 +6,7 @@ sidebar_position: 5
 
 Follow the common Flutter app guide for generating the launcher icon:
 
-[App Icon Setup ↗](https://wrteam-in.github.io/common_app_doc/GeneralSettings/appicon)
+[App Icon Setup ↗](https://www.marketplace.wrteam.in/docs/flutter-common-doc/GeneralSettings/appicon)
 
 ## eBroker-specific notes
 

@@ -20,7 +20,7 @@ Follow this order. Generic Flutter steps link out to the common app guide; eBrok
 
 | # | Step | Guide |
 |---|---|---|
-| 1 | Install Flutter & dev tools | [Basic Setup ↗](https://wrteam-in.github.io/common_app_doc/GeneralSettings/basicsetup) |
+| 1 | Install Flutter & dev tools | [Basic Setup ↗](https://www.marketplace.wrteam.in/docs/flutter-common-doc/GeneralSettings/basicsetup) |
 | 2 | **Upgrading from older eBroker build?** | [Update From Old Version](update-from-old-version.md) |
 | 3 | Change app name | [Change App Name](change-app-name.md) |
 | 4 | Change package name | [Change Package Name](change-package-name.md) |
