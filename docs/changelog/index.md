@@ -3,6 +3,23 @@ sidebar_position: 1
 title: Changelog
 ---
 
+## Version 1.7.0 (September 08, 2026)
+
+### ✨ **Added**
+
+- Admin selected listing sections on home screen – two sections with admin edit options
+- Auto approve listing toggle for individual users and agents
+- Agent follow option – new section in home screen with following agent's properties and priority for story feature
+- Area-bound wise properties on map listing page
+- Multi-currency support
+- Country-wise listing support
+
+### 🔄 **Improved**
+
+- Switched to the new Places API
+- UI/UX improvements across all platforms
+
+
 ## Version 1.6.0 (July 29, 2026)
 
 ### ✨ **Added**
