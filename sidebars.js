@@ -85,6 +85,8 @@ export default {
         "web/google-maps-setup",
         "web/firebase-integration",
         "web/firebase-auth",
+        "web/google-signin-popup-blocked-fix",
+        "web/google-one-tap-signin-setup",
         "web/notification-setup",
         "web/customize-app-name",
         "web/set-favicon",
