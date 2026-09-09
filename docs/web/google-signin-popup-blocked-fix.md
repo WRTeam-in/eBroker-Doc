@@ -50,7 +50,12 @@ Keep this dialog open (or note down the values) — you'll need them in the next
 
 ## Step 6: Add the CNAME Record in Your DNS Provider
 
-Go to your domain's DNS management page (Hostinger, GoDaddy, Cloudflare, etc.). The steps below use Hostinger as an example.
+Go to your domain's DNS management page (Hostinger, GoDaddy, Cloudflare, etc.). The steps below use Hostinger as an example — the fields (record type, name, target/value) are the same everywhere, only the UI differs.
+
+:::info Using a different DNS provider?
+- **GoDaddy**: [Add a CNAME record](https://www.godaddy.com/help/add-a-cname-record-19236)
+- **Cloudflare**: [Manage DNS records](https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/)
+:::
 
 1. Go to **Domains > DNS** for your domain
 
