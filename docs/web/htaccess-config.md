@@ -25,14 +25,14 @@ This guide explains how to configure your Apache web server for both static and 
     RewriteRule ^agent/my-project/(.+)/?$ agent/my-project/[slug]/index.html [L]
     RewriteRule ^payment/([^/]+)/?$ payment/[slug]/index.html [L]
     RewriteRule ^all/([^/]+)/?$ all/[slug]/index.html [L]
-    RewriteRule ^more-pages/([^/]+)/?$ more-pages/[...slug]/index.html [L]
+    RewriteRule ^more-pages/(.+)/?$ more-pages/[...slug]/index.html [L]
 
     RewriteRule ^properties/category/([^/]+)/?$ properties/category/[slug]/index.html [L]
     RewriteRule ^properties/city/([^/]+)/?$ properties/city/[slug]/index.html [L]
-    RewriteRule ^properties/(featured-properties|most-viewed-properties|most-favourite-properties|properties-nearby-city)/?$ properties/[slug]/index.html [L]
+    RewriteRule ^properties/(featured-properties|most-viewed-properties|most-favourite-properties|properties-nearby-city|curated-properties)/?$ properties/[slug]/index.html [L]
     RewriteRule ^properties/?$ properties/index.html [L]
 
-    RewriteRule ^projects/(featured-projects|most-viewed-projects|most-favourite-projects|projects-nearby-city)/?$ projects/[slug]/index.html [L]
+    RewriteRule ^projects/(featured-projects|most-viewed-projects|most-favourite-projects|projects-nearby-city|curated-projects)/?$ projects/[slug]/index.html [L]
     RewriteRule ^projects/?$ projects/index.html [L]
 
     RewriteRule ^agent/(.+)/?$ agent/[...slug]/index.html [L]
