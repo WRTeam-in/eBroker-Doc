@@ -3,6 +3,27 @@ sidebar_position: 1
 title: Changelog
 ---
 
+## Version 1.7.1 (September 12, 2026)
+
+### ✨ **Added**
+
+- Server-side rendering for homepage, listing/search, detail, static, and custom pages
+
+### 🔄 **Improved**
+
+- UI improvements across the app
+- Locale detection and hydration fixes sitewide
+- Removed duplicate API calls for faster SSR performance
+- Optimized article module
+- Optimized property map APIs
+- UI improvements across the backend
+
+### 🛠 **Fixed**
+
+- Add project, view property, and add country issues in the app
+- Favourites, gallery, map drag, filters, video sync, and currency issues
+
+
 ## Version 1.7.0 (September 08, 2026)
 
 ### ✨ **Added**
