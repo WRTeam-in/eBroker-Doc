@@ -37,7 +37,7 @@ title: Changelog
 
 ### 🔄 **Improved**
 
-- Switched to the new Places API
+- Switched to Places API (New) — see [Upgrading from the legacy Places API](../admin/maps-setup.md#upgrading-from-the-legacy-places-api)
 - UI/UX improvements across all platforms
 
 
