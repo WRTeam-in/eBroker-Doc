@@ -3,6 +3,23 @@ sidebar_position: 1
 title: Changelog
 ---
 
+## Version 1.8.0 (October 01, 2026)
+
+### ✨ **Added**
+
+- Agent list search with filters
+- Direct agent chat
+- Save as draft for properties/projects in admin panel
+- Dynamic social media links for agents
+- Advanced search filter fields with dropdown, checkbox, and radio options across web, app, and admin
+
+### 🔄 **Improved**
+
+- Blur placeholder while project images load on web and app
+- Fixed sections in become-agent form
+- Articles now sorted latest first
+
+
 ## Version 1.7.1 (September 12, 2026)
 
 ### ✨ **Added**
