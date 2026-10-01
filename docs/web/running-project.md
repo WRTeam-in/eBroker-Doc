@@ -10,7 +10,7 @@ This guide explains how to run your eBroker web project locally for development 
 
 Before running the project, ensure you have:
 
-- Node.js (version 18 or higher) installed
+- Node.js (version 20.9 or higher; 22 LTS recommended) installed
 - All configuration settings properly set up in your `.env` file
 - Firebase and other integrations configured as needed
 

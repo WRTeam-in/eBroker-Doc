@@ -26,7 +26,7 @@ For SEO functionality, you'll need:
 
 - A VPS (Virtual Private Server) with at least 3-4GB of free RAM
 - SSH root access
-- Node.js (version 18 or later) installed
+- Node.js (version 20.9 or later; 22 LTS recommended) installed
 - A Linux-based operating system (preferably Debian-based)
 
 ## SEO Benefits

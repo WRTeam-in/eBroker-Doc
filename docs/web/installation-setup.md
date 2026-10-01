@@ -38,7 +38,7 @@ Make sure your system meets these requirements before proceeding:
 ### For SEO Support
 
 - **VPS Hosting:** Required for reliable performance and security
-- **Node.js:** Version 18 or higher
+- **Node.js:** Version 20.9 or higher (22 LTS recommended)
 - **Memory:** At least 3-4 GB free RAM
 - **SSH Access:** Root access required
 

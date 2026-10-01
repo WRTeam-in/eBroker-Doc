@@ -24,7 +24,7 @@ To fix, generate both sets:
 
 ```bash
 cd android
-./gradlew signinReport
+./gradlew signingReport
 ```
 
 The output lists SHA-1 and SHA-256 for **both** `debug` and `release` variants. In Firebase Console → Project Settings → Your Android app → Add fingerprint, add **all four** values:

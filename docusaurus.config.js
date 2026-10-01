@@ -45,7 +45,15 @@ const config = {
   },
 
   // Add local search plugin with a unique ID to avoid conflicts
-  plugins: [require.resolve("@easyops-cn/docusaurus-search-local")],
+  plugins: [
+    require.resolve("@easyops-cn/docusaurus-search-local"),
+    [
+      "@docusaurus/plugin-client-redirects",
+      {
+        redirects: [{ from: "/docs", to: "/docs/main-intro" }],
+      },
+    ],
+  ],
 
   presets: [
     [

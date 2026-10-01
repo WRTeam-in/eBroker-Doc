@@ -17,7 +17,7 @@ Choose the documentation section relevant to your needs:
 
 - [Admin Doc](./admin/configure-on-server.md) - Learn how to set up and manage the admin panel
 - [Web Doc](./web/index.md) - Guide for setting up the web application
-- [App Doc](admin/configure-on-server.md) - Instructions for configuring and building the mobile app
+- [App Doc](./app/app-key-points.md) - Instructions for configuring and building the mobile app
 - [Web Video Doc](./web-video/index.md) - Watch step-by-step setup guides
 - [Change Log](./changelog/index.md) - View version history and updates
 

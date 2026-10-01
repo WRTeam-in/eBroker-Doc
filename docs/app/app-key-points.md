@@ -39,6 +39,6 @@ Follow this order. Generic Flutter steps link out to the common app guide; eBrok
 ## Critical Rules
 
 - **Change package name BEFORE Firebase setup** — Firebase config is tied to package name; redoing it later means re-downloading `google-services.json`.
-- **For production phone OTP** — add the **release** SHA-1 + SHA-256 to Firebase, not just debug. Run `cd android && ./gradlew signinReport`.
+- **For production phone OTP** — add the **release** SHA-1 + SHA-256 to Firebase, not just debug. Run `cd android && ./gradlew signingReport`.
 - **Never lose `keystore.jks`** — without it you cannot publish updates to an existing Play Store listing. Always copy from previous build.
 - **Always use `--no-tree-shake-icons`** when building eBroker (`flutter build appbundle --no-tree-shake-icons`).

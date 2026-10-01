@@ -56,7 +56,7 @@ Recommended for live environments with higher quotas and stronger security.
 1. Log in to Admin Panel → `Settings` → `System Settings` → `Gemini AI`.
 2. Toggle **Enable Gemini AI features**.
 3. Paste the key into **Gemini API Key**.
-4. Set rate limits (see recommendations below).
+4. Set your global and per‑user daily limits (set `0` for unlimited).
 5. Click **Save**.
 ![Setup API](/images/panel/gemini-ai/gemini_api_setup_2.png)
 

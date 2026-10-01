@@ -75,7 +75,7 @@ import DocBanner from '@site/src/components/DocBanner/DocBanner';
     <p>Configure Apache rules for static and SEO builds</p>
   </a>
 
-  <a href="https://teams.live.com/l/invite/FEAN_7C4kzeomJM8gE" className="setup-card" target="_blank">
+  <a href="/docs/support" className="setup-card">
     <div className="card-icon">💬</div>
     <h3>Support</h3>
     <p>Contact our support team for assistance</p>
