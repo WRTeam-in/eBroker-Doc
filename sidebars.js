@@ -102,6 +102,7 @@ export default {
         "web/pwa-setup",
         "web/running-project",
         "web/sitemap-setup",
+        "web/language-country-urls",
         "web/deployment-without-seo",
         "web/seo-for-web",
         "web/nextjs-deployment",

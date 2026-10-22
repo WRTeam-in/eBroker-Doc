@@ -69,7 +69,7 @@ If you want to customize the sitemap manually:
 
 ## Sitemap Structure
 
-A typical multilingual website sitemap follows this XML structure:
+Every page is listed once for each language, and each entry carries `hreflang` alternates for all available languages plus an `x-default` entry that points to the default language. URLs follow the `/<language>/<country>/...` shape, with the default language and the "All" countries scope omitted.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -79,28 +79,39 @@ A typical multilingual website sitemap follows this XML structure:
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>https://yourdomain.com/?lang=en</loc>
-    <lastmod>2025-11-14T06:24:51.039Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/?lang=en" />
-    <xhtml:link rel="alternate" hreflang="ur" href="https://yourdomain.com/?lang=ur" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomain.com/?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://yourdomain.com/?lang=en" />
-  </url>
-   <url>
-    <loc>https://yourdomain.com/properties?lang=en</loc>
-    <lastmod>2025-11-14T06:24:51.040Z</lastmod>
+    <loc>https://yourdomain.com/properties/</loc>
+    <lastmod>2026-10-22T06:24:51.040Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/properties?lang=en" />
-    <xhtml:link rel="alternate" hreflang="ur" href="https://yourdomain.com/properties?lang=ur" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomain.com/properties?lang=ar" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://yourdomain.com/properties?lang=en" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/properties/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomain.com/ar/properties/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yourdomain.com/properties/" />
+  </url>
+  <url>
+    <loc>https://yourdomain.com/ar/properties/</loc>
+    <lastmod>2026-10-22T06:24:51.040Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yourdomain.com/properties/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomain.com/ar/properties/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yourdomain.com/properties/" />
   </url>
   <!-- Additional URLs -->
 </urlset>
 ```
+
+### URL shapes
+
+Assuming `en` is the default language:
+
+| Language | Country | URL |
+| --- | --- | --- |
+| Default (`en`) | All | `/properties/` |
+| Other (`ar`) | All | `/ar/properties/` |
+| Default (`en`) | India | `/india/properties/` |
+| Other (`ar`) | India | `/ar/india/properties/` |
+
+For country-specific URLs, the `hreflang` value includes the country's region code, for example `en-IN` or `ar-IN`. If a country has no valid 2-letter region code, its entries are written without `hreflang` alternates.
 
 ## Submitting Your Sitemap to Search Engines
 

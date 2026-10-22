@@ -35,16 +35,32 @@ Enabling SEO mode provides several advantages:
 
 - Server-side rendering of pages for better search engine indexing
 - Improved page load times for users
+- Multilingual meta title, meta description, and schema markup, served in the visitor's language
+- Language and country in the URL path (`/<language>/<country>/...`), so each language and country version can be indexed separately
+- Sitemap with `hreflang` alternates and an `x-default` entry for every language
 - Better handling of meta tags and structured data
 - Support for social media preview cards
 - Improved accessibility for users with slower connections
+
+## Language and Country URLs
+
+With SEO mode enabled, the language and country are part of the URL path:
+
+- `/<language>/<country>/...`, for example `/ar/india/properties`
+- The default language is left out: `/india/properties`
+- The "All" countries scope is left out: `/ar/properties`
+- When both are left out, you get the plain URL: `/properties`
+
+For a simple overview, see [Language and Country URLs](./language-country-urls.md).
+
+Meta title, meta description, and schema markup are written per language in the admin panel and rendered on the server for the language in the URL.
 
 ## SEO Best Practices
 
 In addition to enabling the SEO mode, follow these best practices:
 
-- Create descriptive, unique titles for each page
-- Write compelling meta descriptions
+- Create descriptive, unique titles for each page, in every language you offer
+- Write compelling meta descriptions, in every language you offer
 - Use semantic HTML with proper heading structure
 - Ensure your site has a valid sitemap.xml file
 - Register your site with Google Search Console and Bing Webmaster Tools
