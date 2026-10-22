@@ -25,7 +25,7 @@ Watch this tutorial to learn how to properly upload your code to a server:
 Before you begin, you need to set up Node.js on your system:
 
 :::warning IMPORTANT
-**NodeJS** version should be **18** or later
+**NodeJS** version should be **20.9** or later (**22 LTS** recommended)
 :::
 
 1. Follow our [Step-by-step guide to install NodeJS](https://www.wrteam.in/blog/step-by-step-guide-to-install-nodejs-on-windows-mac/)
