@@ -90,6 +90,10 @@ Start your application with PM2:
 pm2 start "npm start" -n "YOUR_PROJECT_NAME"
 ```
 
+:::info Application port
+`npm start` runs the application on port `8001` by default (set by `NODE_PORT=8001` in the `start` script in `package.json`). Your Apache `.htaccess` proxies requests to this same port, so if you change the port here, update every `8001` in the `.htaccess` as well. See [.htaccess Configuration](./htaccess-config.md#important-notes). Otherwise Apache cannot reach the app and the site returns a `502` or `503` error.
+:::
+
 Check if the PM2 process is running correctly:
 
 ```bash

@@ -38,48 +38,54 @@ You can use any FTP client (like FileZilla) or your hosting control panel to upl
 
 ## Adding the .htaccess File (Important for URL Rewriting)
 
-After uploading the contents of the `out` folder, you also need to add a `.htaccess` file to the **same directory** (e.g., `public_html`). This file handles URL rewriting to make sure your application's routing works correctly on Apache servers.
+Your application's URLs follow the `/<language>/<country>/...` shape, with the default language and the "All" countries scope left out (for example `/properties` instead of `/en/all/properties`). The `.htaccess` file maps these URLs to the exported pages, so your routing only works correctly on Apache servers with it in place.
 
-1.  **Create a new file** named `.htaccess` (note the dot at the beginning) in the root of your deployment directory (the same place you uploaded the `out` folder contents).
-2.  **Copy and paste** the following code into the `.htaccess` file:
+:::warning Use the .htaccess from the out folder
+The build writes a ready-to-use `.htaccess` file into the `out` folder, together with the generated locale rules that handle the omitted default language and "All" scope. Upload **that file** to the same directory as the rest of the `out` contents (e.g., `public_html`). Because it starts with a dot, it may be hidden in your file manager, so enable "show hidden files" if you can't see it.
+
+The code below is the base rule set, shown for reference. It does **not** include the generated locale rules, so use it only if the file is missing from the `out` folder, and expect URLs without a language or country to fail.
+:::
+
+1.  Make sure the `.htaccess` file from the `out` folder is in the root of your deployment directory (the same place you uploaded the `out` folder contents).
+2.  If it is missing, create a new file named `.htaccess` (note the dot at the beginning) in that directory and paste the following code into it:
 
     ```apache
     <IfModule mod_rewrite.c>
         RewriteEngine On
         RewriteBase /
-        RewriteRule ^property-details/([^/]+)/?$ property-details/[slug]/index.html [L]
-        RewriteRule ^project-details/([^/]+)/?$ project-details/[slug]/index.html [L]
-        RewriteRule ^agent-details/([^/]+)/?$ agent-details/[slug]/index.html [L]
-        RewriteRule ^article-details/([^/]+)/?$ article-details/[slug]/index.html [L]
-        RewriteRule ^compare-properties/([^/]+)/?$ compare-properties/[slug]/index.html [L]
-        RewriteRule ^my-property/([^/]+)/?$ my-property/[slug]/index.html [L]
-        RewriteRule ^my-project/([^/]+)/?$ my-project/[slug]/index.html [L]
-        RewriteRule ^agent/my-property/(.+)/?$ agent/my-property/[slug]/index.html [L]
-        RewriteRule ^agent/my-project/(.+)/?$ agent/my-project/[slug]/index.html [L]
-        RewriteRule ^payment/([^/]+)/?$ payment/[slug]/index.html [L]
-        RewriteRule ^all/([^/]+)/?$ all/[slug]/index.html [L]
-        RewriteRule ^more-pages/([^/]+)/?$ more-pages/[...slug]/index.html [L]
 
-        RewriteRule ^properties/category/([^/]+)/?$ properties/category/[slug]/index.html [L]
-        RewriteRule ^properties/city/([^/]+)/?$ properties/city/[slug]/index.html [L]
-        RewriteRule ^properties/(featured-properties|most-viewed-properties|most-favourite-properties|properties-nearby-city)/?$ properties/[slug]/index.html [L]
-        RewriteRule ^properties/?$ properties/index.html [L]
+        RewriteRule ^([^/]+)/([^/]+)/property-details/([^/]+)/?$ [lang]/[country]/property-details/[slug]/index.html [L]
+        RewriteRule ^([^/]+)/([^/]+)/project-details/([^/]+)/?$ [lang]/[country]/project-details/[slug]/index.html [L]
+        RewriteRule ^([^/]+)/([^/]+)/agent-details/([^/]+)/?$ [lang]/[country]/agent-details/[slug]/index.html [L]
+        RewriteRule ^([^/]+)/([^/]+)/article-details/([^/]+)/?$ [lang]/[country]/article-details/[slug]/index.html [L]
+        RewriteRule ^([^/]+)/([^/]+)/compare-properties/([^/]+)/?$ [lang]/[country]/compare-properties/[slug]/index.html [L]
+        RewriteRule ^([^/]+)/([^/]+)/my-property/([^/]+)/?$ [lang]/[country]/my-property/[slug]/index.html [L]
+        RewriteRule ^([^/]+)/([^/]+)/my-project/([^/]+)/?$ [lang]/[country]/my-project/[slug]/index.html [L]
+        RewriteRule ^([^/]+)/([^/]+)/agent/my-property/(.+)/?$ [lang]/[country]/agent/my-property/[slug]/index.html [L]
+        RewriteRule ^([^/]+)/([^/]+)/agent/my-project/(.+)/?$ [lang]/[country]/agent/my-project/[slug]/index.html [L]
+        RewriteRule ^([^/]+)/([^/]+)/payment/([^/]+)/?$ [lang]/[country]/payment/[slug]/index.html [L]
+        RewriteRule ^([^/]+)/([^/]+)/more-pages/(.+)/?$ [lang]/[country]/more-pages/[...slug]/index.html [L]
 
-        RewriteRule ^projects/(featured-projects|most-viewed-projects|most-favourite-projects|projects-nearby-city)/?$ projects/[slug]/index.html [L]
-        RewriteRule ^projects/?$ projects/index.html [L]
+        RewriteRule ^([^/]+)/([^/]+)/properties/category/([^/]+)/?$ [lang]/[country]/properties/category/[slug]/index.html [L]
+        RewriteRule ^([^/]+)/([^/]+)/properties/city/([^/]+)/?$ [lang]/[country]/properties/city/[slug]/index.html [L]
+        RewriteRule ^([^/]+)/([^/]+)/properties/(featured-properties|most-viewed-properties|most-favourite-properties|properties-nearby-city|curated-properties)/?$ [lang]/[country]/properties/[slug]/index.html [L]
+        RewriteRule ^([^/]+)/([^/]+)/properties/?$ [lang]/[country]/properties/index.html [L]
 
-        RewriteRule ^agent/(.+)/?$ agent/[...slug]/index.html [L]
-        RewriteRule ^user/(.+)/?$ user/[...slug]/index.html [L]
+        RewriteRule ^([^/]+)/([^/]+)/projects/(featured-projects|most-viewed-projects|most-favourite-projects|projects-nearby-city|curated-projects)/?$ [lang]/[country]/projects/[slug]/index.html [L]
+        RewriteRule ^([^/]+)/([^/]+)/projects/?$ [lang]/[country]/projects/index.html [L]
 
-        RewriteRule ^(about-us|contact-us|faqs|privacy-policy|terms-and-conditions|subscription-plan|search|all-personalized-feeds|properties-on-map|become-agent|become-agent-form)/?$ $1/index.html [L]
+        RewriteRule ^([^/]+)/([^/]+)/agent/(.+)/?$ [lang]/[country]/agent/[...slug]/index.html [L]
+        RewriteRule ^([^/]+)/([^/]+)/user/(.+)/?$ [lang]/[country]/user/[...slug]/index.html [L]
 
-        RewriteCond %{REQUEST_FILENAME} !-f
-        RewriteCond %{REQUEST_FILENAME} !-d
-        RewriteRule ^([^/]+)/?$ index.html [L]
+        RewriteRule ^([^/]+)/([^/]+)/(about-us|contact-us|faqs|privacy-policy|terms-and-conditions|subscription-plan|search|all-personalized-feeds|properties-on-map|become-agent|become-agent-form|agents|articles|categories)/?$ [lang]/[country]/$3/index.html [L]
 
         RewriteCond %{REQUEST_FILENAME} !-f
         RewriteCond %{REQUEST_FILENAME} !-d
-        RewriteRule ^(.\*)$ /404.html [L]
+        RewriteRule ^([^/]+)/([^/]+)/?$ [lang]/[country]/index.html [L]
+
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteRule ^(.*)$ /404.html [L]
 
     </IfModule>
     ```
@@ -89,7 +95,7 @@ Alternatively, you can [view the raw .htaccess content here](/files/htaccess-exa
 3.  **Save the file** on your server.
 
 :::tip Note
-This `.htaccess` configuration is typically provided with the eBroker web code. If you already have this file from the source code, you can upload that one directly instead of creating a new one.
+Rebuild with `npm run build` after changing your languages or countries, then upload the new `.htaccess` from the `out` folder, since the generated rules are built from them. Languages added later in the admin panel keep working without a rebuild.
 :::
 
 ## Configuring Your Domain
