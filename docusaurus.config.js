@@ -50,7 +50,11 @@ const config = {
     [
       "@docusaurus/plugin-client-redirects",
       {
-        redirects: [{ from: "/docs", to: "/docs/main-intro" }],
+        redirects: [
+          { from: "/docs", to: "/docs/main-intro" },
+          // Renamed in v1.9.0: AI is no longer Gemini-only.
+          { from: "/docs/admin/gemini-ai-setup", to: "/docs/admin/ai-setup" },
+        ],
       },
     ],
   ],

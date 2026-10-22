@@ -3,6 +3,29 @@ sidebar_position: 1
 title: Changelog
 ---
 
+## Version 1.9.0 (October 22, 2026)
+
+### ✨ **Added**
+
+- Multilingual SEO meta title, meta description, and schema markup
+- PayU Money payment gateway as a plugin ([PayU India Setup](../admin/payu-setup.md))
+- Preview of property and project pages
+- Agent stories section on the homepage, with order configurable from the admin panel
+- Multi-model AI options in the admin panel ([AI Setup](../admin/ai-setup.md))
+- Generate complete property and project listings with AI
+- Language and country URL routing (`/<language>/<country>/...`), with default language and "All" omitted in SEO mode
+
+### 🔄 **Improved**
+
+- PayPal payment flow with a revised webhook event structure for more reliable payment confirmation
+- Migrated web views to stable SDKs
+- UI/UX optimizations across the app
+
+### 🛠 **Fixed**
+
+- Minor issues across other payment gateways
+
+
 ## Version 1.8.0 (October 01, 2026)
 
 ### ✨ **Added**
