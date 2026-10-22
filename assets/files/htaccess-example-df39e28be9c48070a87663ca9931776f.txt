@@ -1,0 +1,38 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    RewriteRule ^([^/]+)/([^/]+)/property-details/([^/]+)/?$ [lang]/[country]/property-details/[slug]/index.html [L]
+    RewriteRule ^([^/]+)/([^/]+)/project-details/([^/]+)/?$ [lang]/[country]/project-details/[slug]/index.html [L]
+    RewriteRule ^([^/]+)/([^/]+)/agent-details/([^/]+)/?$ [lang]/[country]/agent-details/[slug]/index.html [L]
+    RewriteRule ^([^/]+)/([^/]+)/article-details/([^/]+)/?$ [lang]/[country]/article-details/[slug]/index.html [L]
+    RewriteRule ^([^/]+)/([^/]+)/compare-properties/([^/]+)/?$ [lang]/[country]/compare-properties/[slug]/index.html [L]
+    RewriteRule ^([^/]+)/([^/]+)/my-property/([^/]+)/?$ [lang]/[country]/my-property/[slug]/index.html [L]
+    RewriteRule ^([^/]+)/([^/]+)/my-project/([^/]+)/?$ [lang]/[country]/my-project/[slug]/index.html [L]
+    RewriteRule ^([^/]+)/([^/]+)/agent/my-property/(.+)/?$ [lang]/[country]/agent/my-property/[slug]/index.html [L]
+    RewriteRule ^([^/]+)/([^/]+)/agent/my-project/(.+)/?$ [lang]/[country]/agent/my-project/[slug]/index.html [L]
+    RewriteRule ^([^/]+)/([^/]+)/payment/([^/]+)/?$ [lang]/[country]/payment/[slug]/index.html [L]
+    RewriteRule ^([^/]+)/([^/]+)/more-pages/(.+)/?$ [lang]/[country]/more-pages/[...slug]/index.html [L]
+
+    RewriteRule ^([^/]+)/([^/]+)/properties/category/([^/]+)/?$ [lang]/[country]/properties/category/[slug]/index.html [L]
+    RewriteRule ^([^/]+)/([^/]+)/properties/city/([^/]+)/?$ [lang]/[country]/properties/city/[slug]/index.html [L]
+    RewriteRule ^([^/]+)/([^/]+)/properties/(featured-properties|most-viewed-properties|most-favourite-properties|properties-nearby-city|curated-properties)/?$ [lang]/[country]/properties/[slug]/index.html [L]
+    RewriteRule ^([^/]+)/([^/]+)/properties/?$ [lang]/[country]/properties/index.html [L]
+
+    RewriteRule ^([^/]+)/([^/]+)/projects/(featured-projects|most-viewed-projects|most-favourite-projects|projects-nearby-city|curated-projects)/?$ [lang]/[country]/projects/[slug]/index.html [L]
+    RewriteRule ^([^/]+)/([^/]+)/projects/?$ [lang]/[country]/projects/index.html [L]
+
+    RewriteRule ^([^/]+)/([^/]+)/agent/(.+)/?$ [lang]/[country]/agent/[...slug]/index.html [L]
+    RewriteRule ^([^/]+)/([^/]+)/user/(.+)/?$ [lang]/[country]/user/[...slug]/index.html [L]
+
+    RewriteRule ^([^/]+)/([^/]+)/(about-us|contact-us|faqs|privacy-policy|terms-and-conditions|subscription-plan|search|all-personalized-feeds|properties-on-map|become-agent|become-agent-form|agents|articles|categories)/?$ [lang]/[country]/$3/index.html [L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^([^/]+)/([^/]+)/?$ [lang]/[country]/index.html [L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ /404.html [L]
+
+</IfModule>
