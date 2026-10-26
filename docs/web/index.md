@@ -5,81 +5,82 @@ sidebar_position: 1
 # Website Setup
 
 import DocBanner from '@site/src/components/DocBanner/DocBanner';
+import Link from '@docusaurus/Link';
 
 <DocBanner />
 
 <div className="setup-grid">
-  <a href="./installation-setup" className="setup-card">
+  <Link to="/docs/web/installation-setup" className="setup-card">
     <div className="card-icon">📋</div>
     <h3>Web Prerequisites</h3>
     <p>We recommend deploying the web application on the main domain</p>
-  </a>
+  </Link>
 
-  <a href="./api-url-config" className="setup-card">
+  <Link to="/docs/web/api-url-config" className="setup-card">
     <div className="card-icon">🔧</div>
     <h3>Website Setup Locally</h3>
     <p>Configure files and environment setup</p>
-  </a>
+  </Link>
 
-  <a href="./firebase-integration" className="setup-card">
+  <Link to="/docs/web/firebase-integration" className="setup-card">
     <div className="card-icon">🔥</div>
     <h3>Firebase Setup</h3>
     <p>Configure Firebase project and authentication</p>
-  </a>
+  </Link>
   
-   <a href="./pwa-setup" className="setup-card">
+   <Link to="/docs/web/pwa-setup" className="setup-card">
     <div className="card-icon">⚡</div>
     <h3>PWA Setup</h3>
     <p>Progressive Web App (PWA) Setup</p>
-  </a>
+  </Link>
 
-  <a href="./google-analytics-setup" className="setup-card">
+  <Link to="/docs/web/google-analytics-setup" className="setup-card">
     <div className="card-icon">📊</div>
     <h3>Google Analytics Setup</h3>
     <p>Track visitors with Google Analytics 4 (GA4)</p>
-  </a>
+  </Link>
 
-  <a href="./microsoft-clarity-setup" className="setup-card">
+  <Link to="/docs/web/microsoft-clarity-setup" className="setup-card">
     <div className="card-icon">🧠</div>
     <h3>Microsoft Clarity Setup</h3>
     <p>Session recordings and heatmaps with Microsoft Clarity</p>
-  </a>
+  </Link>
 
-  <a href="./running-project" className="setup-card">
+  <Link to="/docs/web/running-project" className="setup-card">
     <div className="card-icon">▶️</div>
     <h3>Run Website Locally</h3>
     <p>Install packages and dependencies</p>
-  </a>
+  </Link>
 
-  <a href="./customize-app-name" className="setup-card">
+  <Link to="/docs/web/customize-app-name" className="setup-card">
     <div className="card-icon">⚙️</div>
     <h3>System Configuration</h3>
     <p>Configure application settings and preferences</p>
-  </a>
+  </Link>
 
-  <a href="./nextjs-deployment" className="setup-card">
+  <Link to="/docs/web/nextjs-deployment" className="setup-card">
     <div className="card-icon">🚀</div>
     <h3>Deploy your site</h3>
     <p>Generate build and deploy your website</p>
-  </a>
+  </Link>
 
-  <a href="./web-logo" className="setup-card">
+  <Link to="/docs/web/web-logo" className="setup-card">
     <div className="card-icon">🔄</div>
     <h3>New Version Update</h3>
     <p>Update your website to the latest version</p>
-  </a>
+  </Link>
 
-  <a href="./htaccess-config" className="setup-card">
+  <Link to="/docs/web/htaccess-config" className="setup-card">
     <div className="card-icon">⚡</div>
     <h3>.htaccess Setup</h3>
     <p>Configure Apache rules for static and SEO builds</p>
-  </a>
+  </Link>
 
-  <a href="../support" className="setup-card">
+  <Link to="/docs/support" className="setup-card">
     <div className="card-icon">💬</div>
     <h3>Support</h3>
     <p>Contact our support team for assistance</p>
-  </a>
+  </Link>
 </div>
 
 <style>
