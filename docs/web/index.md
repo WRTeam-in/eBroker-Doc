@@ -75,7 +75,7 @@ import DocBanner from '@site/src/components/DocBanner/DocBanner';
     <p>Configure Apache rules for static and SEO builds</p>
   </a>
 
-  <a href="/docs/support" className="setup-card">
+  <a href="../support" className="setup-card">
     <div className="card-icon">💬</div>
     <h3>Support</h3>
     <p>Contact our support team for assistance</p>
