@@ -25,7 +25,7 @@ Thank you for purchasing code. It really means a lot and It's our pleasure to se
 
 ### For Admin
 
-- **PHP Version:** eBroker Admin panel is built using Laravel Framework 10.0 so you need PHP version minimum 8.1.0 or higher version installed on your server.
+- **PHP Version:** eBroker Admin panel is built using Laravel Framework 12 so you need PHP version 8.2 up to 8.5 installed on your server.
 
 ### For App
 
