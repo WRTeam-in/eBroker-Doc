@@ -3,6 +3,27 @@ sidebar_position: 1
 title: Changelog
 ---
 
+## Version 1.9.1 (October 27, 2026)
+
+### ✨ **Added**
+
+- Leave-page warning while adding a property or project manually on web (reload, tab close, back navigation, in-app links)
+
+### 🔄 **Improved**
+
+- Backend tech stack updated to Laravel v12, with support for PHP 8.2 up to 8.5
+- Notification messages now show as the description in the user notifications list
+- Country dropdown in the header now opens even when only one country exists
+
+### 🛠 **Fixed**
+
+- "Switch to Agent" no longer changes the role when you choose to stay on an unsaved listing
+- Agent verification form: required fields, chip fields, and typing in dynamic inputs
+- Rent period not showing on the property details banner
+- Stale pending message and redirect after resubmitting a rejected user verification form
+- Untranslated login-required alert on subscription screens
+
+
 ## Version 1.9.0 (October 22, 2026)
 
 ### ✨ **Added**
