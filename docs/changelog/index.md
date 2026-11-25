@@ -3,6 +3,33 @@ sidebar_position: 1
 title: Changelog
 ---
 
+## Version 1.9.2 (November 25, 2026)
+
+### ✨ **Added**
+
+- Theme Settings in the admin panel: choose primary, neutral, success, error, warning and info colors with a live shade palette ([Theme Settings](../admin/theme-settings.md))
+- App and web now use the theme colors set in the admin panel
+- End a running subscription from the admin Subscriptions list
+- Retry option in the admin panel if an update's database changes fail
+
+### 🔄 **Improved**
+
+- App and web now use Phosphor Icons for a consistent look across both platforms
+- UI optimizations across the app and web
+- Faster homepage, property, project and map loading
+- Security across the admin panel, login and OTP, payments and file uploads
+- App and web now show the reason when an action is refused
+
+### 🛠 **Fixed**
+
+- Listing prices now show each listing's own currency
+- Expired listings can no longer be reactivated without renewing
+- Expired package shown as active after buying it again
+- Duplicate facilities and parameters when saving a property again
+- Removing gallery images and documents, and SVG icon uploads
+- Property Inquiries page not loading
+
+
 ## Version 1.9.1 (October 27, 2026)
 
 ### ✨ **Added**
