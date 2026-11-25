@@ -26,3 +26,9 @@ Step 1: In Admin panel System Setting copy the under flutterwave settings, copy 
 Step 2: In Flutterwave Dashboard, Head to Settings -> Developers -> Webhook
 
 ![Webhook Flutterwave](/images/panel/Flutterwave/webhook-flutterwave.jpg)
+
+Step 3: Set the webhook **Secret hash** in Flutterwave to the same value as the **Encryption Key** saved in the Admin Panel. eBroker compares the two and rejects webhooks that do not match.
+
+## Store currency
+
+Set the Flutterwave currency in `Settings` → `Payment Settings`. Payments are refused if it differs from the store currency in [System Settings](./system-configurations.md#more-settings) (v1.9.2+).

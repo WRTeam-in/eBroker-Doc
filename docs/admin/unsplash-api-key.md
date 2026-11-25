@@ -28,11 +28,15 @@ Follow these steps to set up the Unsplash API key for your eBroker application:
 
 ## Step 4: Configure in Admin Panel
 
-1. Go to Admin Panel > System Settings > General
+1. Go to Admin Panel > Settings > System Settings > More Settings
 2. Find the Unsplash API Key field
 3. Paste your Access Key
 4. Save the changes
 
 :::note
 The Unsplash API has rate limits. For production use, make sure you're familiar with [Unsplash's guidelines](https://help.unsplash.com/en/articles/2511245-unsplash-api-guidelines) for proper attribution and usage.
+:::
+
+:::info
+From v1.9.2, missing city images are fetched once a day by the scheduler, so the [cron job](./cron-job-setup.md) must be running. New cities get their image on the next daily run.
 :::

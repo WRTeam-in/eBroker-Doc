@@ -41,6 +41,7 @@ Buy a package from the app or website in **Test** mode, complete the PayU checko
 
 ## Good to know
 
+- The **Transaction Currency** must match the store currency in [System Settings](./system-configurations.md#more-settings), or payments are refused (v1.9.2+).
 - Amounts are charged in **whole units** (₹499.50 is sent as ₹500), with a **minimum of 1.00**. Below-minimum purchases are refused up front.
 - PayU is shown to buyers only while it is licensed, enabled and configured ([details](./plugin-manager.md#keep-licences-valid)), and appears with no app or website update.
 

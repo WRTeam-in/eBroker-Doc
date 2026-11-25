@@ -33,3 +33,7 @@ Step 4: Add Webhook URL (From admin), select events that are shown and click on 
 
 Step 5: Copy Webhook ID and add it in admin panel system -> payment settings
 ![Paypal Webhook 4](/images/panel/paypal/paypal-webhook-4.jpg)
+
+## Store currency
+
+Set the PayPal currency in `Settings` → `Payment Settings`. Payments are refused if it differs from the store currency in [System Settings](./system-configurations.md#more-settings) (v1.9.2+).

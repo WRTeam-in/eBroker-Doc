@@ -25,3 +25,9 @@ Thats it! Now you are ready to run your first eBroker: **https://ebroker.wrteam.
 **Default Login Details**  
 User: admin@gmail.com  
 Pass: admin123
+
+:::warning
+From v1.9.2, the panel opens only the **Change Password** page until `admin123` is replaced. The new password must be at least 8 characters.
+:::
+
+![Change the default password](/images/panel/change_default_password.png)

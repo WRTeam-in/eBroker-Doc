@@ -20,3 +20,9 @@ Step 3: Generate API keys and copy Client ID and Client Secret
 :::tip
 Webhook is managed automatically in system internally
 :::
+
+Webhooks are verified with your **Cashfree Secret Key**, so it must be correct.
+
+## Store currency
+
+Set the Cashfree currency in `Settings` → `Payment Settings`. Payments are refused if it differs from the store currency in [System Settings](./system-configurations.md#more-settings) (v1.9.2+).

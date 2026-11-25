@@ -32,5 +32,13 @@ Step 5: Continue -> Select Webhook Event -> Continue
 Step 6: Add Webhook URL from admin and required fields -> Create 
 ![Stripe Step 3](</images/panel/stripe/stripe-webhook-3.jpg>)
 
-Step 7: Copy Webhook ID and add it in admin panel system -> payment settings
+Step 7: Copy the webhook **Signing secret** (`whsec_...`) and add it in admin panel -> Settings -> Payment Settings -> **Stripe Webhook Secret key**
 ![Stripe Step 4](</images/panel/stripe/stripe-webhook-4.jpg>)
+
+:::warning
+From v1.9.2, Stripe webhooks are rejected while this key is empty or wrong.
+:::
+
+## Store currency
+
+Set the Stripe currency in `Settings` → `Payment Settings`. Payments are refused if it differs from the store currency in [System Settings](./system-configurations.md#more-settings) (v1.9.2+).

@@ -35,6 +35,12 @@ Step 4: Click Add New Webhook
 
 Step 5: Add Webhook Secret in your admin -> settings -> payment settings -> Razorpay -> RazorpayWebhook Secret
 
+:::warning
+From v1.9.2, Razorpay webhooks are rejected while the **Razorpay Webhook Secret** is empty or different from the one in the Razorpay Dashboard.
+:::
+
+Razorpay charges in the store currency, so set it in [System Settings](./system-configurations.md#more-settings) first.
+
 ### Step 4: Test the Integration
 
 1. Create a test payment to verify the integration works correctly

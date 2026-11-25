@@ -25,3 +25,11 @@ Step 3: Fill the details mentioned in below image
 ![PhonePe Webhook](</images/panel/phonepe/phonepe-2.jpg>)
 
 Step 4: Copy the Webhook Username and Password and add in admin -> settings -> payment settings -> phonepe
+
+:::warning
+From v1.9.2, PhonePe webhooks are rejected while the **Webhook Username** or **Webhook Password** is empty.
+:::
+
+## Store currency
+
+PhonePe charges in `INR`. Payments are refused if it differs from the store currency in [System Settings](./system-configurations.md#more-settings) (v1.9.2+).

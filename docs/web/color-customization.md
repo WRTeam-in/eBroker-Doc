@@ -11,11 +11,17 @@ Customizing the color scheme of your eBroker web application helps align it with
 The quickest way to change colors is through the admin panel — no code changes required.
 
 1. Log in to your admin panel
-2. Navigate to **Settings → System Settings → More Settings → System Color**
-3. Select your preferred colors for the various UI elements
-4. Save your changes
+2. Navigate to **Settings → Theme Settings** (v1.9.2+)
+3. Pick a color or type its HEX value. The shades are generated automatically
+4. Click **Save** on each color you changed
 
-![Change Color Code](/images/web/change-color-code.png)
+![Theme Settings](/images/panel/theme_settings.png)
+
+See [Theme Settings](../admin/theme-settings.md) for what each color controls.
+
+:::info Up to v1.9.1
+Use **Settings → System Settings → More Settings → System Color** instead. This field was removed in v1.9.2, and its saved value became the **Primary Color**.
+:::
 
 ## Best Practice: Hardcoding Colors in Source Code
 
@@ -45,10 +51,9 @@ As shown in the screenshot above, update `--primary-color` (and any other releva
 
 The eBroker web application allows you to customize several color elements:
 
-- **Primary Color**: Used for main UI elements, buttons, and highlights
-- **Secondary Color**: Used for accents and secondary UI elements
-- **Text Colors**: For various text elements throughout the application
-- **Background Colors**: For different sections and components
+- **Primary Color**: Main brand elements and actions
+- **Neutral Color**: Text, backgrounds, borders, and neutral elements
+- **Status Colors**: Success, error, warning, and info messages
 
 ## Color Selection Tips
 

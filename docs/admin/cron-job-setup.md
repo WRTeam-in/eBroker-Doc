@@ -6,6 +6,15 @@ sidebar_position: 21
 
 This guide explains how to set up cron jobs on your server to automate scheduled tasks for your eBroker application.
 
+## Cron & Queue page
+
+`Settings` → `Cron & Queue` shows whether cron is running, the jobs waiting and failed, and ready-to-copy commands for your own domain and path.
+
+![Cron & Queue](/images/panel/cron_queue.png)
+
+- **Scheduler last ran**: *Never*, or more than 10 minutes ago, means cron is not running.
+- **Let the cron scheduler run the queue worker**: on by default and right for shared hosting. Turn it off only if you run your own worker (Supervisor) on a VPS, or queued emails and notifications will not be sent.
+
 ## Steps to Add Cron Job
 
 ### 1. Access Your Server
