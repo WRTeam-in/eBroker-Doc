@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.10.2">
 <title data-rh="true">Color Customization | eBroker Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://wrteam-in.github.io/eBroker-Doc/images/ebroker-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://wrteam-in.github.io/eBroker-Doc/images/ebroker-social-card.jpg"><meta data-rh="true" property="og:url" content="https://wrteam-in.github.io/eBroker-Doc/docs/web/color-customization/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Color Customization | eBroker Documentation"><meta data-rh="true" name="description" content="Customizing the color scheme of your eBroker web application helps align it with your brand identity and creates a consistent user experience."><meta data-rh="true" property="og:description" content="Customizing the color scheme of your eBroker web application helps align it with your brand identity and creates a consistent user experience."><link data-rh="true" rel="icon" href="/eBroker-Doc/images/favicon.ico"><link data-rh="true" rel="canonical" href="https://wrteam-in.github.io/eBroker-Doc/docs/web/color-customization/"><link data-rh="true" rel="alternate" href="https://wrteam-in.github.io/eBroker-Doc/docs/web/color-customization/" hreflang="en"><link data-rh="true" rel="alternate" href="https://wrteam-in.github.io/eBroker-Doc/docs/web/color-customization/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Color Customization","item":"https://wrteam-in.github.io/eBroker-Doc/docs/web/color-customization"}]}</script><link rel="stylesheet" href="/eBroker-Doc/assets/css/styles.cb8f8fe5.css">
-<script src="/eBroker-Doc/assets/js/runtime~main.08066b80.js" defer="defer"></script>
-<script src="/eBroker-Doc/assets/js/main.082e480d.js" defer="defer"></script>
+<script src="/eBroker-Doc/assets/js/runtime~main.8066a1f8.js" defer="defer"></script>
+<script src="/eBroker-Doc/assets/js/main.a2dc6c7f.js" defer="defer"></script>
 </head>
 <body>
 <svg style="display: none;"><defs>
@@ -17,11 +17,13 @@
 <p>The quickest way to change colors is through the admin panel — no code changes required.</p>
 <ol>
 <li class="">Log in to your admin panel</li>
-<li class="">Navigate to <strong>Settings → System Settings → More Settings → System Color</strong></li>
-<li class="">Select your preferred colors for the various UI elements</li>
-<li class="">Save your changes</li>
+<li class="">Navigate to <strong>Settings → Theme Settings</strong> (v1.9.2+)</li>
+<li class="">Pick a color or type its HEX value. The shades are generated automatically</li>
+<li class="">Click <strong>Save</strong> on each color you changed</li>
 </ol>
-<p><img decoding="async" loading="lazy" alt="Change Color Code" src="/eBroker-Doc/assets/images/change-color-code-48c42d9152dadb909cefba57ed1cdc51.png" width="1914" height="859" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Theme Settings" src="/eBroker-Doc/assets/images/theme_settings-827f43828658d7c7ccb2f090e98c82d3.png" width="1440" height="1300" class="img_ev3q"></p>
+<p>See <a class="" href="/eBroker-Doc/docs/admin/theme-settings/">Theme Settings</a> for what each color controls.</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>Up to v1.9.1</div><div class="admonitionContent_BuS1"><p>Use <strong>Settings → System Settings → More Settings → System Color</strong> instead. This field was removed in v1.9.2, and its saved value became the <strong>Primary Color</strong>.</p></div></div>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="best-practice-hardcoding-colors-in-source-code">Best Practice: Hardcoding Colors in Source Code<a href="#best-practice-hardcoding-colors-in-source-code" class="hash-link" aria-label="Direct link to Best Practice: Hardcoding Colors in Source Code" title="Direct link to Best Practice: Hardcoding Colors in Source Code" translate="no">​</a></h2>
 <p>For a more reliable and permanent color setup — especially in production deployments — it is recommended to <strong>set your brand colors directly in the source code</strong> inside <code>src/styles/globals.css</code>. This ensures that your colors are always applied consistently, regardless of admin panel settings or caching issues.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="where-to-edit">Where to Edit<a href="#where-to-edit" class="hash-link" aria-label="Direct link to Where to Edit" title="Direct link to Where to Edit" translate="no">​</a></h3>
@@ -42,10 +44,9 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="key-color-elements">Key Color Elements<a href="#key-color-elements" class="hash-link" aria-label="Direct link to Key Color Elements" title="Direct link to Key Color Elements" translate="no">​</a></h2>
 <p>The eBroker web application allows you to customize several color elements:</p>
 <ul>
-<li class=""><strong>Primary Color</strong>: Used for main UI elements, buttons, and highlights</li>
-<li class=""><strong>Secondary Color</strong>: Used for accents and secondary UI elements</li>
-<li class=""><strong>Text Colors</strong>: For various text elements throughout the application</li>
-<li class=""><strong>Background Colors</strong>: For different sections and components</li>
+<li class=""><strong>Primary Color</strong>: Main brand elements and actions</li>
+<li class=""><strong>Neutral Color</strong>: Text, backgrounds, borders, and neutral elements</li>
+<li class=""><strong>Status Colors</strong>: Success, error, warning, and info messages</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="color-selection-tips">Color Selection Tips<a href="#color-selection-tips" class="hash-link" aria-label="Direct link to Color Selection Tips" title="Direct link to Color Selection Tips" translate="no">​</a></h2>
 <p>When selecting colors for your web application:</p>
