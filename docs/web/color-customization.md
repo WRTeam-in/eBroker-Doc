@@ -25,25 +25,34 @@ Use **Settings → System Settings → More Settings → System Color** instead.
 
 ## Best Practice: Hardcoding Colors in Source Code
 
-For a more reliable and permanent color setup — especially in production deployments — it is recommended to **set your brand colors directly in the source code** inside `src/styles/globals.css`. This ensures that your colors are always applied consistently, regardless of admin panel settings or caching issues.
+For a more reliable and permanent color setup, especially in production deployments, it is recommended to **set your brand colors directly in the source code** inside `src/styles/tokens.css`. This ensures that your colors are always applied consistently, regardless of admin panel settings or caching issues.
+
+:::note Recommended, not required
+This step is recommended, not required. The `FullScreenSpinner` shows its ring in the primary color from `tokens.css` while the web app loads, before the admin panel color is applied. If your brand color differs from the default, visitors may see a brief flash of the default color. Setting your primary color in `tokens.css` avoids this flash.
+:::
 
 ### Where to Edit
 
-Open the file `src/styles/globals.css` in your project. Locate the `:root` block at the top of the file. This is where all global CSS color variables are defined.
+Open the file `src/styles/tokens.css` in your project. The `:root` block at the top of the file defines the color tokens. The brand color is the **primary scale**, `--color-primary-50` to `--color-primary-950`.
 
-![Hex Color Code in globals.css](/images/web/hex-color-code-web.png)
+![Primary color tokens in tokens.css](/images/web/tokens-css-primary-color.png)
 
-As shown in the screenshot above, update `--primary-color` (and any other relevant variables) with your desired hex color code.
+As shown in the screenshot above, replace the hex values of the `--color-primary-*` tokens (highlighted in red) with the shades of your brand color.
+
+:::note
+Components use the semantic and component tokens, which are built from this scale. Edit the `--color-primary-*` values only and do not rename the tokens.
+:::
 
 ### Step-by-Step Instructions
 
-1. Open `src/styles/globals.css` in your code editor.
-2. Locate the `:root { ... }` block (lines 5–34, as shown in the screenshot).
-3. Find `--primary-color` and replace its value with your brand's primary hex code:
+1. Open `src/styles/tokens.css` in your code editor.
+2. Locate the `:root { ... }` block and the `--color-primary-50` to `--color-primary-950` lines at the top (lines 3–13, as shown in the screenshot).
+3. Replace each value with the matching shade of your brand color. `--color-primary-500` is the main brand shade:
    ```css
-   --primary-color: #YOUR_HEX_CODE;
+   --color-primary-500: #YOUR_HEX_CODE;
    ```
-4. Update any other color variables to match your brand palette.
+   Use a shade generator (for example, from your brand hex) to get the lighter (50–400) and darker (600–950) shades.
+4. Update the neutral, success, error and warning scales in the same file if your brand palette needs them.
 5. Save the file.
 6. Restart the development server (`npm run dev`) or rebuild the production bundle (`npm run build`) to see the changes take effect.
 
@@ -69,4 +78,4 @@ When selecting colors for your web application:
 After setting your custom colors:
 
 1. **Via Admin Panel**: Save your changes — the web application will update automatically. You may need to clear your browser cache to see the updated colors.
-2. **Via Source Code (`globals.css`)**: Save the file and restart or rebuild the application. Changes are applied globally and take effect immediately on the next page load.
+2. **Via Source Code (`tokens.css`)**: Save the file and restart or rebuild the application. Changes are applied globally and take effect immediately on the next page load.
