@@ -81,7 +81,7 @@ This key shows maps in the admin panel and on your website. **You only need one 
    ```
 
    What each line is:
-   - **Line 1:** the address where your **admin panel** is hosted. Replace `admin.yourdomain.com` with your real admin panel address. It can be a subdomain (like `admin.yourdomain.com`) or a path on your main domain.
+   - **Line 1:** the address where your **admin panel** is hosted. Replace `admin.yourdomain.com` with your real admin panel address. This is usually a subdomain of your main domain.
    - **Line 2:** your **website** address without `www`.
    - **Line 3:** your **website** address with `www`.
 
