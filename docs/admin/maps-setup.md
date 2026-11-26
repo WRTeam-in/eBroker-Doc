@@ -4,71 +4,130 @@ sidebar_position: 8
 
 # Map API Key and Place API
 
-For location features to work properly in your app, you need to set up Google Maps and Places API. Follow these steps:
+Maps, location search and address suggestions in your app, admin panel and website all run on Google services. To turn them on, you need to do three things in Google Cloud Console:
 
-> **Since version 1.7.0:** the app, admin panel, and web application use **Places API (New)** instead of the legacy **Places API**. If you're setting this up for the first time, just follow the steps below as written. If you're upgrading from an older version, see [Upgrading from the legacy Places API](#upgrading-from-the-legacy-places-api) at the end of this page.
+1. Turn on the Google services (APIs) the product uses.
+2. Create **two API keys**, one for your server and one for your websites.
+3. Paste both keys into the admin panel.
 
-## Setting up Google Cloud Console
+This takes about 15 minutes. You need a Google account and a credit or debit card for billing (see Step 1).
 
-1. Open [Google Cloud Console](https://console.cloud.google.com)
-2. Select your project
+> **Since version 1.7.0:** the app, admin panel and website use **Places API (New)** instead of the older **Places API**. If you are setting this up for the first time, follow the steps below as written. If you are upgrading from an older version, see [Upgrading from the legacy Places API](#upgrading-from-the-legacy-places-api) at the end of this page.
+
+## What you will create
+
+| Key | What it is used for | How to restrict it |
+| --- | --- | --- |
+| **Server key** | Address search, converting addresses to locations | By your server's IP address |
+| **Web key** | Showing maps in the admin panel and on your website | By your website addresses (HTTP referrer) |
+
+Restricting a key means Google only accepts it from your own server or websites. If someone copies the key, it will not work anywhere else, so nobody can run up charges on your account.
+
+## Step 1: Set up your Google Cloud project
+
+1. Open [Google Cloud Console](https://console.cloud.google.com) and sign in.
+2. Select your project at the top of the page. If you do not have one, create a new project.
 
 ![Cloud Console](/images/panel/maps/cloudconsole.png)
 
-3. Enable the following APIs from "Enable API and Services":
+3. **Turn on billing** for the project. Open the menu, go to **Billing**, and link a billing account.
+
+   > **Important:** Billing is required. Without it, location search will not work in the app, admin panel or website. Google gives a free monthly credit, so small usage is usually free.
+
+## Step 2: Turn on the 6 APIs
+
+1. In Google Cloud Console, open **APIs & Services** and then **Library**.
+2. Search for each API below by its exact name, open it, and click **Enable**:
+
    - Geocoding API
    - **Places API (New)**
-   - Geolocation APIs
+   - Geolocation API
+   - Maps JavaScript API
    - Maps SDK for Android
    - Maps SDK for iOS
-   - Maps JavaScript API
 
-   > **Note:** "Places API (New)" is a separate entry from the legacy "Places API" in the API library — search for it by that exact name and enable it.
+   > **Note:** **Places API (New)** is a different entry from the older **Places API**. Make sure you enable the one that says "(New)".
 
 ![Enable API Services](/images/panel/maps/enable-api-services.png)
 
-## API key options and restrictions
+## Step 3: Create the server key
 
-You can use either a restricted two-key setup (recommended) or a single unrestricted key (simpler but less secure):
+This key is used by your server for address search.
 
-- **Option A — Restricted (recommended):**
-  - Create API Key 1 (server key) with these APIs enabled: Places API (New), Geocoding API, Geolocation API.
-  - Restrict API Key 1 by your server IP address(es), add ipv4 and ipv6(if exists) addresses.
-  - Create API Key 2 (web key) with this API enabled: Maps JavaScript API.
-  - Restrict API Key 2 by your website URL (HTTP referrer).
+1. Go to **APIs & Services** and then **Credentials**.
+2. Click **Create credentials** and then **API key**. Click **Close** on the popup.
+3. Click the new key to open it. Rename it to **Server key**.
+4. Under **Application restrictions**, choose **IP addresses**.
+5. Click **Add an IP address** and enter your server's IP address. If your server has both an IPv4 and an IPv6 address, add both. If you do not know your server IP, ask your hosting provider.
+6. Under **API restrictions**, choose **Restrict key** and select only these three APIs:
+   - Places API (New)
+   - Geocoding API
+   - Geolocation API
+7. Click **Save**.
 
-- **Option B — Single key (not recommended for production):**
-  - Create one API key with all four APIs enabled: Places API (New), Geocoding API, Geolocation API, Maps JavaScript API.
-  - Do not apply restrictions.
+## Step 4: Create the web key
 
-## Setting Up Places API (New)
+This key shows maps in the admin panel and on your website. **You only need one web key for both.** You list both addresses on the same key.
 
-For the Places API (New) to work (which enables location search functionality):
+1. On the **Credentials** page, click **Create credentials** and then **API key**. Click **Close** on the popup.
+2. Click the new key to open it. Rename it to **Web key**.
+3. Under **Application restrictions**, choose **Websites** (this is the HTTP referrer option).
+4. Click **Add** and enter the first address below, then click **Add** again for each of the others. Put `/*` at the end of each one:
 
-1. **Enable billing** on your Google Cloud project
+   ```
+   https://admin.yourdomain.com/*
+   https://yourdomain.com/*
+   https://www.yourdomain.com/*
+   ```
 
-   > **Note:** This is mandatory for Places API (New) to work
+   What each line is:
+   - **Line 1:** the address where your **admin panel** is hosted. Replace `admin.yourdomain.com` with your real admin panel address. It can be a subdomain (like `admin.yourdomain.com`) or a path on your main domain.
+   - **Line 2:** your **website** address without `www`.
+   - **Line 3:** your **website** address with `www`.
 
-2. Copy your API key from Google Cloud Console
-3. Open your admin panel and go to System Settings
-4. Paste the key(s) as per your chosen option and save
+   Tips:
+   - Use your real domains and keep `https://` at the start.
+   - Use the exact subdomain your admin panel opens on. `admin.yourdomain.com` and `panel.yourdomain.com` are different addresses.
+   - If your website only opens with `www` or only without it, add just that one.
+   - If you test on your own computer, you can also add `http://localhost/*`.
+
+5. Under **API restrictions**, choose **Restrict key** and select only **Maps JavaScript API**.
+6. Click **Save**.
+
+> Changes to a key can take a few minutes to start working.
+
+## Step 5: Add the keys to the admin panel
+
+1. Copy the **Server key** from the Credentials page (click **Show key**).
+2. Log in to your admin panel and go to **System Settings**.
+3. Paste the Server key into the **Places API** field.
+4. Go back to Google Cloud Console, copy the **Web key**, and paste it into the **Map API Key** field.
+5. Click **Save**.
 
 ![Place API Panel](/images/panel/maps/panel-set-keys.png)
 
-> Note:
-> - If you used the restricted setup (Option A): use the IP-restricted server key in the "Places API" field, and the referrer-restricted web key in the "Map API Key" field.
-> - If you used a single key (Option B): use the same key in both the "Map API Key" and the "Places API" fields.
-> - The admin panel field is still labeled "Places API" — no field name changed. The key you enter there is now validated against Places API (New) rather than the legacy Places API.
+> **Note:** The field is called "Places API" in the admin panel. The server key you paste there is checked against Places API (New).
 
-> **Important:** Without enabling a billing account, location search will not work in the app, admin panel, or web application.
+## If something does not work
+
+- **Location search shows no results:** check that billing is turned on and that **Places API (New)** is enabled.
+- **The map shows "This page can't load Google Maps correctly":** the web key does not include the address you are on. Add the exact address, ending in `/*`, to the web key and wait a few minutes.
+- **Address search fails on the server:** check that the server IP in the Server key matches your hosting provider's current IP.
+- **A key was just changed:** Google can take up to 5 minutes to apply changes. Wait, then try again.
+
+## Using a single key instead (not recommended)
+
+If you want a simpler setup, you can use one key for everything. Enable all four APIs on it (Places API (New), Geocoding API, Geolocation API, Maps JavaScript API), leave it unrestricted, and paste the same key into both the **Map API Key** and **Places API** fields.
+
+We do not recommend this for a live site. An unrestricted key can be copied and used by anyone, and you pay for their usage.
 
 ## Upgrading from the legacy Places API
 
-If your project was set up before version 1.7.0 and already has the legacy "Places API" enabled with a working key, you need to switch it over:
+If your project was set up before version 1.7.0 and already has the older **Places API** enabled with a working key, switch it over like this:
 
-1. In [Google Cloud Console](https://console.cloud.google.com), open "Enable API and Services" and enable **Places API (New)** on the same project.
-2. Your existing API key(s) do not need to be regenerated — the same key works for Places API (New) once it's enabled, since Google API keys are scoped to a project, not to a single API. If your key is restricted to a specific API list, add Places API (New) to that list.
-3. No changes are needed in the admin panel — the "Places API" field keeps the same key you already saved.
-4. Once you've confirmed location search still works, you can disable the legacy "Places API" in Google Cloud Console to avoid keeping an unused API enabled. This step is optional.
+1. In [Google Cloud Console](https://console.cloud.google.com), open **APIs & Services** and then **Library**, and enable **Places API (New)** on the same project.
+2. You do not need new keys. The same key works once Places API (New) is enabled. If your key is restricted to a list of APIs, add **Places API (New)** to that list.
+3. You do not need to change anything in the admin panel. The **Places API** field keeps the key you already saved.
+4. After you confirm location search still works, you can disable the older **Places API** in Google Cloud Console. This step is optional.
 
 See the [changelog](../changelog/index.md) for the full 1.7.0 release notes.
